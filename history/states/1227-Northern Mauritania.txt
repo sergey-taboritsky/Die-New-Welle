@@ -1,0 +1,21 @@
+state={
+	id=1227
+	name="Northern Mauritania"
+	
+	history={
+		add_core_of = WAF
+		owner = WAF
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	
+	provinces={
+		1962
+	}
+	manpower=4311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

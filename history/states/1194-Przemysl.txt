@@ -1,0 +1,26 @@
+state={
+	id=1194
+	name="Przemysl"
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = POL
+
+		victory_points = {
+			9494 2
+		}
+
+	}
+	
+	provinces={
+		3434 9494 
+	}
+	manpower=40545
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=2.000
+}

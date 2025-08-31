@@ -1,0 +1,24 @@
+state={
+	id=1134
+	name="Annaba"
+
+	impassable = no
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			7081 1 
+		}
+		add_core_of = ALG
+	}
+
+	provinces={
+		1058 1141 1160 7081
+	}
+	manpower=250356
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

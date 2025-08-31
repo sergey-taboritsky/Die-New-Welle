@@ -1,5 +1,5 @@
 state = {
-	id=832
+	id = 832
 	name = "STATE_832"
 
 	history = {
@@ -17,7 +17,7 @@ state = {
 		}
 		
 		add_core_of = RUS
-		add_core_of = TKM
+		add_core_of = TMS
 		add_core_of = KHI
 
 	}

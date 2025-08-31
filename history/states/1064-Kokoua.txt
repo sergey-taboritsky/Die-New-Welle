@@ -1,0 +1,22 @@
+state={
+	id=1064
+	name="Kokoua"
+
+	history={
+		owner = EWA
+		add_core_of = EWA
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		3109 
+	}
+	manpower=54622
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

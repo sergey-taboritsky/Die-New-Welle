@@ -1,12 +1,12 @@
 state = {
-	id=446
+	id = 446
 	name = "STATE_446" # Suez
 	manpower = 131732
 	state_category = wasteland
 
 	history = {
 
-		owner = EGY
+		owner = GBR
 		add_core_of = EGY
 
 		buildings = {

@@ -1,5 +1,5 @@
 state = {
-	id=114
+	id = 114
 	name = "STATE_114"
 	manpower = 991921
 	
@@ -26,7 +26,6 @@ state = {
 			}
 		}
 		add_core_of = ITA
-		add_core_of = STD
 		add_core_of = SPM
 	}
 	provinces = {

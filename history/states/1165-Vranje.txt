@@ -1,0 +1,23 @@
+state={
+	id=1165
+	name="Vranje"
+
+	impassable = no
+
+	history = {
+		owner = SBU
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SBU
+		add_core_of = SER
+		add_claim_by = BUL
+	}
+
+	provinces={
+		11832
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

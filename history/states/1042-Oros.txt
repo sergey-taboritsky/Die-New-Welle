@@ -1,0 +1,24 @@
+state={
+	id=1042
+	name="STATE_1042"
+	
+	history={
+		owner = BYZ
+		
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = BYZ
+		add_claim_by = BUL
+
+	}
+	
+	provinces={
+		966 3844 6930 
+	}
+	manpower=343454
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

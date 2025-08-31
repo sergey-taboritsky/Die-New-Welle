@@ -19,7 +19,6 @@ state={
 
 		}
 		add_core_of = RUS
-		add_core_of = SIB
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 3

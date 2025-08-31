@@ -6,8 +6,7 @@ state={
 	
 	history=
 	{
-		owner = INO
-		add_core_of = INO
+		owner = GBR
 		buildings = {
 			infrastructure = 2
 			13002 = {

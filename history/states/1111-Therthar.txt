@@ -1,0 +1,27 @@
+state={
+	id=1111
+	name="Therthar"
+	resources={
+		oil=16.000
+	}
+	
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1600 3
+		}
+		add_core_of = IRQ
+		add_core_of = KUR
+	}
+
+	provinces={
+		1600 1938 3795 12372 13419 13428 13429 13658
+	}
+	manpower=230211
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

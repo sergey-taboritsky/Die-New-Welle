@@ -1,0 +1,22 @@
+state={
+	id=1146
+	name="Hongjianao"
+
+	impassable = no
+
+	history={
+		owner = QNG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = QNG
+		
+	}
+
+	provinces={
+		13570 13571
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

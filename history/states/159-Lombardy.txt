@@ -1,6 +1,6 @@
 
 state = {
-	id=159
+	id = 159
 	name = "STATE_159"
 	manpower = 5597704
 	state_category = metropolis
@@ -21,7 +21,6 @@ state = {
 
 		}
 		add_core_of = ITA
-		add_core_of = LBD
 		add_core_of = LBV
 		1939.1.1 = {
 			buildings = {

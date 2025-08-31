@@ -1,0 +1,38 @@
+state={
+	id=1204
+	name="STATE_1008"
+	
+	history = {
+
+		owner = QNG
+		add_core_of = QNG
+
+		buildings = {
+			infrastructure = 8 #was: 3
+			industrial_complex = 1
+			air_base = 8
+			dockyard = 3
+			7014 = {
+				naval_base = 6
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+
+		victory_points = {
+			7014 5 # Shanghai
+		}
+
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+	
+	provinces={
+		7014 12076 
+	}
+	manpower=4345455
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=9.000
+}

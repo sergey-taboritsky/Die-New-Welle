@@ -1,0 +1,23 @@
+state={
+	id=1216
+	name="Kamyanyets"
+	
+	history = {
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = POL
+		add_core_of = POL
+		add_core_of = BLR
+
+	}
+	
+	provinces={
+		3281 13610
+	}
+	manpower=130345
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

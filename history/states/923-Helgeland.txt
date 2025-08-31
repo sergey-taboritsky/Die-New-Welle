@@ -1,5 +1,5 @@
 state = {
-	id=923
+	id = 923
 	name = "STATE_923"
 	manpower = 88812
 	
@@ -13,13 +13,8 @@ state = {
 	history = {
 		owner = NOR
 		add_core_of = NOR
-		add_core_of = SAR
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_core_of = SMI
-		}
+		add_core_of = SMI
+		
 		victory_points = {
 			3048 1
 		}

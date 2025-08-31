@@ -7,9 +7,7 @@ state=
 	
 	history=
 	{
-		owner = RUS
-		add_core_of = RUS
-		add_core_of = ASK
+		owner = USA
 		victory_points = {
 			13067 1 
 		}

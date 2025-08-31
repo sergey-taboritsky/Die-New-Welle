@@ -8,7 +8,6 @@ state={
 	history={
 		owner = QNG
 		add_core_of = QNG
-		add_core_of = PRC
 		buildings = {
 			infrastructure = 4
 			arms_factory = 3

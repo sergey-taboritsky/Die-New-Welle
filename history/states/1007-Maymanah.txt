@@ -1,0 +1,16 @@
+state={
+	id=1007
+	name="STATE_1007"
+	manpower = 914775
+	state_category = rural
+	provinces={
+		4893 10476 10896
+	}
+	history={
+		owner = AFK
+		add_core_of = AFK
+	}
+	
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

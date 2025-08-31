@@ -7,8 +7,7 @@ state={
 	state_category = rural
 	
 	history={
-		add_core_of = MGS
-		
+		add_core_of = ISL
 		owner = ISL
 		victory_points = {
 			5128 1

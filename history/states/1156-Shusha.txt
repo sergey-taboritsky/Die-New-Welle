@@ -1,0 +1,23 @@
+state={
+	id=1156
+	name="Shusha"
+
+	impassable = no
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = RUS
+		add_core_of = AZR
+		
+	}
+
+	provinces={
+		1467 9715
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

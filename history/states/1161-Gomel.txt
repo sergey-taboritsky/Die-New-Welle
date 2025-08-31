@@ -1,0 +1,27 @@
+state={
+	id=1161
+	name="Gomel"
+
+	impassable = no
+
+	history = {
+		owner = RUS
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = RUS
+		add_core_of = BLR
+
+		victory_points = {
+			9288 10 
+		}
+
+	}
+
+	provinces={
+		9288 9342
+	}
+	manpower=533543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,5 +1,5 @@
 state = {
-	id=882
+	id = 882
 	name = "STATE_882" # Pavlodar
 	
 	state_category = rural
@@ -10,13 +10,12 @@ state = {
 
 	history = {
 		owner = RUS
-		add_core_of = HAZ
+		add_core_of = KAZ
 		buildings = {
 			infrastructure = 2
 
 		}
 		add_core_of = RUS
-		add_core_of = SIB
 		victory_points = {
 			7708 1
 		}

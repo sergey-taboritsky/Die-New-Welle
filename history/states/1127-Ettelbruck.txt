@@ -1,0 +1,20 @@
+state={
+	id=1127
+	name="Ettelbruck"
+
+	history={
+		owner = LUX
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 13497 5 } #Ettelbruck
+		add_core_of = LUX
+	}
+
+	provinces={
+		13497
+	}
+	manpower=121101
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

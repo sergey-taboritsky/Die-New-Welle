@@ -1,0 +1,21 @@
+state={
+	id=1044
+	name="STATE_1044"
+	
+	history={
+		owner = LEV
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+		}
+		add_core_of = LEV
+	}
+	
+	provinces={
+		4088 
+	}
+	manpower=234323
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

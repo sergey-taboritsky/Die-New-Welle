@@ -1,0 +1,21 @@
+state={
+	id=1220
+	name="Western Jordan"
+	
+	history={
+		owner = JOR
+		buildings = {
+			infrastructure = 2
+		}
+
+		add_core_of = JOR
+	}
+	
+	provinces={
+		1544 4562 4603 13444
+	}
+	manpower=213311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

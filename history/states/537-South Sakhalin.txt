@@ -10,9 +10,7 @@ state= {
 
 	history= {
 		owner = QNG
-		add_core_of = JAP
 		add_core_of = QNG
-		
 		
 		buildings = {
 			infrastructure = 2

@@ -1,5 +1,5 @@
 state = {
-	id=859
+	id = 859
 	name = "STATE_859"
 	manpower = 440000
 
@@ -11,8 +11,6 @@ state = {
 
 		owner = ARB
 		add_core_of = ARB
-		add_core_of = NNG
-		
 
 		victory_points = {
 			12702 1 
@@ -27,7 +25,7 @@ state = {
 	}
 	
 	provinces = {
-		1955 10791 10850 12702 
+		1955 4932 10791 12702 13650 13647 13645
 	}
 	state_category = rural
 	buildings_max_level_factor = 1.000

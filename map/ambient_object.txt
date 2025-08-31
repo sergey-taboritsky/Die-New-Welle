@@ -19,24 +19,6 @@ type={
 	object={
 		name="ambient_water"
 		position={
-			205.110 10.000 1517.910 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
-			685.150 10.000 1008.290 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
 			420.090 10.000 382.670 
 		}
 		rotation={
@@ -56,6 +38,69 @@ type={
 		name="ambient_water"
 		position={
 			2541.140 10.000 370.870 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			3865.330 10.000 555.220 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			4201.620 10.000 358.560 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			5465.920 10.000 559.670 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			685.150 10.000 1008.290 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			100.000 10.000 1000.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			5217.910 10.000 1005.380 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="ambient_water"
+		position={
+			205.110 10.000 1517.910 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -91,52 +136,21 @@ type={
 	object={
 		name="ambient_water"
 		position={
-			3865.330 10.000 555.220 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
-			4201.620 10.000 358.560 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
 			5315.160 10.000 1328.670 
 		}
 		rotation={
 			0.000 0.000 0.000 
 		}
 	}
+}
+type={
+	type="frame_border_entity"
+	use_animation=no
+	scale=110.000000
 	object={
-		name="ambient_water"
+		name="frame_border_entity_top"
 		position={
-			5217.910 10.000 1005.380 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
-			5465.920 10.000 559.670 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
-	object={
-		name="ambient_water"
-		position={
-			100.000 10.000 1000.000 
+			0.000 0.000 2456.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -151,7 +165,30 @@ type={
 	object={
 		name="frame_border_entity_top"
 		position={
-			0.000 0.000 2190.000 
+			0.000 0.000 -246.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="frame_border_bottom_entity"
+	use_animation=no
+	scale=110.000000
+	object={
+		name="frame_border_bottom_entity_bottom"
+		position={
+			0.000 0.000 -158.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_border_bottom_entity_bottom"
+		position={
+			0.000 0.000 2604.000 
 		}
 		rotation={
 			0.000 0.000 0.000 
@@ -163,15 +200,6 @@ type={
 	use_animation=no
 	scale=100.000000
 	always_visible=yes
-	object={
-		name="frame_border_bottom_entity_bottom"
-		position={
-			0.000 0.000 -140.000 
-		}
-		rotation={
-			0.000 0.000 0.000 
-		}
-	}
 }
 type={
 	type="frame_border_logo_entity"
@@ -181,7 +209,7 @@ type={
 	object={
 		name="frame_border_logo_entity_top"
 		position={
-			3000.000 0.000 2130.000 
+			3000.000 0.000 2386.000 
 		}
 		rotation={
 			0.000 0.000 0.000 

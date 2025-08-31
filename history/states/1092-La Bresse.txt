@@ -1,0 +1,20 @@
+state={
+	id=1092
+	name="La Bresse"
+	
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		13460 13491
+	}
+	manpower=532100
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

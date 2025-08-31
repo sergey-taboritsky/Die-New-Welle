@@ -14,12 +14,12 @@ state={
 		}
 		add_core_of = SBU
 		add_core_of = SER
-		add_claim_by = BUR
+		add_claim_by = BUL
 
 	}
 
 	provinces={
-		11832 11857 11868 
+		11857 11868 
 	}
 	manpower=210000
 	buildings_max_level_factor=1.000

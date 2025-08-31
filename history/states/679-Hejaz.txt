@@ -1,5 +1,5 @@
 state = {
-	id=679
+	id = 679
 	name = "STATE_679"
 	manpower = 511000
 
@@ -7,7 +7,6 @@ state = {
 
 		owner = ARB
 		add_core_of = ARB
-		add_core_of = HNG
 
 		victory_points = {
 			12758 2 
@@ -20,7 +19,7 @@ state = {
 	}
 
 	provinces = {
-		2033 4981 5099 7934 10748 10835 12758 
+		4981 5099 7934 10748 10835 12758 13480 12455 7970 13475 5027
 	}
 	
 	buildings_max_level_factor = 1.000

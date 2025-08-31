@@ -1,0 +1,26 @@
+state={
+	id=1171
+	name="Torun"
+
+	impassable = no
+
+	history={
+		owner = POL
+		add_core_of = POL
+		buildings = {
+			infrastructure = 2
+		}
+
+		victory_points = {
+			3230 5
+		}
+		
+	}
+
+	provinces={
+		3230 6321 9290 9316 
+	}
+	manpower=643543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

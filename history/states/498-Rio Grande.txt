@@ -1,6 +1,6 @@
 
 state = {
-	id=498
+	id = 498
 	name = "STATE_498"
 	manpower = 649000 # A third removed for Ceara and Pernambuco each, was 7746000
 

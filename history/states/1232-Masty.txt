@@ -1,0 +1,24 @@
+state={
+	id=1232
+	name="Masty"
+
+	impassable = no
+	
+	history={
+		add_core_of = POL
+		add_core_of = BLR
+		owner = POL
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	
+	provinces={
+		13654
+	}
+	manpower=42311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

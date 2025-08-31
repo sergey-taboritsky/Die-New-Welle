@@ -5,16 +5,24 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = EMA
+		owner = GBR
 		buildings = {
 			infrastructure = 2
+			5210 = {
+				naval_base = 2
+
+			}
 		}
-		add_core_of = EMA
+
+		victory_points = {
+			5210 1 
+		}
+		add_core_of = KEN
 
 	}
 
 	provinces={
-		5196 6020 
+		5196 5210 6020 13718
 	}
 
 	buildings_max_level_factor=1.000

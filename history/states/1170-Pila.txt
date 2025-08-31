@@ -1,0 +1,22 @@
+state={
+	id=1170
+	name="Pila"
+
+	impassable = no
+
+	history={
+		owner = POL
+		add_core_of = POL
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+		584 6401 9439 9546 11515
+	}
+	manpower=643543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

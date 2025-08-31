@@ -1,5 +1,5 @@
 state = {
-	id=474
+	id = 474
 	name = "STATE_474"
 	manpower = 440289
 	
@@ -7,9 +7,9 @@ state = {
 
 	history = {
 
-		owner = YCK
+		owner = MEX
 		add_core_of = MEX
-		add_core_of = YCK
+		add_core_of = YUC
 
 		buildings = {
 			infrastructure = 2

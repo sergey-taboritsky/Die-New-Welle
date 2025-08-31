@@ -1,0 +1,23 @@
+state={
+	id=1097
+	name="Saudi Neutral Zone"
+	
+	history={
+		owner = ARB
+		buildings = {
+			infrastructure = 1
+		}
+
+		set_demilitarized_zone = yes
+
+		add_core_of = ARB
+	}
+
+	provinces={
+		13435
+	}
+	manpower=2100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

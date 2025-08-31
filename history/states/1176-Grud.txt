@@ -1,0 +1,27 @@
+state={
+	id=1176
+	name="Grud"
+
+	impassable = no
+
+	history={
+		owner = POL
+		add_core_of = POL
+		buildings = {
+			infrastructure = 3
+
+		}
+
+		victory_points = {
+			9263 5 # Gdynia
+		}
+		
+	}
+
+	provinces={
+		3295 6347
+	}
+	manpower=84264
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

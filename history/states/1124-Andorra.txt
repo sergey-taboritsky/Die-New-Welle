@@ -1,0 +1,22 @@
+state={
+	id=1124
+	name="Andorra"
+
+	history={
+		owner = AND
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SPC
+		victory_points = {
+			13487 3
+		}
+	}
+
+	provinces={
+		13487
+	}
+	manpower=31101
+	buildings_max_level_factor=1.000
+	state_category=city
+}

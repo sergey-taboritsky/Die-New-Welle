@@ -8,7 +8,6 @@ state={
 	history={
 		owner = WAF
 		add_core_of = WAF
-		
 		victory_points = {
 			4927 1 
 		}

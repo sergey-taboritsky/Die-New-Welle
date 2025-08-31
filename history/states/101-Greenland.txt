@@ -1,5 +1,5 @@
 state = {
-	id=101
+	id = 101
 	name = "STATE_101"
 	manpower = 18000
 	resources = {
@@ -9,14 +9,15 @@ state = {
 	state_category = wasteland
 	
 	history = {
-		owner = ICE
+		owner = DAN
 		buildings = {
 			infrastructure = 1
 			12512 ={
 				naval_base = 1
 			}
 		}
-		add_core_of = ICE
+		add_core_of = DAN
+		add_core_of = GRN
 
 		victory_points = { #Nuuk
 			12512 1
@@ -24,7 +25,7 @@ state = {
 	}
 
 	provinces = {
-		10245 10636 12512 13058 13066 
+		10245 10636 12512 13066 13508 13510 13514 13515 13516
 	}
 	local_supplies = 0.0 
 }

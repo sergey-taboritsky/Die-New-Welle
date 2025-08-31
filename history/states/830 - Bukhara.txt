@@ -1,6 +1,6 @@
 state = {
 
-	id=830
+	id = 830
 	name = "STATE_830" #Bukhara
 
 

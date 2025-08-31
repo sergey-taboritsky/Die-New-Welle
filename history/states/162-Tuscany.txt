@@ -1,6 +1,6 @@
 
 state = {
-	id=162
+	id = 162
 	name = "STATE_162"
 	manpower = 3084933
 	
@@ -34,7 +34,6 @@ state = {
 			}
 		}
 		add_core_of = ITA
-		add_core_of = FOL
 		add_core_of = TOS
 		1939.1.1 = {
 			buildings = {
@@ -45,7 +44,7 @@ state = {
 	}
 
 	provinces = {
-		910 1616 3885 6875 6946 6973 9750 9879 9907 11833 11889 
+		910 1616 3885 6875 6946 6973 9750 9879 9907 11833 11889 13623
 	}
 
 	local_supplies = 0.0 

@@ -6,8 +6,8 @@ state={
 	}
 
 	history={
-		owner = INO
-		add_core_of = INO
+		owner = LNF
+		add_core_of = LNF
 		buildings = {
 			infrastructure = 2
 			1355 = {

@@ -3,21 +3,21 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7413;1419;sea;5294;-1;-1;-1;-1;;Moluccas
 10141;1419;sea;5267;-1;-1;-1;-1;;Moluccas
 480;9431;sea;8621;-1;-1;-1;-1;;Netherlands outlier
-8857;2284;sea;7617;1560;1009;1556;1016;PANAMA_CANAL;Panama
-2729;2408;sea;6257;2949;1598;2962;1612;KIEL_CANAL;Kiel
+8857;2284;sea;7617;-1;-1;-1;-1;PANAMA_CANAL;Panama
+2729;2408;sea;6257;-1;-1;-1;-1;KIEL_CANAL;Kiel
 5388;803;sea;1155;-1;-1;-1;-1;SUEZ_CANAL;Suez
 299;211;sea;2282;-1;-1;-1;-1;;Småland-Öland
 6345;6287;sea;2382;-1;-1;-1;-1;;Skåne-Sjaelland
 3260;3325;sea;2408;-1;-1;-1;-1;;Sjaelland-Fyn
-3374;13260;sea;2408;2971;1622;2973;1620;;SdFyn-Langeland
-13260;13261;sea;2408;2975;1619;2977;1618;;Langeland-Lolland
-13261;3305;sea;2408;2987;1617;2989;1619;;Lolland-Själland
+3374;13260;sea;2408;-1;-1;-1;-1;;SdFyn-Langeland
+13260;13261;sea;2408;-1;-1;-1;-1;;Langeland-Lolland
+13261;3305;sea;2408;-1;-1;-1;-1;;Lolland-Själland
 3277;3325;sea;2408;-1;-1;-1;-1;;Fyn-Jylland
 3325;13259;sea;2408;-1;-1;-1;-1;;Fyn-Samsö
-6364;13259;sea;2408;2965;1642;2968;1641;;Jylland-Samsö
-11251;13258;sea;2408;2954;1621;2956;1621;;Sönderjylland-Als
-11251;3325;sea;2408;2956;1628;2960;1629;;Fyn-SdrJylland
-9388;13257;sea;2358;3010;1608;3012;1609;;Stralsund-Rügen
+6364;13259;sea;2408;-1;-1;-1;-1;;Jylland-Samsö
+11251;13258;sea;2408;-1;-1;-1;-1;;Sönderjylland-Als
+11251;3325;sea;2408;-1;-1;-1;-1;;Fyn-SdrJylland
+9388;13257;sea;2358;-1;-1;-1;-1;;Stralsund-Rügen
 83;185;sea;1885;-1;-1;-1;-1;;Estonia-Ösel
 185;6201;sea;1885;-1;-1;-1;-1;;Ösel-Dagö
 83;6201;sea;1660;-1;-1;-1;-1;;Dagö-Estonia
@@ -49,12 +49,12 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10342;1437;sea;4899;-1;-1;-1;-1;;Obi-Bacan
 7413;1437;sea;4899;-1;-1;-1;-1;;Halmahera-Bacan
 4509;7542;sea;2585;-1;-1;-1;-1;;Papua-Japen
-10251;1329;sea;430;5112;550;5122;559;;Papua-New Britain
+10251;1329;sea;430;-1;-1;-1;-1;;Papua-New Britain
 7251;4421;sea;7010;-1;-1;-1;-1;;New Britain-Latangai
 13021;13022;sea;8673;-1;-1;-1;-1;;Gilbert Islands
 4268;4231;sea;5741;-1;-1;-1;-1;;New Caledonia 1
 1237;12120;sea;5660;-1;-1;-1;-1;;New Caledonia 2
-12632;1814;sea;5637;-1;-1;-1;-1;;North-South NZ Islands
+12632;1814;sea;2119;-1;-1;-1;-1;;North-South NZ Islands
 10231;10248;sea;430;-1;-1;-1;-1;;New Guinea-Fergusson
 12246;10288;sea;5513;-1;-1;-1;-1;;Cobourg-Australia
 1042;7437;sea;6819;-1;-1;-1;-1;;San Cristobal-Guadalcanal
@@ -68,23 +68,23 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11985;1025;sea;7932;-1;-1;-1;-1;;Japan-Kyushu
 4094;7212;sea;8791;-1;-1;-1;-1;;Shikoku-Chugoku
 9965;7072;sea;8791;-1;-1;-1;-1;;Shikoku-Kansai
-1399;1515;sea;220;-1;-1;-1;-1;;Kurils 1
+1399;1515;sea;8893;-1;-1;-1;-1;;Kurils 1
 1515;13037;sea;5614;-1;-1;-1;-1;;Kurils 2
 13037;4646;sea;4465;-1;-1;-1;-1;;Kurils-Hokkaido
 9952;1117;sea;2658;-1;-1;-1;-1;;Niigata-Sado
 10092;7046;sea;8791;-1;-1;-1;-1;;Kyushu-Shikoku
 4198;12032;sea;8472;-1;-1;-1;-1;;Kanoya-Yokushima
 11948;1177;sea;2708;-1;-1;-1;-1;;Jeju-Korea
-10124;1123;sea;8499;-1;-1;-1;-1;;Okinawa 1
+10124;11932;sea;8499;-1;-1;-1;-1;;Okinawa 1
 1123;7115;sea;8318;-1;-1;-1;-1;;Okinawa 2
 3995;13024;sea;2855;-1;-1;-1;-1;;Saipan-Tinian
 1135;13090;sea;6471;-1;-1;-1;-1;;Amlia-Unalaska
 13090;10694;sea;6064;-1;-1;-1;-1;;Unalaska-Unimak
-10048;7195;sea;8384;-1;-1;-1;-1;;Hawaii-Maui
-7195;4180;sea;8410;-1;-1;-1;-1;;Maui-Honolulu
-4180;7112;sea;5339;-1;-1;-1;-1;;Honolulu-Kauai
-12148;10188;sea;8660;-1;-1;-1;-1;;Tahiti-Raiatea
-7290;13080;sea;9081;-1;-1;-1;-1;;Samoan Islands
+10048;7195;sea;6467;-1;-1;-1;-1;;Hawaii-Maui
+7195;4180;sea;6467;-1;-1;-1;-1;;Maui-Honolulu
+4180;7112;sea;6467;-1;-1;-1;-1;;Honolulu-Kauai
+12148;10188;sea;2427;-1;-1;-1;-1;;Tahiti-Raiatea
+7290;13080;sea;2891;-1;-1;-1;-1;;Samoan Islands
 4286;12159;sea;8289;-1;-1;-1;-1;;Fiji-Sanua Levu
 13055;13056;sea;8419;-1;-1;-1;-1;;Nukufetau-Funafuti
 13056;13057;sea;8419;-1;-1;-1;-1;;Funafuti-Nukulaelae
@@ -118,7 +118,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9833;11829;sea;5412;-1;-1;-1;-1;;Bosphorus
 9680;6741;sea;8282;-1;-1;-1;-1;;Kerch Strait
 9859;3962;sea;5946;-1;-1;-1;-1;;Tsugaru Strait
-10011;7110;sea;2708;4825;1219;-1;-1;;Tushima-Kyushu
+10011;7110;sea;2708;-1;-1;-1;-1;;Tushima-Kyushu
 4160;1070;sea;5244;-1;-1;-1;-1;;Hainan-Strait
 1712;12147;sea;8978;-1;-1;-1;-1;;Quebec-Strait
 3691;7813;sea;6261;-1;-1;-1;-1;;Cold Ass-Strait
@@ -142,13 +142,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10825;8029;impassable;-1;-1;-1;-1;-1;;Himalayas
 10910;1991;impassable;-1;-1;-1;-1;-1;;Himalayas
 10910;12807;impassable;-1;-1;-1;-1;-1;;Himalayas
-12730;2098;impassable;-1;-1;-1;-1;-1;;Himalayas
-12730;5018;impassable;-1;-1;-1;-1;-1;;Himalayas
-10810;5018;impassable;-1;-1;-1;-1;-1;;Himalayas
-1996;5018;impassable;-1;-1;-1;-1;-1;;Himalayas
-1996;8041;impassable;-1;-1;-1;-1;-1;;Himalayas
-1996;5102;impassable;-1;-1;-1;-1;-1;;Himalayas
-4318;5102;impassable;-1;-1;-1;-1;-1;;Himalayas
+12730;2098;;-1;-1;-1;-1;-1;;Himalayas
+12730;5018;;-1;-1;-1;-1;-1;;Himalayas
+10810;5018;;-1;-1;-1;-1;-1;;Himalayas
+1996;5018;;-1;-1;-1;-1;-1;;Himalayas
+1996;8041;;-1;-1;-1;-1;-1;;Himalayas
+1996;5102;;-1;-1;-1;-1;-1;;Himalayas
+4318;5102;;-1;-1;-1;-1;-1;;Himalayas
 1898;8029;impassable;-1;-1;-1;-1;-1;;Himalayas
 1898;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 3989;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
@@ -200,11 +200,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 671;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
 3675;668;impassable;-1;-1;-1;-1;-1;;austrian alps
 3674;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
-3674;6691;impassable;-1;-1;-1;-1;-1;;austrian alps
-6691;6687;impassable;-1;-1;-1;-1;-1;;austrian alps
-6691;9650;impassable;-1;-1;-1;-1;-1;;austrian alps
 9650;3684;impassable;-1;-1;-1;-1;-1;;austrian alps
-3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
+3314;6336;sea;2752;-1;-1;-1;-1;;Afsluitdijk
 13058;10245;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
 13058;12512;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
 13058;10636;impassable;-1;-1;-1;-1;-1;;Greenland Glacier
@@ -217,4 +214,83 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 13312;7982;sea;2919;-1;-1;-1;-1;;South Iran
 761;13315;sea;9092;-1;-1;-1;-1;;Ontario
 13196;13314;sea;9092;-1;-1;-1;-1;;Northern Quebec
--1;-1;;-1;-1;-1;-1;-1;-1 
+8053;10476;impassable;-1;-1;-1;-1;-1;;Paropamisus Mountains
+12788;10476;impassable;-1;-1;-1;-1;-1;;Paropamisus Mountains
+12788;10896;impassable;-1;-1;-1;-1;-1;;Paropamisus Mountains
+1995;10896;impassable;-1;-1;-1;-1;-1;;Paropamisus Mountains
+10852;7584;impassable;-1;-1;-1;-1;-1;;North Afghanistan
+10852;12248;impassable;-1;-1;-1;-1;-1;;North Afghanistan
+12877;7584;impassable;-1;-1;-1;-1;-1;;North Afghanistan
+10781;12248;impassable;-1;-1;-1;-1;-1;;North Afghanistan
+10781;12314;impassable;-1;-1;-1;-1;-1;;North Afghanistan
+10789;7916;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+10789;1995;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+10789;2078;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+5064;2078;impassable;-1;-1;-1;-1;-1;;South Afghanistan
+1421;10184;sea;2899;-1;-1;-1;-1;;Sulu-Mindanao
+4211;4409;sea;5641;-1;-1;-1;-1;;Sumatra-Kalimantan
+10181;1098;sea;8822;-1;-1;-1;-1;;Sula-Kalimantan
+4493;7369;sea;5343;-1;-1;-1;-1;;Sula-Mol
+10409;12386;sea;5320;-1;-1;-1;-1;;Mol-Pap
+13384;13386;sea;5838;-1;-1;-1;-1;;Zadar-Dal
+13560;13556;sea;13517;-1;-1;-1;-1;;Savl-EastSavl
+13560;13561;sea;13517;-1;-1;-1;-1;;Savl-NorthernSavl
+13557;13558;sea;13533;-1;-1;-1;-1;;Island-Anotherisland
+13558;13566;sea;13533;-1;-1;-1;-1;;Island-AnAnotherisland
+11422;588;sea;13392;-1;-1;-1;-1;;Dnipro-Zaporo
+3468;9519;sea;13393;-1;-1;-1;-1;;Cherk-Vara
+7477;4563;sea;1271;-1;-1;-1;-1;;Turkbridge
+362;11265;sea;2309;-1;-1;-1;-1;;DNZ-NEM
+3340;6334;sea;2358;-1;-1;-1;-1;;VOR-HIN
+13313;8051;sea;2691;-1;-1;-1;-1;;BAH-QAT
+13313;12702;sea;2691;-1;-1;-1;-1;;BAH-SAU
+6449;13397;sea;2871;-1;-1;-1;-1;;ChannelIslands
+11833;13623;sea;5579;-1;-1;-1;-1;;tos
+13385;13622;sea;5786;-1;-1;-1;-1;;zadar2
+13386;13616;sea;5838;-1;-1;-1;-1;;zadar3
+3868;13616;sea;5838;-1;-1;-1;-1;;zadar4
+8085;13367;sea;2896;-1;-1;-1;-1;;kuwait
+4056;10011;impassable;-1;1;1;1;1;;Japan
+5069;12073;impassable;-1;1;1;1;1;;Egypt
+12406;1814;impassable;-1;1;1;1;1;;Austroasia
+4279;12299;impassable;-1;1;1;1;1;;dutchmalau
+690;11655;impassable;-1;-1;-1;-1;-1;;
+3743;6571;impassable;-1;-1;-1;-1;-1;;
+3899;3915;impassable;-1;-1;-1;-1;-1;;
+3898;3915;impassable;-1;-1;-1;-1;-1;;
+3665;6667;impassable;-1;-1;-1;-1;-1;;
+672;11664;impassable;-1;-1;-1;-1;-1;;
+11609;11614;impassable;-1;-1;-1;-1;-1;;
+3711;6763;impassable;-1;-1;-1;-1;-1;;
+3665;11605;impassable;-1;-1;-1;-1;-1;;
+3898;6915;impassable;-1;-1;-1;-1;-1;;
+9628;11609;impassable;-1;-1;-1;-1;-1;;
+9685;11689;impassable;-1;-1;-1;-1;-1;;
+654;9632;impassable;-1;-1;-1;-1;-1;;
+670;3667;impassable;-1;-1;-1;-1;-1;;
+690;11619;impassable;-1;-1;-1;-1;-1;;
+3689;11672;impassable;-1;-1;-1;-1;-1;;
+660;690;impassable;-1;-1;-1;-1;-1;;
+9626;9632;impassable;-1;-1;-1;-1;-1;;
+1450;6763;impassable;-1;-1;-1;-1;-1;;
+727;3743;impassable;-1;-1;-1;-1;-1;;
+11605;6679;impassable;-1;-1;-1;-1;-1;;
+727;9548;impassable;-1;-1;-1;-1;-1;;
+711;11672;impassable;-1;-1;-1;-1;-1;;
+3743;9704;impassable;-1;-1;-1;-1;-1;;
+3728;9685;impassable;-1;-1;-1;-1;-1;;
+6436;7554;impassable;-1;-1;-1;-1;-1;;
+6571;9425;impassable;-1;-1;-1;-1;-1;;
+3689;11655;impassable;-1;-1;-1;-1;-1;;
+660;3676;impassable;-1;-1;-1;-1;-1;;
+727;11689;impassable;-1;-1;-1;-1;-1;;
+11617;11664;impassable;-1;-1;-1;-1;-1;;
+3898;6931;impassable;-1;-1;-1;-1;-1;;
+6667;9619;impassable;-1;-1;-1;-1;-1;;
+6692;11617;impassable;-1;-1;-1;-1;-1;;
+670;11609;impassable;-1;-1;-1;-1;-1;;
+672;6674;impassable;-1;-1;-1;-1;-1;;
+1455;6436;impassable;-1;-1;-1;-1;-1;;
+711;3728;impassable;-1;-1;-1;-1;-1;;
+711;11689;impassable;-1;-1;-1;-1;-1;;
+-1;-1;;-1;-1;-1;-1;-1;-1

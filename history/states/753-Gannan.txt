@@ -9,9 +9,7 @@ state={
 	state_category = rural
 	history={
 		owner = QNG
-		add_core_of = XSM
 		add_core_of = QNG
-		add_core_of = PRC
 		victory_points = {
 			2045 1 
 		}
@@ -27,7 +25,7 @@ state={
 					}
 
 				}
-				QNG = {
+				CHI = {
 					transfer_state = PREV
 
 				}

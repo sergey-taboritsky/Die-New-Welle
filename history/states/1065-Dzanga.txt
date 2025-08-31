@@ -1,0 +1,22 @@
+state={
+	id=1065
+	name="Dzanga"
+
+	history={
+		owner = EWA
+		add_core_of = EWA
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		8078 11012 13699 13704
+	}
+	manpower=65735
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

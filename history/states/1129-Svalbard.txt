@@ -1,0 +1,29 @@
+state={
+	id=1129
+	name="Svalbard"
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 1
+			13254 = {
+				naval_base = 3
+			}
+			13555 = {
+				naval_base = 1
+			}	
+			13559 = {
+				naval_base = 1
+			}	
+		}
+		victory_points = { 13254 3 } #Longyearbyen
+		add_core_of = NOR
+	}
+
+	provinces={
+		13254 13555 13556 13559 13560 13561 13562 13563 13564 13565 
+	}
+	manpower=1601
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}

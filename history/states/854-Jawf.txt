@@ -2,13 +2,11 @@ state={
 	id=854
 	name="STATE_854"
 	provinces={
-		2057 4974 8101 10815 10901 
+		2057 4974 8101 10815 10901 13479 13481 13482 13483 13484 
 	}
 	history = {
 		owner = ARB
 		add_core_of = ARB
-		add_core_of = NNG
-		
 	}
 	manpower=5000
 	state_category=pastoral

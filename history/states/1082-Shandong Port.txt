@@ -1,0 +1,29 @@
+state={
+	id=1082
+	name="Laoshan"
+
+	history={
+		owner = QNG
+		add_core_of = QNG
+		buildings = {
+			infrastructure = 3
+			4205 = {
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+
+		1938.10.25 = {
+			controller = JAP
+		}
+	}
+
+	provinces={
+		4205
+	}
+	manpower=3734454
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

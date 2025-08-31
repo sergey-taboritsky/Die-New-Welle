@@ -1,6 +1,6 @@
 state=
 {
-	id=559
+	id = 559
 	name = "STATE_559"
 	manpower = 771671# was 1028895
 	resources = {
@@ -10,9 +10,8 @@ state=
 	state_category = rural
 	
 	history={
-		owner = ETH
-		add_core_of = ETH
-		
+		owner = ITA
+		add_core_of = SOM
 		victory_points = {
 			12991 3 
 		}

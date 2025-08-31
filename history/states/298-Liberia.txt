@@ -26,7 +26,7 @@ state=
 		add_core_of = EWA
 	}
 	provinces={
-		7959 8006
+		7959 8006 13698 13697 13702
 	}
 
 	local_supplies=0.0 

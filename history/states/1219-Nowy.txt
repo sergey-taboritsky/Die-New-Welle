@@ -1,0 +1,32 @@
+state={
+	id=1219
+	name="Nowy"
+	
+	history = {
+		buildings = {
+			infrastructure = 4
+
+		}
+		owner = POL
+		add_core_of = POL
+		add_core_of = GLC
+
+		victory_points = {
+			442 3 
+		}
+
+		resources={
+			steel=5.000
+			oil=3.000
+		}
+
+	}
+	
+	provinces={
+		417 442 466 3410 6499 6522 11398 11413 11507
+	}
+	manpower=965442
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

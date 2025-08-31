@@ -1,0 +1,21 @@
+state={
+	id=1108
+	name="Varena"
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+		add_core_of = LIT
+	}
+
+	provinces={
+		13485
+	}
+	manpower=9533
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

@@ -1,0 +1,23 @@
+state={
+	id=1169
+	name="Lebork"
+
+	impassable = no
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = PRE
+		buildings = {
+			infrastructure = 3
+		}
+		
+	}
+
+	provinces={
+		13601
+	}
+	manpower=10234
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

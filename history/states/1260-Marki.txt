@@ -1,0 +1,25 @@
+state={
+	id=1260
+	name="Marki"
+
+	impassable = no
+	
+	history = {
+
+		owner = POL
+		add_core_of = POL
+
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+	
+	provinces={
+		524 11385
+	}
+	manpower=192311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

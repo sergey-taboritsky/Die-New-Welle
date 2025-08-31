@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		add_core_of = GUI
+		add_core_of = GYA
 		owner = GBR
 		victory_points = {
 			4982 1

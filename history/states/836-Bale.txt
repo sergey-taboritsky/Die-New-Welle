@@ -1,5 +1,5 @@
 state = {
-	id=836 # Bale
+	id = 836 # Bale
 	name = "STATE_836"
 	manpower = 800000
 	resources = {

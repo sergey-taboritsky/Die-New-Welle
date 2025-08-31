@@ -1,0 +1,23 @@
+state={
+	id=1131
+	name="Svenkoya"
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 1	
+			13557 = {
+				naval_base = 1
+			}	
+		}
+		#victory_points = { 13254 3 } #Longyearbyen
+		add_core_of = NOR
+	}
+
+	provinces={
+		13557 13558 13566
+	}
+	manpower=101
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}

@@ -20,8 +20,6 @@ state={
 			infrastructure = 2
 		}
 		add_core_of = SBU
-		add_core_of = HSG
-		add_core_of = BOS
 		add_core_of = BOS
 		add_core_of = HRZ
 	}

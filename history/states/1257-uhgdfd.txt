@@ -1,0 +1,25 @@
+state={
+	id=1257
+	name="trsgfd"
+
+	impassable = no
+	
+	history = {
+
+		owner = ROM
+		add_core_of = ROM
+
+		buildings = {
+			infrastructure = 3 
+		}
+
+	}
+	
+	provinces={
+		713 3696
+	}
+	manpower=52311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

@@ -1,5 +1,5 @@
 state = {
-	id=754
+	id = 754
 	name = "STATE_754"
 	provinces = {
 		1882 4536 4888 7270 10490 10817 11448 12732 12815 
@@ -9,9 +9,7 @@ state = {
 	state_category = rural
 	history = {
 		owner = QNG
-		add_core_of = XSM
 		add_core_of = QNG
-		add_core_of = PRC
 
 		victory_points = {
 			12732 10 #Was 3 when it was Lanzhou, but should be Xining, the capital of Xibei 
@@ -31,7 +29,7 @@ state = {
 					}
 
 				}
-				QNG = {
+				CHI = {
 					transfer_state = PREV
 
 				}

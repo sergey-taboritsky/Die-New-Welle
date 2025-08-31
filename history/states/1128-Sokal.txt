@@ -1,0 +1,21 @@
+state={
+	id=1128
+	name="Sokal"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 13497 10 } #Ettelbruck
+		add_core_of = POL
+		add_core_of = UKR
+	}
+
+	provinces={
+		13495
+	}
+	manpower=91101
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,18 @@
+state={
+	id=1056
+	name="North Cameroons"
+	
+	impassable = no
+	
+	history={
+		owner = EWA
+		add_core_of = EWA
+	}
+	provinces={
+		4889 8109
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

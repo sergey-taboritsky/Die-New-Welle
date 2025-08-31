@@ -1,0 +1,18 @@
+state={
+	id=1210
+	name="STATE_1014"
+	
+	history={
+		owner = WAF
+		add_core_of = WAF
+
+	}
+	
+	provinces={
+		1956 7939 8028 8128 10758 10780 10805 10917 13580 13583 13587 13593 13598 13600 
+	}
+	manpower=43455
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,14 +1,14 @@
 state={
 	id=857
 	name="STATE_857"
-	provinces={
-		4968 5058 10892 10923 12749 
-	}
+	
 	history = {
 		owner = ARB
 		add_core_of = ARB
-		add_core_of = NNG
-		
+	}
+
+	provinces={
+		4968 5058 10850 10892 10923 12749 13471 13472 13473 13476 13477 13478 13488 
 	}
 	manpower=5000
 	state_category = pastoral

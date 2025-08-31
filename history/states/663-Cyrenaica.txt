@@ -1,21 +1,15 @@
 state={
 	id=663
 	name="STATE_663"
-	manpower = 8808
-	
-	state_category = wasteland
-
 	history={
-		owner = LBY
-		buildings = {
-			infrastructure = 1
-		}
-		add_core_of = LBY
+		owner = ITA
+		add_core_of = LBA
 	}
-
 	provinces={
-		1062 1186 4060 4063 4133 7063 7139 7206 9977 10049 12025 12079 13078 
+		1062 1186 4063 4191 4133 4200 7063 7076 7139 7206 9977 10049 10104 11951 12025 12079 13078 
 	}
-
-	local_supplies=0.0 
+	manpower=8808
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=4.000
 }

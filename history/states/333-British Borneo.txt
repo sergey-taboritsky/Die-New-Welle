@@ -12,7 +12,7 @@ state=
 
 	history=
 	{
-		owner = LNF
+		owner = MAL
 		victory_points = {
 			7371 1
 		}
@@ -28,8 +28,7 @@ state=
 				naval_base = 2
 			}
 		}
-		add_core_of = LNF
-		add_core_of = WEN
+		add_core_of = MAL
 	}
 
 	provinces={

@@ -13,8 +13,6 @@ state={
 	history={
 		owner = GBR
 		add_core_of = GBR
-		add_core_of = ENG
-		add_core_of = NOS
 		victory_points = {
 			351 8 
 		}

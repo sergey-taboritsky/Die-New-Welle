@@ -1,0 +1,26 @@
+state={
+	id=1115
+	name="Assad"
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			6883 1
+		}
+		victory_points = {
+			1606 3
+		}
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		1606 6883
+	}
+	manpower=210011
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

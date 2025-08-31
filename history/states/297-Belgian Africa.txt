@@ -1,13 +1,11 @@
-state=
-{
-	id=297
+state={
+	id = 297
 	name="STATE_297" # Equatorial Guinea
 	manpower = 185000
 	
 	state_category = enclave
 	
-	history=
-	{
+	history={
 		owner = EWA
 		add_core_of = EWA
 		victory_points = {
@@ -23,9 +21,7 @@ state=
 			}
 		}
 	}
-	provinces=
-	{
-1903 8244 	}
+	provinces={ 1903 8244 }
 
 	local_supplies=0.0 
 }

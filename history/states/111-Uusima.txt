@@ -1,6 +1,6 @@
 
 state = {
-	id=111
+	id = 111
 	name = "STATE_111" # UUSIMA
 	manpower = 559000
 	
@@ -22,7 +22,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 2 #TODO_Manu: Was 3
+			infrastructure = 2 #MM: Was 3
 			arms_factory = 2
 			industrial_complex = 1
 			air_base = 3

@@ -1,0 +1,26 @@
+state={
+	id=1139
+	name="Inner Mongolia"
+
+	impassable = no
+
+	history={
+		owner = QNG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = QNG
+
+		victory_points = {
+			8127 2 #Yinchuan
+		}
+		
+	}
+
+	provinces={
+		4783 5031 7727 7803 8055 8102 8127 10724 10770 10899 12750  
+	}
+	manpower=684543
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,24 @@
+state={
+	id=1233
+	name="Skidzyel"
+
+	impassable = no
+	
+	history={
+		add_core_of = POL
+		add_core_of = BLR
+		owner = POL
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	
+	provinces={
+		13655
+	}
+	manpower=62311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

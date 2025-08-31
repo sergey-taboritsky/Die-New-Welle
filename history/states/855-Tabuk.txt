@@ -4,11 +4,9 @@ state={
 	history = {
 		owner = ARB
 		add_core_of = ARB
-		add_core_of = HNG
-		
 	}
 	provinces={
-		1033 2027 2095 5027 7970 8092 12101 12455 
+		1033 2033 2027 2095 8092 12101 
 	}
 	manpower=500000
 	state_category = pastoral

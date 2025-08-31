@@ -1,0 +1,22 @@
+state={
+	id=1218
+	name="Zarki"
+	
+	history = {
+		buildings = {
+			infrastructure = 2
+
+		}
+		owner = POL
+		add_core_of = POL
+
+	}
+	
+	provinces={
+		13602
+	}
+	manpower=30345
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

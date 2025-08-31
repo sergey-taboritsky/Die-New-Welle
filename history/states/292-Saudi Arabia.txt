@@ -14,12 +14,11 @@ state={
 			12727 5 
 		}
 		add_core_of = ARB
-		add_core_of = NNG
 
 	}
 
 	provinces={
-		5024 5093 7995 8004 8060 12727 12813 12870 
+		5024 7995 8004 8060 12727 12813 12870 13467 13468 13470 13474
 	}
 	manpower=1000000
 	buildings_max_level_factor=1.000

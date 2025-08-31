@@ -1,6 +1,6 @@
 
 state = {
-	id=487
+	id = 487
 	name = "STATE_487"
 	manpower = 334500
 	
@@ -8,7 +8,7 @@ state = {
 
 	history = {
 
-		owner = BRZ
+		owner = BVO
 		add_core_of = BVO
 
 		buildings = {

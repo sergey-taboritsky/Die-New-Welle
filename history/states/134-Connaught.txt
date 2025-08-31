@@ -8,7 +8,7 @@ state=
 	state_category = town
 
 	history= {
-		owner = GBR
+		owner = IRE
 		victory_points = {
 			9303 3 #Galway
 		}
@@ -19,7 +19,6 @@ state=
 			infrastructure = 3 #was: 6
 		}
 		add_core_of = IRE
-		add_core_of = GBR
 	}
 
 	provinces=

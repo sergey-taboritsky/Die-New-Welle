@@ -9,9 +9,7 @@ state={
 	state_category = pastoral
 	history={
 		owner = QNG
-		add_core_of = YUN
 		add_core_of = QNG
-		add_core_of = PRC
 		victory_points = {
 			7965 3 
 		}
@@ -26,7 +24,7 @@ state={
 					}
 
 				}
-				QNG = {
+				CHI = {
 					transfer_state = PREV
 
 				}

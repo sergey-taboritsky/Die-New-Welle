@@ -1,5 +1,5 @@
 state = {
-	id=509
+	id = 509
 	name = "STATE_509" # Chaco Australis
 	manpower = 704241
 	
@@ -14,7 +14,6 @@ state = {
 
 		owner = ARG
 		add_core_of = ARG
-		
 
 		buildings = {
 			infrastructure = 1

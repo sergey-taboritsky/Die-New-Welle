@@ -1,5 +1,5 @@
 state = {
-	id=926
+	id = 926
 	name = "STATE_926" #TURKU AND PORI
 
 	manpower = 529300
@@ -23,7 +23,7 @@ state = {
 		}
 		
 		buildings = {
-			infrastructure = 2 #TODO_Manu: Was 3
+			infrastructure = 2 #MM: Was 3
 			arms_factory = 1
 			industrial_complex = 1
 			dockyard = 1
@@ -38,7 +38,7 @@ state = {
 	}
 
 	provinces = {
-		32 169 3009 3083 3117 6066 9094 9194 13101 
+		32 169 3009 3083 3117 6066 9094 9194 
 	}
 	
 	local_supplies = 0.0

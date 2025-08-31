@@ -1,0 +1,25 @@
+state={
+	id=1256
+	name="Satu"
+
+	impassable = no
+	
+	history = {
+
+		owner = ROM
+		add_core_of = ROM
+
+		buildings = {
+			infrastructure = 3 
+		}
+
+	}
+	
+	provinces={
+		746 9704 727
+	}
+	manpower=52311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

@@ -1,0 +1,20 @@
+state={
+	id=1114
+	name="Al Hawa"
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		901 1634 13411
+	}
+	manpower=100300
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

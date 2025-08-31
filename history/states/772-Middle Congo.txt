@@ -1,18 +1,23 @@
-
 state={
 	id=772
-	name="STATE_772" # Middle Congo (Brazzaville)
-	manpower = 746415
-	
-	state_category = pastoral
+	name="STATE_772"
 	resources={
-		rubber=1 # was: 1
+		rubber=1.000
 	}
-	history={
-		owner = FCA
+
+	history = {
+
+		owner = FRA
+		add_core_of = RCG
+
 		victory_points = {
-			8193 2
+			8193 3 #Brazzaville
 		}
+
+		victory_points = {
+			12975 1 #Loango
+		}
+
 		buildings = {
 			infrastructure = 2
 			12975 = {
@@ -23,8 +28,10 @@ state={
 	}
 
 	provinces={
-		2192 3109 6008 8193 12975 
+		2192 8193 12975 13682 13675 13677 13665
 	}
-
-	local_supplies=0.0 
+	manpower=746415
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

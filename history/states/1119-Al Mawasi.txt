@@ -1,0 +1,21 @@
+state={
+	id=1119
+	name="Al Mawasi"
+
+	impassable = yes
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = LBY
+	}
+
+	provinces={
+		10785
+	}
+	manpower=10101
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

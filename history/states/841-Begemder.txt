@@ -1,5 +1,5 @@
 state = {
-	id=841 # Begemder
+	id = 841 # Begemder
 	name = "STATE_841"
 	manpower = 1100000
 	resources = {
@@ -40,7 +40,7 @@ state = {
 	}
 
 	provinces = {
- 		1984 2040 13137 13241
+ 		1984 2040 13241
  	}
 
 	local_supplies = 0.0 

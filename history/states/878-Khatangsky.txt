@@ -1,6 +1,6 @@
 
 state = {
-	id=878
+	id = 878
 	name = "STATE_878" # Khatangsky
 	manpower = 15974
 	
@@ -12,7 +12,7 @@ state = {
 			infrastructure = 1
 		}
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = TAY
 	}
 
 	provinces = {

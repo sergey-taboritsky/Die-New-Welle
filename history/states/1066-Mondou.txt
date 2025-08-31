@@ -1,0 +1,22 @@
+state={
+	id=1066
+	name="Mondou"
+
+	history={
+		owner = EWA
+		add_core_of = EWA
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1993 
+	}
+	manpower=34224
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

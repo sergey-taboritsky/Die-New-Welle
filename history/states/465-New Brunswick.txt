@@ -1,5 +1,5 @@
 state = {
-	id=465
+	id = 465
 	name = "STATE_465"
 	manpower = 475020
 	
@@ -19,7 +19,11 @@ state = {
 		}
 
 		victory_points = {
-			4285 2 
+			1424 2 
+		}
+
+		victory_points = {
+			4285 1 
 		}
 		
 	}

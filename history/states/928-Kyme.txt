@@ -1,5 +1,5 @@
 state = {
-	id=928
+	id = 928
 	name = "STATE_928" #KYME
 
 	manpower = 43457
@@ -29,7 +29,7 @@ state = {
 
 
 	provinces = {
-		52 139 3061 6082 6186 9183 11056 13105 
+		52 139 3061 6082 6186 9183 11056 
 	}
 	
 	local_supplies = 0.0

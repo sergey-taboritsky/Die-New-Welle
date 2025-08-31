@@ -1,6 +1,6 @@
 
 state = {
-	id=562
+	id = 562
 	name = "STATE_562" # Okhotsk
 	manpower = 63480
 	state_category = pastoral
@@ -11,7 +11,7 @@ state = {
 			infrastructure = 1
 		}
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = FER
 	}
 
 	provinces = {

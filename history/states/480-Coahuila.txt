@@ -1,5 +1,5 @@
 state = {
-	id=480
+	id = 480
 	name = "STATE_480"
 	manpower = 827826
 	
@@ -12,8 +12,9 @@ state = {
 
 	history = {
 
-		owner = USA
+		owner = MEX
 		add_core_of = MEX
+		add_core_of = RIG
 
 		buildings = {
 			infrastructure = 2

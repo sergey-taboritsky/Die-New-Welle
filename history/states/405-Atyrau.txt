@@ -1,6 +1,6 @@
 state = {
 
-	id=405
+	id = 405
 	name = "STATE_405" #Tashkent
 
 	history = {

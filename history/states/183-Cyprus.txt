@@ -1,7 +1,7 @@
 state= {
 	id=183
 	name="STATE_183"
-	manpower = 347959
+	manpower = 247959
 	
 	state_category = rural
 	resources={
@@ -10,12 +10,8 @@ state= {
 
 	history=
 	{
-		owner = BYZ
-		add_core_of = BYZ
-		add_core_of = SRP
-		victory_points = {
-			11984 5
-		}
+		owner = GBR
+		add_core_of = CYP
 		victory_points = {
 			7193 3
 		}
@@ -28,7 +24,7 @@ state= {
 		}
 
 	}
-	provinces= { 7193 11984 }
+	provinces= { 7193 13612 13613 }
 
 	local_supplies=0.0 
 }

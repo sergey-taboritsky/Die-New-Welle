@@ -1,0 +1,23 @@
+state={
+	id=1102
+	name="Jebel al Harim"
+	
+	history={
+		owner = AMM
+		buildings = {
+			infrastructure = 3
+			10904 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = AMM
+	}
+
+	provinces={
+		10904
+	}
+	manpower=55533
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

@@ -1,0 +1,29 @@
+state={
+	id=1112
+	name="Adadan"
+	
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			12413 1 # Rumadiyah
+		}
+		victory_points = {
+			13404 3
+		}
+		victory_points = {
+			13449 3
+		}
+		add_core_of = IRQ
+	}
+
+	provinces={
+		10876 13404 13408 13449 13451 13405 13409 12413 13416 13651
+	}
+	manpower=512344
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

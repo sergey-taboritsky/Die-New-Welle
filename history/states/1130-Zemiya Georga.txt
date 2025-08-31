@@ -1,0 +1,23 @@
+state={
+	id=1130
+	name="Zemiya Georga"
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 1
+			13567 = {
+				naval_base = 1
+			}	
+		}
+		#victory_points = { 13254 3 } #Longyearbyen
+		add_core_of = RUS
+	}
+
+	provinces={
+		13567 13568
+	}
+	manpower=101
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}

@@ -1,0 +1,22 @@
+state={
+	id=1195
+	name="STATE_999"
+	
+	history={
+		owner = TUR
+		
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+		add_claim_by = SOV
+	}
+	
+	provinces={
+		7454 10403 
+	}
+	manpower=55635
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

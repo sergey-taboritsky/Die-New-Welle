@@ -1,0 +1,19 @@
+state={
+	id=1118
+	name="Tabaqah"
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LBY
+	}
+
+	provinces={
+		4962 10884 12022 12082 12866 
+	}
+	manpower=40101
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -7,8 +7,7 @@ state=
 	
 	history=
 	{
-		owner = PLI
-		add_core_of = PLI
+		owner = GBR
 		buildings = {
 			infrastructure = 1
 			1280 = {

@@ -24,7 +24,6 @@ state=
 			}
 		}
 		add_core_of = UCA
-		add_core_of = HOD
 		victory_points = {
 			12865 3 
 		}

@@ -1,0 +1,26 @@
+state={
+	id=1181
+	name="Bleisko-Biala"
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = POL
+
+		victory_points = {
+			13205 5
+		}
+
+	}
+	
+	provinces={
+		13205 
+	}
+	manpower=1023040
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=4.000
+}

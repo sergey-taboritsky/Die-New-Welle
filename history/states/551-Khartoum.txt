@@ -5,10 +5,8 @@ state={
 	manpower = 821003
 
 	history={
-		owner = EGY
+		owner = GBR
 		add_core_of = SUD
-		add_core_of = EGY
-		
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -23,7 +21,7 @@ state={
 	}
 
 	provinces={
-		2046 4138 4961 4963 7925 7989 8105 10745 12796 12806 12826 12836 12881 
+		2046 4138 4961 4963 7925 7987 7989 8105 10745 12796 12806 12826 12836 12881 13755
 	}
 	
 	buildings_max_level_factor=1.000

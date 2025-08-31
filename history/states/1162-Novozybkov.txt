@@ -1,0 +1,23 @@
+state={
+	id=1162
+	name="Novozybkov"
+
+	impassable = no
+
+	history = {
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = RUS
+		add_core_of = RUS
+
+	}
+
+	provinces={
+		288 315 343 11229 371 11298 11325 
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -9,16 +9,16 @@ state={
 		victory_points = {
 			406 1
 		}
-		owner = RUS
+		owner = POL
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = RUS
-		add_core_of = BLG
+		add_core_of = POL
+		add_core_of = BLR
 	}
 
 	provinces={
-		233 277 358 406 6340 9341 11391 
+		233 277 358 406 9341 
 	}
 
 	local_supplies=0.0 

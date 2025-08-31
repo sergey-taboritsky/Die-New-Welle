@@ -1,6 +1,6 @@
 
 state = {
-	id=829
+	id = 829
 	name = "STATE_829" #Volga Germany
 	manpower = 618530
 	

@@ -1,13 +1,11 @@
 state = {
-	id=604
+	id = 604
 	name = "STATE_604"
 
 	history = {
 
 		owner = QNG
-		add_core_of = XSM
 		add_core_of = QNG
-		add_core_of = PRC
 
 		#victory_points = {
 		#	7940 10 # Goldmud was not ofunded until in the late fifties
@@ -26,7 +24,7 @@ state = {
 					}
 
 				}
-				QNG = {
+				CHI = {
 					transfer_state = PREV
 
 				}
@@ -38,7 +36,7 @@ state = {
 	}
 
 	provinces = {
-		4914 4964 7940 8018 8037 12899 
+		4914 4964 7940 8018 12899 
 	}
 	manpower=  1196100
 	buildings_max_level_factor = 1.000

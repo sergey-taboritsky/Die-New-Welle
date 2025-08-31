@@ -6,8 +6,8 @@ state={
 	state_category = small_island
 
 	history={
-		owner = PLI
-		add_core_of = PLI
+		owner = FRA
+		add_core_of = TAH
 		buildings = {
 			infrastructure = 2
 			air_base = 1
@@ -21,7 +21,7 @@ state={
 	}
 
 	provinces={
-		10188 12148 
+		10188 12148 13659
 	}
 
 	local_supplies=0.0 

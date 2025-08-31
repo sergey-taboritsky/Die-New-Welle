@@ -1,5 +1,5 @@
 state = {
-	id=508
+	id = 508
 	name = "STATE_508" # Tucuman
 	manpower = 1141311
 	
@@ -9,7 +9,6 @@ state = {
 
 		owner = ARG
 		add_core_of = ARG
-		
 
 		buildings = {
 			infrastructure = 2

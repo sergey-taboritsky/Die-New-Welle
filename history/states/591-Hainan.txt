@@ -6,10 +6,7 @@ state={
 
 	history={
 		owner = QNG
-		add_core_of = GXC
-		
 		add_core_of = QNG
-		add_core_of = PRC
 		
 		victory_points = {
 			1070 1 
@@ -24,16 +21,6 @@ state={
 
 		}
 
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "Waking the Tiger" }
-				}
-				remove_core_of = GXC
-				QNG = { transfer_state = PREV }
-			}
-			controller = JAP
-		}
 	}
 
 	provinces={

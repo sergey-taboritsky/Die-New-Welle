@@ -1,5 +1,5 @@
 state = {
-	id=875
+	id = 875
 	name = "STATE_875" #Chukchi Peninsula
 
 	history = {
@@ -14,12 +14,13 @@ state = {
 			}
 		}
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = CKK
+		add_core_of = FER
 
 	}
 
 	provinces = {
-		13204 13254
+		13204 
 	}
 	manpower = 30000
 	buildings_max_level_factor = 1

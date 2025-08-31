@@ -1,0 +1,20 @@
+state={
+	id=1107
+	name="Zayqat"
+	
+	history={
+		owner = GBR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAY
+	}
+
+	provinces={
+		13469 13732
+	}
+	manpower=9533
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

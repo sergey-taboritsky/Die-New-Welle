@@ -3,8 +3,8 @@ state={
 	name="STATE_738"
 
 	history={
-		owner = INO
-		add_core_of = INO
+		owner = LNF
+		add_core_of = LNF
 		buildings = {
 			infrastructure = 1
 

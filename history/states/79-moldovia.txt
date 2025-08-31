@@ -1,13 +1,8 @@
-state=
-{
+state={
 	id=79
 	name="STATE_79"
-	manpower = 2806400
 	
-	state_category = rural
-	
-	history=
-	{
+	history={
 		owner = ROM
 		buildings = {
 			infrastructure = 3
@@ -21,11 +16,13 @@ state=
 			6706 1 
 		}
 		add_core_of = ROM
-		add_core_of = MOR
 	}
-	provinces=
-	{
-723 744 3728 3741 6584 6706 6729 6747 6761 9701 9716 11534 11652 11655 11672 11689 	}
-
-	local_supplies=7.0 
+	
+	provinces={
+		723 744 3728 3741 6584 6706 6729 6747 9701 9716 11534 11652 11655 11672
+	}
+	manpower=2806400
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=7.000
 }

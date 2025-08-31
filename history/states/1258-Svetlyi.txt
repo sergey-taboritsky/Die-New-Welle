@@ -1,0 +1,25 @@
+state={
+	id=1258
+	name="Svetlyi"
+
+	impassable = no
+	
+	history = {
+
+		owner = RUS
+		add_core_of = RUS
+
+		buildings = {
+			infrastructure = 3 
+		}
+
+	}
+	
+	provinces={
+		87 180 3075 3081 9041 6105 11042 11089
+	}
+	manpower=152311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

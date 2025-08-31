@@ -1,0 +1,20 @@
+state={
+	id=1060
+	name="Quan-Dao"
+
+	history={
+		add_core_of = VIN
+		owner = FRI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		1073 1157 4119 7015 7093 7518 9948 12008 12048 12065 
+	}
+	manpower=4353233
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

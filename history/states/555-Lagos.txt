@@ -8,10 +8,8 @@ state={
 
 	history={
 		owner = QNG
-		#add_core_of = JAP
-		add_core_of = QNG
-		
-		#add_claim_by = RUS # Removed because of too much aggression
+		#add_core_of = QNG
+		#add_claim_by = SOV # Removed because of too much aggression
 		buildings = {
 			infrastructure = 2
 			1399 = {

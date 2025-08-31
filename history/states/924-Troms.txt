@@ -1,5 +1,5 @@
 state = {
-	id=924
+	id = 924
 	name = "STATE_924"
 	manpower = 142100 # 355251
 	
@@ -15,13 +15,8 @@ state = {
 		}
 		owner = NOR
 		add_core_of = NOR
-		add_core_of = SAR
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_core_of = SMI
-		}
+		add_core_of = SMI
+		
 		buildings = {
 			infrastructure = 1
 			air_base = 1

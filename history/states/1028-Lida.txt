@@ -1,0 +1,23 @@
+state={
+	id=1028
+	name="STATE_1028"
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = POL
+		add_core_of = BLR
+
+	}
+	
+	provinces={
+		3366 
+	}
+	manpower=34321
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

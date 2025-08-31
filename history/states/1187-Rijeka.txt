@@ -1,0 +1,22 @@
+state={
+	id=1187
+	name="STATE_991"
+	
+	history={
+		owner = SBU
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SBU
+		#add_claim_by = ITA #added by focus
+		add_core_of = CRO
+	}
+	
+	provinces={
+		13252 
+	}
+	manpower=435566
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=5.000
+}

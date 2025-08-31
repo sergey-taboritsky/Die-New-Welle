@@ -22,7 +22,6 @@ state=
 			}
 		}
 		add_core_of = UCA
-		add_core_of = SAW
 		victory_points = {
 			12823 3
 		}

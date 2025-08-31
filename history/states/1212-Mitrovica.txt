@@ -1,0 +1,24 @@
+state={
+	id=1212
+	name="STATE_1016"
+	
+	history = {
+		owner = SBU
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SBU
+		add_core_of = KOS
+		add_core_of = SER
+
+	}
+	
+	provinces={
+		9890 
+	}
+	manpower=230345
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

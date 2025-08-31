@@ -1,16 +1,13 @@
-state=
-{
+state={
 	id=743
 	name="STATE_743"
 	manpower = 385000
 	state_category = large_town
 	
 	
-	history=
-	{
+	history={
 		owner = QNG
 		add_core_of = QNG
-		add_core_of = PRC
 		victory_points = {
 			10000 5 
 		}

@@ -1,21 +1,24 @@
-state={
-	id=901
-	name="STATE_901"
+state = {
+	id = 901
+	name = "STATE_901"
 	manpower = 166240
 	state_category = pastoral
 
-	history={
+	history = {
+
 		owner = EWA
 		add_core_of = EWA
+
 		buildings = {
 			infrastructure = 1
 		}
+
 	}  
 
-	provinces={
-		4997 5028 8109 10820 
+	provinces = {
+		4997 5028 10820 
 	}
 
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
 }

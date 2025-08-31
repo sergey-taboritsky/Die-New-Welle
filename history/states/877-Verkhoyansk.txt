@@ -1,5 +1,5 @@
 state = {
-	id=877
+	id = 877
 	name = "STATE_877" # Verkhoyansk
 
 	history = {
@@ -11,7 +11,7 @@ state = {
 			infrastructure = 1
 		}
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = YAK
 
 	}
 

@@ -1,0 +1,19 @@
+state={
+	id=1117
+	name="Tarfaya Strip"
+
+	history={
+		owner = SPC
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MOC
+	}
+
+	provinces={
+		10900 13637
+	}
+	manpower=30101
+	buildings_max_level_factor=1.000
+	state_category=town
+}

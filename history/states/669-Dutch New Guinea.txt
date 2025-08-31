@@ -6,8 +6,8 @@ state={
 	state_category = pastoral
 
 	history= {
-		owner = INO
-		add_core_of = INO
+		owner = LNF
+		add_core_of = LNF
 		victory_points = {
 			12371 1 
 		}

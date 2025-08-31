@@ -5,13 +5,13 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = GFA
+		owner = ESA
 		buildings = {
 			infrastructure = 2
 
 		}
 		
-		add_core_of = GFA
+		add_core_of = ESA
 		add_core_of = NMB
 
 	}

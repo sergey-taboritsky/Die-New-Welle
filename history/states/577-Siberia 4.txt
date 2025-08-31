@@ -1,6 +1,6 @@
 
 state = { 
-	id=577 # Surgut
+	id = 577 # Surgut
 	manpower = 29299
 	name = "STATE_577"
 	resources = {
@@ -15,7 +15,7 @@ state = {
 			infrastructure = 1
 		}
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = OVO
 	}
 
 	provinces = {

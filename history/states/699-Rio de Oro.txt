@@ -7,7 +7,7 @@ state={
 
 	history={
 		owner = SPC
-		add_core_of = MOC
+		add_claim_by = WES
 		buildings = {
 			infrastructure = 1
 			8038 = {
@@ -20,7 +20,7 @@ state={
 	}
 	
 	provinces={
-		4920 5012 7979 8038 8111 10875
+		4920 5012 8038 8111 10875 13635 13640 
 	}
 
 	local_supplies=0.0 

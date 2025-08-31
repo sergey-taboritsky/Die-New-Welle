@@ -1,0 +1,21 @@
+state={
+	id=1136
+	name="Hami"
+
+	impassable = no
+
+	history={
+		owner = QNG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = QNG
+	}
+
+	provinces={
+		7808
+	}
+	manpower=23043
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

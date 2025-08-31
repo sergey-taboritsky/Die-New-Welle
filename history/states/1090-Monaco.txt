@@ -1,0 +1,26 @@
+state={
+	id=1090
+	name="Monaco"
+	
+	history = {
+
+		owner = MCO
+		add_core_of = MCO
+
+		buildings = {
+			infrastructure = 4
+			13458 = {
+				naval_base = 2
+			}	
+		}
+
+	}
+
+	provinces={
+		13458
+	}
+	manpower=43110
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

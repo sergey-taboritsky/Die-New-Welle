@@ -9,8 +9,6 @@ state={
 	{
 		owner = QNG
 		add_core_of = QNG
-		add_core_of = MAN
-		add_core_of = PRC
 		victory_points = {
 			1150 1 
 		}

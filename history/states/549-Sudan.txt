@@ -9,10 +9,8 @@ state={
 		victory_points = {
 			2096 1 
 		}
-		owner = EGY
+		owner = GBR
 		add_core_of = SUD
-		add_core_of = EGY
-		
 		buildings = {
 			infrastructure = 2
 
@@ -21,7 +19,7 @@ state={
 	}
 
 	provinces={
-		2016 4033 8052 8084 10739 10795 10827 10851 12744 
+		2016 4033 8052 8084 10739 10795 10827 10851 12744 13748 13746 13743 13745 13747
 	}
 
 	buildings_max_level_factor=1.000

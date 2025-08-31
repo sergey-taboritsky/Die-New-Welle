@@ -1,13 +1,13 @@
 state = {
-	id=844
+	id = 844
 	name = "STATE_844"
 	manpower = 1028895
 	
 	state_category = pastoral
 	
 	history = {
-		owner = EMA
-		add_core_of = EMA
+		owner = ITA
+		add_core_of = SOM
 		victory_points = {
 		 	12941 1 
 		}

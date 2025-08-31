@@ -1,0 +1,22 @@
+state={
+	id=1163
+	name="Feres"
+
+	impassable = no
+
+	history = {
+		owner = BYZ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = BYZ
+
+	}
+
+	provinces={
+		11905
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

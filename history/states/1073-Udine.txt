@@ -1,0 +1,28 @@
+state={
+	id=1073
+	name="Udine"
+
+	history = {
+		owner = ITA
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = ITA
+		add_core_of = LBV
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+
+	}
+
+	provinces={
+		628 3657 6656 9613
+	}
+	manpower=665356
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

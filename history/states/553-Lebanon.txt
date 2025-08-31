@@ -20,9 +20,7 @@ state={
 			}
 		}
 
-		add_core_of = LBN
 		add_core_of = LEV
-		
 	}
 
 	provinces={

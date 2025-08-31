@@ -1,15 +1,10 @@
-
 state={
 	id=557
-	name="STATE_557" # Mauritania
-	manpower = 225000
+	name="STATE_557"
 	
-	state_category = pastoral
-
 	history={
 		owner = WAF
 		add_core_of = WAF
-		
 		victory_points = {
 			5034 1
 		}
@@ -18,10 +13,12 @@ state={
 		}
 
 	}
-
+	
 	provinces={
-		5034 5077 7992 8058 10814
+		5034 5077 8058 10814 13641 7992
 	}
-
-	local_supplies=0.0 
+	manpower=225000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

@@ -1,0 +1,22 @@
+state={
+	id=1153
+	name="Andkhov"
+
+	impassable = no
+
+	history={
+		owner = AFK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AFK
+		
+	}
+
+	provinces={
+		7448 12877
+	}
+	manpower=243543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,20 @@
+state={
+	id=1052
+	name="STATE_1052"
+
+	history={
+		owner = QNG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = QNG
+	}
+
+	provinces={
+		4873 
+	}
+	manpower=54566
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

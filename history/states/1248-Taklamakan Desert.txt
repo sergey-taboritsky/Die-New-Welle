@@ -1,0 +1,22 @@
+state={
+	id=1248
+	name="Taklamakan Desert"
+
+	impassable = yes
+	
+	history={
+		add_core_of = QNG
+		owner = QNG
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	
+	provinces={
+		8042
+	}
+	manpower=2311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

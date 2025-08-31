@@ -7,7 +7,7 @@ state={
 	
 	history=
 	{
-		owner = ISL
+		owner = GBR
 		buildings = {
 			infrastructure = 2
 			2188 = {

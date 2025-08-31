@@ -13,7 +13,6 @@ state={
 
 		}
 		add_core_of = SPC
-		add_core_of = ADU
 
 	}
 

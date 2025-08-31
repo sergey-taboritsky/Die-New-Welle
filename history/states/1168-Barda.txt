@@ -1,0 +1,28 @@
+state={
+	id=1168
+	name="Barda"
+
+	impassable = no
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 2
+		}
+
+		victory_points = {
+			11674 1 
+		}
+
+		add_core_of = RUS
+		add_core_of = AZR
+		
+	}
+
+	provinces={
+		1539 1610 11674 11704 
+	}
+	manpower=543543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

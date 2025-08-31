@@ -1,0 +1,23 @@
+state={
+	id=1172
+	name="Szczecinek"
+
+	impassable = no
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = PRE
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+		9252 11260 11288 11316
+	}
+	manpower=643543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,22 @@
+state={
+	id=1039
+	name="STATE_1039"
+	
+	history={
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	
+	provinces={
+		6500 11562 
+	}
+	manpower=324344
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

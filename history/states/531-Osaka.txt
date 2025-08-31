@@ -1,6 +1,6 @@
 
 state = {
-	id=531
+	id = 531
 	name = "STATE_531" # Kansai
 	manpower = 11015000
 	state_category = metropolis
@@ -11,9 +11,7 @@ state = {
 	history = {
 
 		owner = QNG
-		add_core_of = JAP
 		add_core_of = QNG
-		
 
 		buildings = {
 			infrastructure = 4 #was: 8

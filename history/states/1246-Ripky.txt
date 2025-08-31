@@ -1,0 +1,26 @@
+state={
+	id=1246
+	name="Ripky"
+
+	impassable = no
+	
+	history={
+		add_core_of = RUS
+		add_core_of = UKR
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			3568 3
+		}
+	}
+	
+	provinces={
+		489 3568 546
+	}
+	manpower=182311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

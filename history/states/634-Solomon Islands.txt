@@ -3,8 +3,8 @@ state={
 	name="STATE_634"
 
 	history={
-		owner = PLI
-		add_core_of = PLI
+		owner = AUT
+		add_core_of = SOL
 		buildings = {
 			infrastructure = 1
 			1269 = {

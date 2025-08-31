@@ -29,7 +29,6 @@ state={
 			7566 1 
 		}
 		add_core_of = AUT
-		
 
 	}
 

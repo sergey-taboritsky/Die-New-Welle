@@ -7,20 +7,19 @@ state={
 		rubber=3 # was: 4
 	}
 	history={
-		owner = EMA
+		owner = GBR
 		buildings = {
 			infrastructure = 2
 
 		}
-		add_core_of = EMA
-		
+		add_core_of = UGA
 		victory_points = {
 			12989 1
 		}
 	}
 
 	provinces={
-		3854 7088 7133 8223 12929 12989 13177 
+		3854 7088 7133 8223 12929 12989 
 	}
 	manpower=3515625
 	buildings_max_level_factor=1.000

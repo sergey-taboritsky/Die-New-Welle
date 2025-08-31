@@ -12,8 +12,8 @@ state={
 	}
 
 	history={
-		owner = INO
-		add_core_of = INO
+		owner = LNF
+		add_core_of = LNF
 		victory_points = {
 			7381 5
 		}

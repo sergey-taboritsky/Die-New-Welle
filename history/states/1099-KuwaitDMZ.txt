@@ -1,0 +1,23 @@
+state={
+	id=1099
+	name="Al Wafrah zone"
+	
+	history={
+		owner = GBR
+		buildings = {
+			infrastructure = 1
+		}
+
+		set_demilitarized_zone = yes
+
+		add_core_of = KUW
+	}
+
+	provinces={
+		13433
+	}
+	manpower=32411
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

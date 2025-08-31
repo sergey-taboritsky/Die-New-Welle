@@ -9,7 +9,6 @@ state={
 	history={
 		owner = SPC
 		add_core_of = GLC
-		add_core_of = GAC
 		victory_points = {
 			758 5
 		}

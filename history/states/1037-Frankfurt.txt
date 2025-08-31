@@ -1,0 +1,45 @@
+state={
+	id=1037
+	name="STATE_1037"
+	
+	history = {
+
+		owner = GER
+		add_core_of = GER
+		add_core_of = HES
+		add_core_of = PRE
+
+		buildings = {
+
+			infrastructure = 4
+
+		}
+		
+		set_demilitarized_zone = yes
+
+		victory_points = {
+			6488 20 # Frankfurt
+		}
+
+		victory_points = {
+			6444 2 # Wiesbaden
+		}
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+				arms_factory = 4
+				# From "Develop Heraeus Research Facilities"
+				industrial_complex = 4
+			}
+		}
+	}
+	
+	provinces={
+		589 3574 6444 6488 9486 
+	}
+	manpower=2798235
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

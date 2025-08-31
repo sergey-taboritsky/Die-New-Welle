@@ -1,5 +1,5 @@
 state = {
-	id=876 
+	id = 876 
 	name = "STATE_876" #Udachny
 
 	history = {
@@ -14,7 +14,7 @@ state = {
 		}
 
 		add_core_of = RUS
-		add_core_of = SIB
+		add_core_of = YAK
 
 	}
 

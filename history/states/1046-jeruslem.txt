@@ -1,0 +1,24 @@
+state={
+	id=1046
+	name="STATE_1046"
+	
+	history={
+		owner = LEV
+		buildings = {
+			infrastructure = 5 
+			industrial_complex = 2
+		}
+		victory_points = {
+			13391 3 
+		}
+		add_core_of = LEV
+	}
+	
+	provinces={
+		13391 
+	}
+	manpower=554543
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

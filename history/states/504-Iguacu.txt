@@ -1,6 +1,6 @@
 
 state = {
-	id=504
+	id = 504
 	name = "STATE_504"
 	manpower = 229900
 	
@@ -10,7 +10,6 @@ state = {
 
 		owner = BRZ
 		add_core_of = BRZ
-		
 
 		buildings = {
 			infrastructure = 1

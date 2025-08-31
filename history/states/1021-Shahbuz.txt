@@ -1,0 +1,23 @@
+state={
+	id=1021
+	name="STATE_1021"
+	
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = RUS
+		add_core_of = AZR
+
+	}
+	
+	provinces={
+		6997 
+	}
+	manpower=123434
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

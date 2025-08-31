@@ -1,0 +1,30 @@
+state={
+	id=1188
+	name="STATE_992"
+	
+	history = {
+
+		owner = GER
+		add_core_of = GER
+		add_core_of = PRE
+
+		buildings = {
+			infrastructure = 4
+			anti_air_building = 2
+			air_base = 6
+		}
+		
+		victory_points = {
+			13607 10
+		}
+		
+	}
+	
+	provinces={
+		13607
+	}
+	manpower=5354555
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=5.000
+}

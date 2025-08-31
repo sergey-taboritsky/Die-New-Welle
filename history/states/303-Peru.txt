@@ -1,6 +1,6 @@
 
 state = {
-	id=303
+	id = 303
 	name = "STATE_303" # Lima
 	manpower = 3563249
 	resources = {
@@ -11,8 +11,8 @@ state = {
 
 	history = {
 
-		owner = BRZ
-		
+		owner = PRU
+		add_core_of = PRU
 
 		buildings = {
 			infrastructure = 2

@@ -1,0 +1,25 @@
+state={
+	id=1241
+	name="Homs"
+
+	impassable = no
+	
+	history={
+		add_core_of = SYR
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3942 1
+		}
+	}
+	
+	provinces={
+		1072 13420 3942
+	}
+	manpower=122311
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	local_supplies=0.000
+}

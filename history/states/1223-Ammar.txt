@@ -1,0 +1,21 @@
+state={
+	id=1223
+	name="Ammar"
+	
+	history={
+		add_core_of = JOR
+		owner = JOR
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	
+	provinces={
+		13646
+	}
+	manpower=3311
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

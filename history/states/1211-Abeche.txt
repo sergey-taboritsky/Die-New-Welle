@@ -1,0 +1,18 @@
+state={
+	id=1211
+	name="STATE_1015"
+	
+	history={
+		owner = FRA
+		add_core_of = CHA
+
+	}
+	
+	provinces={
+		1473 3123 4897 4978 13592 13595 13596 13597 13599 
+	}
+	manpower=32044
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

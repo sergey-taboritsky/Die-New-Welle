@@ -5,8 +5,7 @@ state={
 	state_category = tiny_island
 	
 	history= {
-		owner = EWA
-		add_core_of = EWA
+		owner = GBR
 		buildings = {
 			infrastructure = 1
 			13016 = {
