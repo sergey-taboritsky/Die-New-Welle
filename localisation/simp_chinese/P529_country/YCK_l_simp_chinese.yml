@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ YCK_authoritarian_democrat: "尤卡坦共和国"
+ YCK_authoritarian_democrat_DEF: "尤卡坦共和国"
+ YCK_authoritarian_democrat_ADJ: "尤卡坦"
+ YCK_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ YCK_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ YCK_autonomy_puppet: "$OVERLORDADJ$属尤卡坦"
+ YCK_autonomy_puppet_DEF: "$OVERLORDADJ$属尤卡坦"
+ YCK: "尤卡坦"
+ YCK_DEF: "尤卡坦"
+ YCK_ADJ: "尤卡坦"

@@ -1,0 +1,114 @@
+﻿division_template = {
+	name = "Infantry Division"			# 1st - 5th divisions = fully equipped, others = reserve divisions
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+
+
+units = {
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11293
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 285
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7394
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6313
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9303
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11371
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 385
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3379
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	#Aldershot Command
+	division= {	# "1st Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 303
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+}

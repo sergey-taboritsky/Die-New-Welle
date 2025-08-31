@@ -1,0 +1,29 @@
+
+state={
+	id=354
+	name="STATE_354"
+	manpower = 1031129
+	
+	state_category = town
+
+	history={
+		owner = TRA
+		
+		victory_points = {
+			9932 15
+		}
+		buildings = {
+			infrastructure = 2
+			9932 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = TRA
+	}
+
+	provinces={
+		3714 3979 9886 9932 11753
+	}
+
+	local_supplies=0.0 
+}

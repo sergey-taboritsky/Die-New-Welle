@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ITA_authoritarian_democrat: "意大利王国"
+ ITA_authoritarian_democrat_DEF: "意大利王国"
+ ITA_authoritarian_democrat_ADJ: "意大利"
+ ITA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ITA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ITA_autonomy_puppet: "$OVERLORDADJ$属意大利"
+ ITA_autonomy_puppet_DEF: "$OVERLORDADJ$属意大利"
+ ITA: "意大利"
+ ITA_DEF: "意大利"
+ ITA_ADJ: "意大利"

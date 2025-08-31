@@ -1,0 +1,8 @@
+SOV_revolt_fa = {
+	color = rgb { 224 5 5 }
+	color_ui = rgb { 193 81 81 }
+}
+SOV_fa = {
+	color = rgb { 224 5 5 }
+	color_ui = rgb { 193 81 81 }
+}

@@ -1,0 +1,1392 @@
+GBR_economic_decision = {
+	collapsing_ecnonmic = {          
+		available = {            
+			check_variable = {
+				GBR_stable_degree > 99
+				tooltip = GBR_stable_degree_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 365
+		timeout_effect = {
+			#解体，内战
+			country_event = {
+				id = GBR_decision_event.1
+			}
+		}
+		complete_effect = {   
+			add_political_power = 100
+		}
+	}
+	IRE_separate = {          
+		available = {            
+			always = no
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 150
+		timeout_effect = {
+			country_event = {
+				id = GBR_decision_event.2
+			}
+		}
+		complete_effect = {   
+			
+		}
+	}
+	SCO_separate = {          
+		available = {            
+			SCO = {
+				exists = yes
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 150
+		timeout_effect = {
+			country_event = {
+				id = GBR_decision_event.8
+			}
+		}
+		complete_effect = {   
+			add_political_power = 100
+		}
+	}
+	WEI_separate = {          
+		available = {            
+			WEI = {
+				exists = yes
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 150
+		timeout_effect = {
+			country_event = {
+				id = GBR_decision_event.9
+			}
+		}
+		complete_effect = {   
+			add_political_power = 100
+		}
+	}
+	collapsing_IND = { 
+		available = {            
+			always = no
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 150
+		timeout_effect = {
+			country_event = {
+				id = GBR_decision_event.3
+			}
+		}
+		complete_effect = {   
+			
+		}
+		
+	}
+	BAN_control = {
+        cost = 50
+		fire_only_once = yes
+		visible = {
+			has_global_flag = IND_collapsing_has_start
+		}
+        complete_effect = {
+            set_country_flag = BAN_control_complete
+			custom_effect_tooltip  = BAN_control_complete_tt
+        }
+		ai_will_do = {
+			base = 1000
+		}
+		days_remove = 30
+    }
+	GBR_local_enterprises = {
+        cost = 30
+		visible = {
+			has_completed_focus = ENG_crisis_2_A
+		}
+        remove_effect = {
+            add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		days_re_enable = 30
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_Stimulating_exports = {
+        cost = 30
+		visible = {
+			has_completed_focus = ENG_crisis_2_A
+		}
+        remove_effect = {
+            add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		days_remove = 30
+		days_re_enable = 30
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_Reduce_teacher_salaries = {
+        cost = 50
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = ENG_crisis_2_B
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_stability = -0.10
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			consumer_goods_factor = -0.1
+			research_speed_factor = -0.1
+		}
+		days_remove = 70
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_Reduce_army_salaries = {
+        custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = CP_larger_than_15_tt
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = ENG_crisis_2_B
+		}
+        complete_effect = {
+            add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_command_power = -15
+			add_timed_idea = {
+				idea = GBR_reduced_army_salaries
+				days = 365
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+        }
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_Reduce_navy_salaries = {
+        custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = CP_larger_than_15_tt
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = ENG_crisis_2_B
+		}
+        complete_effect = {
+            add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_command_power = -15
+			add_timed_idea = {
+				idea = GBR_reduced_navy_salaries
+				days = 365
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+        }
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_construction_infrastructure = {
+        cost = 50
+		visible = {
+			has_completed_focus = ENG_crisis_3_B
+			check_variable = {
+				GBR_stable_degree < 149
+				tooltip = GBR_stable_degree_lesser_than_100_tt
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+        }
+		remove_effect = {
+            random_owned_controlled_state = {
+				limit = {
+					is_core_of = GBR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			political_power_gain = -0.1
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_construction_industrial_complex = {
+        cost = 70
+		visible = {
+			has_completed_focus = ENG_crisis_3_B
+			check_variable = {
+				GBR_stable_degree < 99
+				tooltip = GBR_stable_degree_lesser_than_100_tt
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+        }
+		remove_effect = {
+            random_owned_controlled_state = {
+				limit = {
+					is_core_of = GBR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			political_power_gain = -0.1
+			civilian_factory_use = 4
+		}
+		days_remove = 60
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_sell_weapon_gun = {
+        custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		visible = {
+			has_completed_focus = ENG_crisis_3_C
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			random_country = {
+				limit = {
+					AND = {
+						OR = {
+							is_puppet_of = GBR
+						}
+						has_war = yes
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = GBR
+				}
+			}	
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			consumer_goods_factor = -0.1
+		}
+		days_remove = 30
+		ai_will_do = {
+			base = 1000
+		}
+    }
+	GBR_investment = {
+        cost = 50
+		visible = {
+			has_completed_focus = ENG_crisis_3_D
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = GBR_stable_degree
+				value = 10
+				tooltip = add_10_GBR_stable_degree_tt
+			}	
+        }
+		remove_effect = {
+			random_list = {
+				33 = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GBR
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				33 = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GBR
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				34 = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GBR
+							is_coastal = yes
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+        }
+		modifier = {
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		ai_will_do = {
+			base = 1000
+		}
+    }
+}
+
+GBR_Edward_VIII_abdicated_decision = {
+	Edward_VIII_abdicated = {          
+		available = {            
+			has_global_flag = P529_Edward_VIII_abdicated_end
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 365
+		timeout_effect = {
+		}
+		complete_effect = {   
+			country_event = {
+				id = GBR_decision_event.10
+			}
+		}
+	}
+}
+
+GBR_SOC_colonization_decision = {
+	Establish_Colonial_Affairs_Office = {
+		cost = 10
+		fire_only_once = yes
+		remove_effect = {
+            custom_effect_tooltip = Establish_Colonial_Affairs_Office_effect_tt
+        }
+		modifier = {
+			political_power_gain = -0.1
+			civilian_factory_use = 4
+		}
+		days_remove = 60
+		remove_effect = {
+			set_country_flag = P529_GBR_has_set_department
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	P529_GBR_repress_monarchy = {
+
+		cost = 50
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+			}
+		}
+
+		available = {
+			FROM = {
+				NOT = {
+					has_country_flag = P529_has_repressed_monarchy
+				}
+			}
+			has_country_flag = P529_GBR_has_set_department
+		}
+		
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			FROM = {
+				set_country_flag = P529_has_repressed_monarchy
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_1 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 468
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 468
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 468
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			468 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_2 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 468
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 468
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 468
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			468 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_chromium_construction_colonize_1 = {
+
+		cost = 50
+
+		icon = chromium
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 682
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 682
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 682
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			682 = {
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_oil_construction_colonize_1 = {
+
+		cost = 50
+
+		icon = oil
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 473
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 473
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 473
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			473 = {
+				add_resource = {
+					type = oil
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_3 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 681
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 681
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 681
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			681 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_tungsten_construction_colonize_1 = {
+
+		cost = 50
+
+		icon = tungsten
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 681
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 681
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 681
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			681 = {
+				add_resource = {
+					type = tungsten
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_4 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 522
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 522
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 522
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			522 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_5 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 285
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 285
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 285
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			285 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_6 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 521
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 521
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 521
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			521 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_7 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 519
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 519
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation2
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 519
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			519 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_8 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 517
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 517
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation4
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 517
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			517 = {
+				add_resource = {
+					type = steel
+					amount = 48
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_9 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 284
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 284
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation4
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 284
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			284 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_steel_construction_colonize_10 = {
+
+		cost = 50
+
+		icon = steel
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 723
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 723
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation4
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 723
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			723 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_oil_construction_colonize_2 = {
+
+		cost = 50
+
+		icon = oil
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 284
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 284
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 284
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			284 = {
+				add_resource = {
+					type = oil
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_rubber_construction_colonize_1 = {
+
+		cost = 50
+
+		icon = rubber
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 700
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 700
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 700
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			700 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_rubber_construction_colonize_2 = {
+
+		cost = 50
+
+		icon = rubber
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 548
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 548
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 548
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			548 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+	P529_GBR_rubber_construction_colonize_3 = {
+
+		cost = 50
+
+		icon = rubber
+
+		targets = { CAN AUT NZL ESA EWA WIE }
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = GBR
+				controls_state = 546
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 546
+			}
+		}
+
+		available = {
+			has_completed_focus = ENG_SOC_colonize_2
+			has_tech = excavation3
+			FROM = {
+				has_country_flag = P529_has_repressed_monarchy
+				controls_state = 546
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			546 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0.3
+		}
+	}
+}

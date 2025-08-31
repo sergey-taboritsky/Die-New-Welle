@@ -1,0 +1,111 @@
+bookmarks = {
+	bookmark = {
+		name = "P529_NAME"
+		desc = "P529_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_P529_DESC"
+			ideology = syndicalist
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"GER"={
+			history = "GER_P529_DESC"
+			ideology = totalist
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"AUS"={
+			history = "AUS_P529_DESC"
+			ideology = paternal_autocrat
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"RUS"={
+			history = "RUS_P529_DESC"
+			ideology = paternal_autocrat
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"GBR"={
+			history = "GBR_P529_DESC"
+			ideology = social_conservative
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"ITA"={
+			history = "ITA_P529_DESC"
+			ideology = authoritarian_democrat
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"QNG"={
+			history = "QNG_P529_DESC"
+			ideology = paternal_autocrat
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		"ISL"={
+			history = "ISL_P529_DESC"
+			ideology = national_populist
+			available = { always = yes } 
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

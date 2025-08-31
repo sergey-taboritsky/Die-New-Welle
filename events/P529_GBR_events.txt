@@ -1,0 +1,1361 @@
+add_namespace = GBR_focus_event
+add_namespace = GBR_decision_event
+add_namespace = GBR_political_event
+add_namespace = GBR_political_news_event
+
+country_event = {#印度小麦歉收
+	id = GBR_political_event.101
+	title = GBR_political_event.101.t
+	desc = GBR_political_event.101.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = IND
+		date > 1936.03.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.101.a
+		add_timed_idea = {
+			idea = IND_famine
+			days = 730
+		}
+		GBR = {
+			country_event = {
+				id = GBR_political_event.102
+				days = 4
+				random_hours = 12
+				random_days = 1
+			}
+		}
+	}
+}
+
+country_event = {#英国股市波动
+	id = GBR_political_event.102
+	title = GBR_political_event.102.t
+	desc = GBR_political_event.102.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.102.a
+		add_ideas = GBR_omen_of_crisis
+		GBR = {
+			country_event = {
+				id = GBR_political_event.1
+				days = 4
+				random_hours = 12
+				random_days = 1
+			}
+		}
+	}
+}
+
+country_event = {#美国股市崩溃
+	id = GBR_political_event.103
+	title = GBR_political_event.103.t
+	desc = GBR_political_event.103.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.103.a
+		add_timed_idea = {
+			idea = GBR_economic_crisis_1
+			days = 730
+		}
+		every_possible_country = {
+			news_event = {
+				id = GBR_political_news_event.1
+			}
+		}
+	}
+}
+
+country_event = {#英国股市崩溃
+	id = GBR_political_event.1
+	title = GBR_political_event.1.t
+	desc = GBR_political_event.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.1.a
+		add_ideas = GBR_economic_crisis_1	
+		remove_ideas = P529_GBR_recent_repress_revolt
+		remove_ideas = P529_GBR_prosperous_market
+		remove_ideas = GBR_omen_of_crisis
+		set_global_flag = economic_crisis_has_happened
+		activate_mission = collapsing_ecnonmic
+		activate_mission = IRE_separate
+		USA = {
+			country_event = {
+				id = GBR_political_event.103
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+	}
+}
+
+news_event = {#黑色星期五
+	id = GBR_political_news_event.1
+	title = GBR_political_news_event.1.t
+	desc = GBR_political_news_event.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  GBR_political_news_event.1.a
+	}
+}
+
+country_event = {#印度事务
+	id = GBR_political_event.2
+	title = GBR_political_event.2.t
+	desc = GBR_political_event.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = GBR
+		IND = {
+			exist = yes
+			is_puppet_of = GBR
+		}
+		date > 1936.08.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.2.a
+		activate_mission = collapsing_IND
+		set_global_flag = IND_collapsing_has_start
+	}
+}
+
+country_event = {
+	id = GBR_political_event.3
+	title = GBR_political_event.3.t
+	desc = GBR_political_event.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		check_variable = {
+			GBR_stable_degree > 99
+			tooltip = GBR_stable_degree_further_than_100_tt
+		}
+		has_idea = GBR_economic_crisis_1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.3.a
+		swap_ideas = {
+			add_idea = GBR_economic_crisis_2
+			remove_idea = GBR_economic_crisis_1
+		}
+	}
+}
+
+country_event = {
+	id = GBR_political_event.4
+	title = GBR_political_event.4.t
+	desc = GBR_political_event.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		check_variable = {
+			GBR_stable_degree > 149
+			tooltip = GBR_stable_degree_further_than_100_tt
+		}
+		has_idea = GBR_economic_crisis_2
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.4.a
+		swap_ideas = {
+			add_idea = GBR_economic_crisis_3
+			remove_idea = GBR_economic_crisis_2
+		}
+	}
+}
+
+country_event = {
+	id = GBR_political_event.5
+	title = GBR_political_event.5.t
+	desc = GBR_political_event.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		check_variable = {
+			GBR_stable_degree > 199
+			tooltip = GBR_stable_degree_further_than_100_tt
+		}
+		has_idea = GBR_economic_crisis_3
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.5.a
+		swap_ideas = {
+			add_idea = GBR_economic_crisis_4
+			remove_idea = GBR_economic_crisis_3
+		}
+	}
+}
+
+country_event = {#爱尔兰停战协议
+	id = GBR_political_event.6
+	title = GBR_political_event.6.t
+	desc = GBR_political_event.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = IRE
+		IRE = {
+			has_war_with = GBR
+		}
+		date > 1937.01.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.6.a
+		GBR = {
+			country_event = {
+				id = GBR_political_event.7
+			}
+		}
+	}
+	option = {
+		name = GBR_political_event.6.b
+		GBR = {
+			country_event = {
+				id = GBR_political_event.8
+			}
+		}
+	}
+}
+
+country_event = {#爱尔兰-北爱尔兰让步
+	id = GBR_political_event.7
+	title = GBR_political_event.7.t
+	desc = GBR_political_event.7.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.7.a
+		white_peace = IRE
+		set_state_owner = 119
+		set_state_controller = 119
+	}
+}
+
+country_event = {#爱尔兰-自治省让步
+	id = GBR_political_event.8
+	title = GBR_political_event.8.t
+	desc = GBR_political_event.8.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.8.a
+		white_peace = IRE
+		set_autonomy = {
+			target = IRE
+			autonomous_state = autonomy_autonomous_province
+		}
+	}
+}
+
+country_event = {#爱德华八世退位
+	id = GBR_political_event.9
+	title = GBR_political_event.9.t
+	desc = GBR_political_event.9.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = GBR
+		has_completed_focus = ENG_DEM_1
+		date > 1937.06.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_political_event.9.a
+		activate_mission = Edward_VIII_abdicated
+		set_global_flag = P529_Edward_VIII_abdicated_starting
+	}
+}
+
+country_event = {#英国内战
+	id = GBR_decision_event.1
+	title = GBR_decision_event.1.t
+	desc = GBR_decision_event.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.1.a
+		
+	}
+}
+
+country_event = {#爱尔兰分离
+	id = GBR_decision_event.2
+	title = GBR_decision_event.2.t
+	desc = GBR_decision_event.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.2.a
+		release = IRE
+		IRE = {
+			inherit_technology = GBR
+			load_oob = "IRE_separate_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+		}
+		GBR = {
+			declare_war_on = {
+				target = IRE
+				type = annex_everything
+			}
+			set_country_flag = IRE_separate_has_happened
+			activate_mission = SCO_separate
+			activate_mission = WEI_separate
+		}
+	}
+}
+
+country_event = {#印度解体
+	id = GBR_decision_event.3
+	title = GBR_decision_event.3.t
+	desc = GBR_decision_event.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.3.a
+		set_global_flag = IND_collapsing_has_happened
+		clr_global_flag = IND_collapsing_has_start
+		IND = {
+			country_event = {
+				id = GBR_decision_event.4
+			}
+		}
+		hidden_effect = {
+			GBR = {
+				country_event = {
+					id = GBR_decision_event.06
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+country_event = {#印度解体
+	id = GBR_decision_event.4
+	title = GBR_decision_event.4.t
+	desc = GBR_decision_event.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.4.a
+		every_owned_state = {
+			add_core_of = IND
+		}
+		release = HID 
+		release = BAN 
+		release = ASM 
+		release = LJS 
+		release = GOC 
+		release = MRP 
+		release = ORS 
+		release = ADR 
+		release = MRD 
+		release = MSR 
+		release = TMR 
+		release = KRR  
+		release = PUN 
+		release = BAL 
+		release = SIN 
+		release = HYD 
+		release = BIH 
+		every_country = {
+			limit = {
+				OR = { 
+					tag = HID 
+					tag = BAN 
+					tag = ASM 
+					tag = LJS 
+					tag = GOC 
+					tag = MRP 
+					tag = ORS 
+					tag = ADR 
+					tag = MRD 
+					tag = MSR 
+					tag = TMR 
+					tag = KRR  
+					tag = PUN 
+					tag = BAL 
+					tag = SIN 
+					tag = HYD 
+					tag = BIH
+				}
+			}
+			hidden_effect = {
+				load_oob = "IND_civil_war_start"
+				country_event = {
+					id = GBR_decision_event.5
+					days = 1
+				}
+			}
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			
+		}
+		BAN = { change_tag_from = ROOT }
+	}
+}
+
+country_event = {
+	id = GBR_decision_event.5
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		every_owned_state = {
+			create_unit = {
+				division = "name = \"Militia Corps\" division_template = \"Militia Corps\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				count = 10
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Heavy armored militia corps\" division_template = \"Heavy armored militia corps\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				count = 2
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Militia Cavalry Army\" division_template = \"Militia Cavalry Army\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+				count = 5
+				owner = ROOT
+			}
+		}
+		if = {
+			limit = {
+				tag = BAN
+				GBR = {
+					has_country_flag = BAN_control_complete
+				}
+			}
+			BAN = {
+				country_event = {
+					id = GBR_decision_event.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GBR_decision_event.6
+	title = GBR_decision_event.6.t
+	desc = GBR_decision_event.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.6.a
+		GBR = {
+			country_event = {
+				id = GBR_decision_event.7
+			}
+		}
+		add_manpower = 50000
+	}
+}
+
+country_event = {
+	id = GBR_decision_event.06
+	title = GBR_decision_event.06.t
+	desc = GBR_decision_event.06.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.06.a
+		add_ideas = GBR_lack_of_tee
+	}
+}
+
+country_event = {
+	id = GBR_decision_event.7
+	title = GBR_decision_event.7.t
+	desc = GBR_decision_event.7.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.7.a
+		set_autonomy = {
+			target = BAN
+			autonomous_state = autonomy_autonomous_colonial_territory
+		}
+		BAN = {
+			every_owned_state = {
+				limit = {
+					is_capital = yes
+				}
+				create_unit = {
+					division = "name = \"Heavy armored militia corps\" division_template = \"Heavy armored militia corps\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					count = 2
+					owner = BAN
+				}
+			}
+		}
+	}
+}
+
+country_event = {#苏格兰分离
+	id = GBR_decision_event.8
+	title = GBR_decision_event.8.t
+	desc = GBR_decision_event.8.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.8.a
+		release = SCO
+		SCO = {
+			inherit_technology = GBR
+			load_oob = "SCO_separate_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+		}
+		GBR = {
+			declare_war_on = {
+				target = SCO
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {#威尔士分离
+	id = GBR_decision_event.9
+	title = GBR_decision_event.9.t
+	desc = GBR_decision_event.9.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.9.a
+		release = WEI
+		WEI = {
+			inherit_technology = GBR
+			load_oob = "WEI_separate_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+		}
+		GBR = {
+			declare_war_on = {
+				target = WEI
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {#退位后续
+	id = GBR_decision_event.10
+	title = GBR_decision_event.10.t
+	desc = GBR_decision_event.10.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_decision_event.10.a
+		trigger = {
+			OR = {
+				has_country_flag = own_to_organization
+				has_country_flag = own_to_king
+			}
+		}
+		clr_global_flag = P529_Edward_VIII_abdicated_starting
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+	}
+	option = {
+		name = GBR_decision_event.10.b
+		trigger = {
+			has_country_flag = own_to_cabinet
+		}
+		clr_global_flag = P529_Edward_VIII_abdicated_starting
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.1
+	title = GBR_focus_event.1.t
+	desc = GBR_focus_event.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_focus_event.1.a
+		release = SCO
+		release = WEI
+		set_autonomy = {
+			target = SCO
+			autonomous_state = autonomy_core_province
+		}
+		set_autonomy = {
+			target = WEI
+			autonomous_state = autonomy_core_province
+		}
+		set_cosmetic_tag = GBE
+		SCO = {
+			every_owned_state = {
+				add_core_of = GBR
+			}
+		}
+		WEI = {
+			every_owned_state = {
+				add_core_of = GBR
+			}
+		}
+	}
+	option = {
+		name = GBR_focus_event.1.b
+		
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.2
+	title = GBR_focus_event.2.t
+	desc = GBR_focus_event.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_focus_event.2.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+		set_country_flag = own_to_king
+	}
+	option = {
+		name = GBR_focus_event.2.b
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.3
+		}
+		set_country_flag = own_to_cabinet
+	}
+	option = {
+		name = GBR_focus_event.2.c
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.3
+		}
+		set_country_flag = own_to_organization
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.3
+	title = GBR_focus_event.3.t
+	desc = GBR_focus_event.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_focus_event.3.a
+		trigger = {
+			OR = {
+				has_country_flag = own_to_organization
+				has_country_flag = own_to_king
+			}
+		}
+		set_global_flag = P529_Edward_VIII_abdicated_end
+	}
+	option = {
+		name = GBR_focus_event.3.b
+		trigger = {
+			has_country_flag = own_to_cabinet
+		}
+		set_global_flag = P529_Edward_VIII_abdicated_end
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.4
+	title = GBR_focus_event.4.t
+	desc = GBR_focus_event.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = GBR_focus_event.4.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.5
+	title = GBR_focus_event.5.t
+	desc = GBR_focus_event.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.5.a
+		GBR = {
+			country_event = GBR_focus_event.6
+		}
+		add_ideas = P529_trade_agreement_with_UK
+	}
+	option = {
+		name = GBR_focus_event.5.b
+		GBR = {
+			country_event = GBR_focus_event.7
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+}
+
+country_event = {
+	id = GBR_focus_event.6
+	title = GBR_focus_event.6.t
+	desc = GBR_focus_event.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.6.a
+		if = {
+			limit = {
+				FROM = {
+					tag = FRA
+				}
+			}
+			add_ideas = P529_trade_agreement_with_FRA
+		}
+		if = {
+			limit = {
+				FROM = {
+					tag = GER
+				}
+			}
+			add_ideas = P529_trade_agreement_with_GER
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.7
+	title = GBR_focus_event.7.t
+	desc = GBR_focus_event.7.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.7.a		
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.8
+	title = GBR_focus_event.8.t
+	desc = GBR_focus_event.8.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.8.a	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.9
+	title = GBR_focus_event.9.t
+	desc = GBR_focus_event.9.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.8.a	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.3
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		set_country_flag = GBR_monarchic_communism
+		create_country_leader = {
+			name = GBR_Edward_VIII
+			picture = "gfx/P529_leaders/GBR/Edward_VIII.png"
+			expire = "1965.1.1"
+			ideology = radical_socialist_subtype
+			traits = {
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.10
+	title = GBR_focus_event.10.t
+	desc = GBR_focus_event.10.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.10.a	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = -0.3
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.11
+	title = GBR_focus_event.11.t
+	desc = GBR_focus_event.11.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.11.a	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+	}
+	option = {
+		name = GBR_focus_event.11.b	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = GBR_focus_event.12
+	title = GBR_focus_event.12.t
+	desc = GBR_focus_event.12.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.12.a	
+		set_country_flag = P529_Member_of_the_Royalist_Party_International
+		add_ideas = P529_Royalist_Party_International
+	}
+}
+
+country_event = {#英工站队
+	id = GBR_focus_event.13
+	title = GBR_focus_event.13.t
+	desc = GBR_focus_event.13.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {#德
+		name = GBR_focus_event.13.a	
+		GER = {
+			country_event = {
+				id = GBR_focus_event.14
+				days = 2
+			}
+		}
+		set_global_flag = GBR_GER_union
+	}
+	option = {#法
+		name = GBR_focus_event.13.b
+		FRA = {
+			country_event = {
+				id = GBR_focus_event.15
+				days = 2
+			}
+		}
+		set_global_flag = GBR_FRA_union
+	}
+	option = {#不站队
+		name = GBR_focus_event.13.c
+		FRA = {
+			country_event = {
+				id = GBR_focus_event.16
+				days = 2
+			}
+		}
+		GER = {
+			country_event = {
+				id = GBR_focus_event.16
+				days = 2
+			}
+		}
+		every_possible_country = {
+			news_event = {
+				id = GBR_political_news_event.4
+				days = 10
+			}
+		}
+		create_faction = London_international
+	}
+}
+
+country_event = {#德国触发事件-同意
+	id = GBR_focus_event.14
+	title = GBR_focus_event.14.t
+	desc = GBR_focus_event.14.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.14.a	
+		FRA = {
+			country_event = {
+				id = GBR_focus_event.18
+				days = 2
+			}
+		}
+		GBR = {
+			country_event = {
+				id = GBR_focus_event.19
+				days = 2
+			}
+		}
+		every_possible_country = {
+			news_event = {
+				id = GBR_political_news_event.3
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = {#法国触发事件-同意
+	id = GBR_focus_event.15
+	title = GBR_focus_event.15.t
+	desc = GBR_focus_event.15.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.15.a	
+		GER = {
+			country_event = {
+				id = GBR_focus_event.17
+				days = 2
+			}
+		}
+		GBR = {
+			country_event = {
+				id = GBR_focus_event.19
+				days = 2
+			}
+		}
+		every_possible_country = {
+			news_event = {
+				id = GBR_political_news_event.2
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = {#德法触发事件-英国没站队
+	id = GBR_focus_event.16
+	title = GBR_focus_event.16.t
+	desc = GBR_focus_event.16.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.16.a	
+		
+	}
+}
+
+country_event = {#德国触发事件-投法
+	id = GBR_focus_event.17
+	title = GBR_focus_event.17.t
+	desc = GBR_focus_event.17.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.17.a	
+		
+	}
+}
+
+country_event = {#法国触发事件-投德
+	id = GBR_focus_event.18
+	title = GBR_focus_event.18.t
+	desc = GBR_focus_event.18.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.18.a	
+		
+	}
+}
+
+country_event = {#英国触发事件-入阵营
+	id = GBR_focus_event.19
+	title = GBR_focus_event.19.t
+	desc = GBR_focus_event.19.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.19.a	
+		FROM = {
+			add_to_faction = GBR
+		}
+	}
+}
+
+news_event = {#英法同盟
+	id = GBR_political_news_event.2
+	title = GBR_political_news_event.2.t
+	desc = GBR_political_news_event.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  GBR_political_news_event.2.a
+	}
+}
+
+news_event = {#英德同盟
+	id = GBR_political_news_event.3
+	title = GBR_political_news_event.3.t
+	desc = GBR_political_news_event.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  GBR_political_news_event.3.a
+	}
+}
+
+news_event = {#光荣孤立
+	id = GBR_political_news_event.4
+	title = GBR_political_news_event.4.t
+	desc = GBR_political_news_event.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  GBR_political_news_event.4.a
+	}
+}
+
+country_event = {#冰岛的命运
+	id = GBR_focus_event.20
+	title = GBR_focus_event.20.t
+	desc = GBR_focus_event.20.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.20.a	#共产化
+		ICE = {
+			country_event = GBR_focus_event.21
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = GBR_focus_event.20.b	#和丹麦合并
+		ICE = {
+			country_event = GBR_focus_event.22
+		}
+		trigger = {
+			is_in_faction_with = GER
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = {#冰岛共产化
+	id = GBR_focus_event.21
+	title = GBR_focus_event.21.t
+	desc = GBR_focus_event.21.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.21.a	
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {#冰岛-丹麦联合
+	id = GBR_focus_event.22
+	title = GBR_focus_event.22.t
+	desc = GBR_focus_event.22.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.22.a#合并	
+		DAN = {
+			country_event = GBR_focus_event.23
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = ICE
+			}
+			add_core_of = DAN
+		}
+		DAN = {
+			annex_country = {
+				target = ICE
+				transfer_troops = yes
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = GBR_focus_event.22.b#自治领	
+		DAN = {
+			country_event = GBR_focus_event.23
+			set_autonomy = {
+				target = ICE
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {#丹麦庆祝
+	id = GBR_focus_event.23
+	title = GBR_focus_event.23.t
+	desc = GBR_focus_event.23.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GBR_focus_event.23.a	
+		add_stability = 0.1
+		hidden_effect = {
+			every_possible_country = {
+				news_event = {
+					id = GBR_political_news_event.5
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+news_event = {#丹麦-冰岛重新联合
+	id = GBR_political_news_event.5
+	title = GBR_political_news_event.5.t
+	desc = GBR_political_news_event.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name =  GBR_political_news_event.5.a
+	}
+}

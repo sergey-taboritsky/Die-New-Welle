@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ BYZ_social_conservative: "拜占庭帝国"
+ BYZ_social_conservative_DEF: "拜占庭帝国"
+ BYZ_social_conservative_ADJ: "拜占庭"
+ BYZ_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ BYZ_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ BYZ_autonomy_puppet: "$OVERLORDADJ$属拜占庭"
+ BYZ_autonomy_puppet_DEF: "$OVERLORDADJ$属拜占庭"
+ BYZ: "拜占庭"
+ BYZ_DEF: "拜占庭"
+ BYZ_ADJ: "拜占庭"

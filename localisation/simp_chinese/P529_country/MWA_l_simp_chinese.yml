@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MWA_paternal_autocrat: "勃固王国"
+ MWA_paternal_autocrat_DEF: "勃固王国"
+ MWA_paternal_autocrat_ADJ: "勃固"
+ MWA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MWA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MWA_autonomy_puppet: "$OVERLORDADJ$属勃固"
+ MWA_autonomy_puppet_DEF: "$OVERLORDADJ$属勃固"
+ MWA: "勃固"
+ MWA_DEF: "勃固"
+ MWA_ADJ: "勃固"

@@ -1,0 +1,44 @@
+GBR_economic_decision = {
+	priority = 100
+
+	icon = 
+	picture = 
+	
+	allow = {
+		tag = GBR
+	}
+	visible = {
+		has_global_flag = economic_crisis_has_happened
+		check_variable = {
+			GBR_stable_degree < 200
+		}
+	}
+}
+
+GBR_Edward_VIII_abdicated_decision = {
+	priority = 100
+
+	icon = 
+	picture = 
+	
+	allow = {
+		tag = GBR
+	}
+	visible = {
+		has_global_flag = P529_Edward_VIII_abdicated_starting
+	}
+}
+
+GBR_SOC_colonization_decision = {
+	priority = 100
+
+	icon = 
+	picture = 
+	
+	allow = {
+		tag = GBR
+	}
+	visible = {
+		has_completed_focus = ENG_SOC_2_1
+	}
+}

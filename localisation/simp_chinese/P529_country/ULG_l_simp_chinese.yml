@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ULG_social_conservative: "乌拉圭共和国"
+ ULG_social_conservative_DEF: "乌拉圭共和国"
+ ULG_social_conservative_ADJ: "乌拉圭"
+ ULG_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ULG_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ULG_autonomy_puppet: "$OVERLORDADJ$属乌拉圭"
+ ULG_autonomy_puppet_DEF: "$OVERLORDADJ$属乌拉圭"
+ ULG: "乌拉圭"
+ ULG_DEF: "乌拉圭"
+ ULG_ADJ: "乌拉圭"

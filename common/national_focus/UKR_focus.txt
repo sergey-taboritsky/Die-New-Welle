@@ -1,0 +1,547 @@
+focus_tree = {
+	id = UKR_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = UKR
+		}
+	}
+	focus = {
+		id = UKR_home_of_tsar
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 12
+		y = 0
+
+		completion_reward = {
+			RUS = {
+				every_core_state = {
+					add_state_claim = UKR
+				}
+			}
+		}	
+	}
+	focus = {
+		id = UKR_final_milit_preps
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 14
+		y = 0
+
+		completion_reward = {
+			army_experience = 50
+			add_command_power = 50
+		}	
+	}
+	focus = {
+		id = UKR_contact_marshal
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 16
+		y = 0
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = UKR_warprep.1 days = 2 }
+			}
+		}	
+	}
+	focus = {
+		id = UKR_monarch_state
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_home_of_tsar
+		}
+		prerequisite = {
+			focus = UKR_final_milit_preps
+		}
+		prerequisite = {
+			focus = UKR_contact_marshal
+		}
+		mutually_exclusive = {
+			focus = UKR_unfinished_revolution
+		}
+		x = 13
+		y = 1
+
+		completion_reward = {
+			set_power_balance = {
+				id = UKR_init_bop
+				set_value = 0.10
+			}
+			add_command_power = 25
+		}	
+	}
+	focus = {
+		id = UKR_unfinished_revolution
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_home_of_tsar
+		}
+		prerequisite = {
+			focus = UKR_final_milit_preps
+		}
+		prerequisite = {
+			focus = UKR_contact_marshal
+		}
+		mutually_exclusive = {
+			focus = UKR_monarch_state
+		}
+		x = 15
+		y = 1
+
+		completion_reward = {
+			set_power_balance = {
+				id = UKR_init_bop
+				set_value = -0.10
+			}
+			add_political_power = 50
+		}	
+	}
+	focus = {
+		id = UKR_seek_church
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monarch_state
+		}
+		x = 8
+		y = 2
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+			add_ideas = UKR_church_support_idea
+		}	
+	}
+	focus = {
+		id = UKR_rebuild_gendarmes
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monarch_state
+		}
+		x = 10
+		y = 2
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_revive_cossack
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_rebuild_gendarmes
+		}
+		x = 9
+		y = 3
+		mutually_exclusive = {
+			focus = UKR_british_cannons
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_british_cannons
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_rebuild_gendarmes
+		}
+		x = 11
+		y = 3
+		mutually_exclusive = {
+			focus = UKR_revive_cossack
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_royal_wedding
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monarch_state
+		}
+		x = 12
+		y = 2
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_remobilize_black
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monarch_state
+		}
+		prerequisite = {
+			focus = UKR_revive_cossack
+			focus = UKR_british_cannons
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_arm_guerillas
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_unfinished_revolution
+		}
+		x = 20
+		y = 2
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = -0.05
+			}
+			RUS = {
+				add_ideas = UKR_guerilla_sabotage_idea
+			}
+		}	
+	}
+	focus = {
+		id = UKR_contact_berlin
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_unfinished_revolution
+		}
+		x = 17
+		y = 2
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = -0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_keep_party_unity
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_contact_berlin
+		}
+		x = 17
+		y = 3
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = -0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_request_worker_movement
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_keep_party_unity
+		}
+		x = 16
+		y = 4
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = -0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_shake_general_loyalty
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monarch_state
+			focus = UKR_unfinished_revolution
+		}
+		x = 14
+		y = 2
+
+		completion_reward = {
+			country_event = { id = UKR_warprep.3 }
+		}	
+	}
+	focus = {
+		id = UKR_decrease_industrial_wages
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_shake_general_loyalty
+		}
+		x = 13
+		y = 3
+		mutually_exclusive = {
+			focus = UKR_expand_worker_councils
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = 0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_expand_worker_councils
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_shake_general_loyalty
+		}
+		x = 15
+		y = 3
+		mutually_exclusive = {
+			focus = UKR_decrease_industrial_wages
+		}
+		completion_reward = {
+			add_power_balance_value = {
+				id = UKR_init_bop
+				value = -0.05
+			}
+		}	
+	}
+	focus = {
+		id = UKR_extensive_mobilisation
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_decrease_industrial_wages
+			focus = UKR_expand_worker_councils
+		}
+		x = 14
+		y = 4
+		completion_reward = {
+		}	
+	}
+	focus = {
+		id = UKR_toward_moscow
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_extensive_mobilisation
+		}
+		prerequisite = {
+			focus = UKR_remobilize_black
+			focus = UKR_request_worker_movement
+		}
+		x = 14
+		y = 5
+		completion_reward = {
+			declare_war_on = {
+				target = RUS
+				type = civil_war
+			}
+		}	
+	}
+	focus = {
+		id = UKR_monster_doomsday
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				country_exists = RUS
+			}
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+		}	
+	}
+	focus = {
+		id = UKR_soviet_rebirth
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monster_doomsday
+		}
+		mutually_exclusive = {
+			focus = UKR_constitutional_compromise
+			focus = UKR_throne_almighty
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = UKR_init_bop
+				range = UKR_bolsheviks_range
+			}
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			remove_power_balance = {
+				id = UKR_init_bop
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+		}	
+	}
+	focus = {
+		id = UKR_constitutional_compromise
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monster_doomsday
+		}
+		mutually_exclusive = {
+			focus = UKR_throne_almighty
+			focus = UKR_soviet_rebirth
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = UKR_init_bop
+				range = UKR_coalition_range
+			}
+		}
+		x = 14
+		y = 8
+		completion_reward = {
+			remove_power_balance = {
+				id = UKR_init_bop
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}	
+	}
+	focus = {
+		id = UKR_throne_almighty
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = UKR_monster_doomsday
+		}
+		mutually_exclusive = {
+			focus = UKR_constitutional_compromise
+			focus = UKR_soviet_rebirth
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = UKR_init_bop
+				range = UKR_tsarists_range
+			}
+		}
+		x = 18
+		y = 8
+		completion_reward = {
+			remove_power_balance = {
+				id = UKR_init_bop
+			}
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+		}	
+	}
+}

@@ -1,0 +1,18 @@
+scripted_gui = {
+
+	RUS_communist_civil_war_ui = {
+		context_type = decision_category
+		window_name = "RUS_communist_civil_war_ui_window"
+		
+			properties = {
+				RUS_map = {
+					frame = GFX_decision_cat_picture_soviet_civil_war 
+					x = 0
+					y = 0
+				}
+			}
+		}
+	}
+	
+}
+

@@ -1,0 +1,574 @@
+ISL_decision = {
+	ISL_clean_islands = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 20
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 706
+					state = 707
+					state = 709
+					state = 710
+					state = 713
+				}
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_1
+		}
+		
+		remove_effect = {	
+			FROM = {
+				set_temp_variable = { temp_var = THIS.state_population  }
+				divide_temp_variable = { temp_var = -4 }
+				multiply_temp_variable = { temp_var = 3 }
+				add_core_of = ROOT
+				add_manpower = temp_var
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_clean_MGS = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 200
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		remove_effect = {	
+			FROM = {
+				set_temp_variable = { temp_var = THIS.state_population  }
+				divide_temp_variable = { temp_var = -4 }
+				multiply_temp_variable = { temp_var = 3 }
+				add_core_of = ROOT
+				if = {
+					limit = {
+						THIS.state_population_k > 2000
+					}
+					add_manpower = -1500000
+				}
+				else = {
+					add_manpower = temp_var
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_MGS_immigrant = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 15
+
+		days_remove = 100
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+				
+		remove_effect = {	
+			FROM = {
+				add_manpower = 50000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_Leather = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+				add_manpower = -10000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_Oil = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -10000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_soap = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = -10000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_gun = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_manpower = -10000
+			}
+			ROOT = {
+				add_tech_bonus = {
+					bonus = 3
+					uses = 3
+					category = infantry_tech
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_Cr = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = chromium
+					amount = 100
+				}
+				add_manpower = -10000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_construct_MGS_dockyard = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 30
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 543
+				}
+				is_core_of = ROOT
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+		
+		available = {
+			FROM = {
+				manpower > 10000
+			}
+		}
+		
+		fire_only_once = yes
+		
+		remove_effect = {	
+			FROM = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 42
+				}
+				add_manpower = -10000
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_attract_investment = {          
+		
+		cancel_if_not_visible = yes
+		
+		cost = 40
+
+		days_remove = 120
+		
+		visible = {
+			has_completed_focus = ISL_focus_7
+		}
+				
+		remove_effect = {	
+			ROOT = {
+				random_list = {
+					33 = {
+						add_offsite_building = { 
+							type = arms_factory 
+							level = 1
+						}
+					}
+					33 = {
+						add_offsite_building = { 
+							type = industrial_complex 
+							level = 1
+						}
+					}
+					33 = {
+						add_offsite_building = { 
+							type = dockyard 
+							level = 1
+						}
+					}
+					1 = {
+						add_manpower = 300000
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_clean_ETH = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 100
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				is_core_of = ETH
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_second_A_2_2
+		}
+		
+		remove_effect = {	
+			FROM = {
+				set_temp_variable = { temp_var = THIS.state_population  }
+				divide_temp_variable = { temp_var = -4 }
+				multiply_temp_variable = { temp_var = 3 }
+				add_core_of = ROOT
+				if = {
+					limit = {
+						THIS.state_population_k > 2000
+					}
+					add_manpower = -1500000
+				}
+				else = {
+					add_manpower = temp_var
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	ISL_clean_all = {          
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 100
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = ISL_focus_second_A_2_2
+		}
+		
+		remove_effect = {	
+			FROM = {
+				set_temp_variable = { temp_var = THIS.state_population  }
+				divide_temp_variable = { temp_var = -4 }
+				multiply_temp_variable = { temp_var = 3 }
+				add_core_of = ROOT
+				if = {
+					limit = {
+						THIS.state_population_k > 2000
+					}
+					add_manpower = -1500000
+				}
+				else = {
+					add_manpower = temp_var
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+}

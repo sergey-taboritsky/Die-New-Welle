@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	P529_similar_ruling_party_group = {
+		value = 20
+	}
+	P529_ENG_ISL_common_defend = {
+		value = 50
+	}
+}

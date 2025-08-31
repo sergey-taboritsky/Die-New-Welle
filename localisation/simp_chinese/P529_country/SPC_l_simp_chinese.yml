@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SPC_syndicalist: "西班牙公社"
+ SPC_syndicalist_DEF: "西班牙公社"
+ SPC_syndicalist_ADJ: "西班牙"
+ SPC_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SPC_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SPC_autonomy_puppet: "$OVERLORDADJ$属西班牙"
+ SPC_autonomy_puppet_DEF: "$OVERLORDADJ$属西班牙"
+ SPC: "西班牙"
+ SPC_DEF: "西班牙"
+ SPC_ADJ: "西班牙"

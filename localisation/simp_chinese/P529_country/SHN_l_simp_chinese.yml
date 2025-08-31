@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SHN_paternal_autocrat: "兰纳王国"
+ SHN_paternal_autocrat_DEF: "兰纳王国"
+ SHN_paternal_autocrat_ADJ: "兰纳"
+ SHN_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SHN_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SHN_autonomy_puppet: "$OVERLORDADJ$属兰纳"
+ SHN_autonomy_puppet_DEF: "$OVERLORDADJ$属兰纳"
+ SHN: "兰纳"
+ SHN_DEF: "兰纳"
+ SHN_ADJ: "兰纳"

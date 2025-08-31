@@ -1,0 +1,410 @@
+ideas = {
+	country = {
+		P529_GBR_recent_repress_revolt = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				stability_factor = 0.2
+				totalist_drift = -0.03
+				syndicalist_drift = -0.03
+				radical_socialist_drift = -0.03
+				social_democrat_drift = -0.01
+			}
+		}
+		P529_GBR_prosperous_market = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.2
+			}
+		}
+		GBR_economic_crisis_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = -0.3
+				production_factory_max_efficiency_factor = -0.6
+				industrial_capacity_factory = -0.6
+				production_speed_buildings_factor = -0.6
+				consumer_goods_factor = 0.6
+				war_support_factor = 0.25
+				totalist_drift = 0.1
+				syndicalist_drift = 0.1
+				radical_socialist_drift = 0.1
+				social_democrat_drift = 0.03
+				national_populist_drift = 0.05
+			}
+		}
+		GBR_economic_crisis_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = -0.15
+				production_factory_max_efficiency_factor = -0.3
+				industrial_capacity_factory = -0.6
+				production_speed_buildings_factor = -0.6
+				consumer_goods_factor = 0.4
+				war_support_factor = 0.3
+				totalist_drift = 0.01
+				syndicalist_drift = 0.01
+				radical_socialist_drift = 0.01
+				social_democrat_drift = 0.03
+			}
+		}
+		GBR_economic_crisis_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.2
+				war_support_factor = 0.2
+			}
+		}
+		GBR_economic_crisis_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = 0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+		IND_famine = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = -0.3
+				consumer_goods_factor = 0.6
+			}
+		}
+		GBR_omen_of_crisis = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		GBR_off_the_gold_standard = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = 0.33
+				min_export = 0.8
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		GBR_Reduce_government_spending = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = -0.3
+				research_speed_factor = -0.4
+				surrender_limit = -0.1
+				political_power_factor = -0.2
+			}
+		}
+		GBR_reduced_army_salaries = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				experience_gain_army_factor = -0.15
+				training_time_factor = 0.25
+				army_org_factor = -0.1
+				supply_consumption_factor = 0.1
+			}
+		}
+		GBR_reduced_navy_salaries = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				critical_receive_chance = 0.2
+				naval_doctrine_cost_factor = 0.4
+				experience_gain_navy_factor = -0.2
+				positioning = -0.2
+			}
+		}
+		GBR_imperial_impact = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.10
+			}
+		} 
+		GBR_public_politics = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly = 0.01
+				social_conservative_drift = 0.03
+			}
+		} 
+		GBR_loyal_marriage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				stability_weekly = 0.005
+				social_conservative_drift = -0.03
+			}
+		} 
+		GBR_Media_manipulation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				stability_weekly = 0.005
+				market_liberal_drift = -0.03
+			}
+		} 
+		P529_trade_agreement_with_UK = {	
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			cancel = {
+				has_war_with = GBR
+			}
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			targeted_modifier = {
+				tag = GBR
+				trade_cost_for_target_factor = -0.2
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		P529_trade_agreement_with_FRA = {	
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			cancel = {
+				has_war_with = FRA
+			}
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			targeted_modifier = {
+				tag = FRA
+				trade_cost_for_target_factor = -0.2
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		P529_trade_agreement_with_GER = {	
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			cancel = {
+				has_war_with = GER
+			}
+			on_add = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.2
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		P529_Royalist_Party_International = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.1
+			}
+		} 
+		GBR_lack_of_tee = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				army_org_regain = -0.1
+				dig_in_speed_factor = -0.1
+			}
+		} 
+	}
+	industrial_concern = {
+		GBR_Commonwealth_Joint_Construction = {
+
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = GBR
+			}
+
+			available = {
+				has_completed_focus = ENG_SOC_MOC_MON_industry_construction_3
+			}
+
+			visible = {
+				always = yes
+			}
+
+			cost = 100
+
+			traits = { construction_company }
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		GBR_GER_Council_of_Mutual_Economic_Assistance = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = GBR
+			}
+
+			available = {
+				has_completed_focus = ENG_SOC_MOC_MON_industry_construction_4
+				is_in_faction_with = GER
+			}
+
+			visible = {
+				always = yes
+			}
+
+			cost = 100
+
+			traits = { construction_company }
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		GBR_FRA_Strait_Customs_Community = {
+
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = GBR
+			}
+
+			available = {
+				has_completed_focus = ENG_SOC_MOC_MON_industry_construction_4
+				is_in_faction_with = FRA
+			}
+
+			visible = {
+				always = yes
+			}
+
+			cost = 100
+
+			traits = { construction_company }
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+	}
+}

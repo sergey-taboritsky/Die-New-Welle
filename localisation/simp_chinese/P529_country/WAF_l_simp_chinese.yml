@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ WAF_social_conservative: "法兰西-西非邦联共和国"
+ WAF_social_conservative_DEF: "法兰西-西非邦联共和国"
+ WAF_social_conservative_ADJ: "法兰西-西非邦联"
+ WAF_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ WAF_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ WAF_autonomy_puppet: "$OVERLORDADJ$属法兰西-西非邦联"
+ WAF_autonomy_puppet_DEF: "$OVERLORDADJ$属法兰西-西非邦联"
+ WAF: "法兰西-西非邦联"
+ WAF_DEF: "法兰西-西非邦联"
+ WAF_ADJ: "法兰西-西非邦联"

@@ -1,0 +1,11 @@
+AUS_civil_war_state_modifier_scripted_effects = {
+	add_dynamic_modifier = {
+		modifier = AUS_civil_war_state_modifier
+	}
+}
+
+HUN_BNT_help_state_modifier_scripted_effects = {
+	add_dynamic_modifier = {
+		modifier = HUN_BNT_help_state_modifier
+	}
+}

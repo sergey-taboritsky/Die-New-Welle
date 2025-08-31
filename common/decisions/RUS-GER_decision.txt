@@ -1,0 +1,396 @@
+RUS-GER_decision = {
+	lenin_revolt = {          
+		available = {            
+			check_variable = {
+				SOV_support < -49
+				tooltip = SOV_support_lower_than_50_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 360
+		timeout_effect = {
+			RUS = { 
+				country_event = {
+					id = SOV_revolt_events.1
+				}
+			}
+			news_event = {
+				id = SOV_revolt_news_events.1
+				hours = 12
+			}
+		}
+		complete_effect = {                    
+			RUS = { 
+				country_event = {
+					id = SOV_revolt_events.4
+				}
+			}
+		}
+	}
+    GER_send_gun_to_SOV = {
+		visible = {
+			tag = GER
+			has_completed_focus = GER_communsit_politic_A_12
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = 1
+					tooltip = send_200_gun_to_SOV_tt
+				}
+				add_to_variable = {
+					var = GER_SOV_gun_support
+					value = 200
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support > 40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 30
+    }
+	GER_send_support_equipment_to_SOV = {
+		visible = {
+			tag = GER
+			has_completed_focus = GER_communsit_politic_A_12
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = 2
+					tooltip = send_100_equipment_to_SOV_tt
+				}
+				add_to_variable = {
+					var = GER_SOV_equipment_support
+					value = 100
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support > 40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 30
+    }
+	GER_send_grand_gun_to_SOV = {
+		visible = {
+			tag = GER
+			has_completed_focus = GER_communsit_politic_A_13
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = 2
+					tooltip = send_500_gun_to_SOV_tt
+				}
+				add_to_variable = {
+					var = GER_SOV_gun_support
+					value = 500
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support > 40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 40
+    }
+	GER_send_grand_support_equipment_to_SOV = {
+		visible = {
+			tag = GER
+			has_completed_focus = GER_communsit_politic_A_13
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = 4
+					tooltip = send_200_equipment_to_SOV_tt
+				}
+				add_to_variable = {
+					var = GER_SOV_equipment_support
+					value = 20
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support > 40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 40
+    }
+	GER_send_truck_to_SOV = {
+		visible = {
+			tag = GER
+			has_completed_focus = GER_communsit_politic_A_13
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = -100
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = 5
+					tooltip = send_100_truck_to_SOV_tt
+				}
+				add_to_variable = {
+					var = GER_SOV_truck_support
+					value = 100
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support > 40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 40
+    }
+	RUS_small_SOV = {
+		visible = {
+			tag = RUS
+		}
+		cost = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = -1
+					tooltip = RUS_small_SOV_tt
+				}
+				random_list = {
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_gun_support
+							value = -50
+							tooltip = RUS_find_SOV_gun
+						}
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_equipment_support
+							value = -30
+							tooltip = RUS_find_SOV_equipment
+						}					
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_truck_support
+							value = -10
+							tooltip = RUS_find_SOV_truck
+						}
+					}
+					25 = {
+						add_to_variable = {
+							var = SOV_support
+							value = -1
+							tooltip = RUS_find_SOV_group
+						}						
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support < -40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 20
+    }
+	RUS_medium_SOV = {
+		visible = {
+			tag = RUS
+		}
+		cost = 50
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -400
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = -2
+					tooltip = RUS_medium_SOV_tt
+				}
+				random_list = {
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_gun_support
+							value = -100
+							tooltip = RUS_find_SOV_gun
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_equipment_support
+							value = -50
+							tooltip = RUS_find_SOV_equipment
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_truck_support
+							value = -30
+							tooltip = RUS_find_SOV_truck
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = SOV_support
+							value = -2
+							tooltip = RUS_find_SOV_group
+						}						
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support < -40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 40
+    }
+	RUS_large_SOV = {
+		visible = {
+			tag = RUS
+		}
+		cost = 100
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			RUS = {
+				add_to_variable = {
+					var = SOV_support
+					value = -3
+					tooltip = RUS_large_SOV_tt
+				}
+				random_list = {
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_gun_support
+							value = -200
+							tooltip = RUS_find_SOV_gun
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_equipment_support
+							value = -100
+							tooltip = RUS_find_SOV_equipment
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = GER_SOV_truck_support
+							value = -100
+							tooltip = RUS_find_SOV_truck
+						}						
+					}
+					25 = {
+						add_to_variable = {
+							var = SOV_support
+							value = -3
+							tooltip = RUS_find_SOV_group
+						}						
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = { 
+				check_variable = { 
+					SOV_support < -40
+				}
+				factor = 0
+			}
+		}
+		days_remove = 60
+    }
+}
+
+RUS-GER_decision_2 = {
+	offer_to_Berlin = {
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			GER = { add_to_faction = SOV }
+			GER = {
+				country_event = {
+					id = SOV_revolt_events.3
+					hours = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+    }
+}

@@ -1,0 +1,13 @@
+ISL_decision = {
+	priority = 100
+
+	icon = GFX_P529_decision_ISL_small
+	picture = GFX_P529_decision_ISL_big
+	
+	allow = {
+		tag = ISL
+	}
+	visible = {
+		tag = ISL
+	}
+}

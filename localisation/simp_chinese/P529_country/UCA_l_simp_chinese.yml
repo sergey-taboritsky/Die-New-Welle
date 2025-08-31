@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ UCA_authoritarian_democrat: "中美洲合众国"
+ UCA_authoritarian_democrat_DEF: "中美洲合众国"
+ UCA_authoritarian_democrat_ADJ: "中美洲"
+ UCA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ UCA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ UCA_autonomy_puppet: "$OVERLORDADJ$属中美洲"
+ UCA_autonomy_puppet_DEF: "$OVERLORDADJ$属中美洲"
+ UCA: "中美洲"
+ UCA_DEF: "中美洲"
+ UCA_ADJ: "中美洲"

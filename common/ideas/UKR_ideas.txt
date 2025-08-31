@@ -1,0 +1,92 @@
+ideas = {
+	country = {
+		UKR_dual_regime_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = -0.10
+				political_advisor_cost_factor = 0.10
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+		}
+		UKR_dual_regime_1_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = -0.10
+				political_advisor_cost_factor = 0.10
+			}
+		}
+		UKR_dual_regime_2_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = -0.05
+				political_advisor_cost_factor = 0.05
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+			}
+		}
+		UKR_dual_regime_3_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = -0.05
+				political_advisor_cost_factor = 0.05
+			}
+		}
+    	UKR_church_support_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = 0.15
+				war_support_factor = -0.05
+			}
+		}
+		UKR_guerilla_sabotage_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				war_support_weekly = -0.05
+				stability_weekly = -0.05
+				army_org_factor = -0.20
+			}
+			targeted_modifier = {
+				tag = UKR
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.15
+			}
+		}
+	}
+}

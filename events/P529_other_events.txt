@@ -1,0 +1,84 @@
+add_namespace = P529_news_events
+add_namespace = P529_country_on_actions_events
+
+news_event = {
+	id = P529_news_events.1
+	title = P529_news_events.1.t
+	desc = P529_news_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = P529_news_events.1.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = P529_country_on_actions_events.1
+	title = P529_country_on_actions_events.1.t
+	desc = P529_country_on_actions_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = P529_country_on_actions_events.1.a
+		CGN = { change_tag_from = BEL }
+		CGN = {
+			set_cosmetic_tag = BEL_exile_government
+			every_state = {
+				limit = {
+					is_core_of = CGN
+				}
+				transfer_state_to = CGN
+			}
+		}		
+	}
+}
+
+news_event = {
+	id = P529_news_events.2
+	title = P529_news_events.2.t
+	desc = P529_news_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = P529_news_events.2.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = P529_country_on_actions_events.2
+	title = P529_country_on_actions_events.2.t
+	desc = P529_country_on_actions_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = P529_country_on_actions_events.2.a
+		INO = { change_tag_from = NER }
+		INO = {
+			set_cosmetic_tag = NER_exile_government
+			every_state = {
+				limit = {
+					is_core_of = INO
+				}
+				transfer_state_to = INO
+			}
+		}
+	}
+}

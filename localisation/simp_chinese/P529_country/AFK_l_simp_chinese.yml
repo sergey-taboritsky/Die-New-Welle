@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ AFK_paternal_autocrat: "阿富汗王国"
+ AFK_paternal_autocrat_DEF: "阿富汗王国"
+ AFK_paternal_autocrat_ADJ: "阿富汗"
+ AFK_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ AFK_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ AFK_autonomy_puppet: "$OVERLORDADJ$属阿富汗"
+ AFK_autonomy_puppet_DEF: "$OVERLORDADJ$属阿富汗"
+ AFK: "阿富汗"
+ AFK_DEF: "阿富汗"
+ AFK_ADJ: "阿富汗"

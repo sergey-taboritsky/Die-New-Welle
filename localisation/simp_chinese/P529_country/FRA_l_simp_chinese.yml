@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ FRA_syndicalist: "法兰西公社"
+ FRA_syndicalist_DEF: "法兰西公社"
+ FRA_syndicalist_ADJ: "法国"
+ FRA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ FRA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ FRA_autonomy_puppet: "$OVERLORDADJ$属法国"
+ FRA_autonomy_puppet_DEF: "$OVERLORDADJ$属法国"
+ FRA: "法兰西"
+ FRA_DEF: "法兰西"
+ FRA_ADJ: "法兰西"

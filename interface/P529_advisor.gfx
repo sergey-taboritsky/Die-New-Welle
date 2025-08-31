@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_Oswald_Mosley_small"
+		texturefile = "gfx/P529_advisor/GBR/Oswald_Mosley_small.png"
+	}
+}

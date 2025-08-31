@@ -1,0 +1,8 @@
+generic_econ = {
+	icon = generic_research
+	visible = {
+		NOT = {
+			has_country_flag = econ_decisions_disabled
+		}
+	}
+}

@@ -1,0 +1,178 @@
+add_namespace = FRA_political_events
+add_namespace = FRA_focus_events
+
+country_event = {
+	id = FRA_political_events.1
+	title = FRA_political_events.1.t
+	desc = FRA_political_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA_political_events.1.a
+		unlock_national_focus = FRA_Politics_GER_a_1
+		ai_chance = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = FRA_political_events.1.b
+		unlock_national_focus = FRA_Politics_GER_a_1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = FRA_focus_events.1
+	title = FRA_focus_events.1.t
+	desc = FRA_focus_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA_focus_events.1.a
+		add_state_core = 34
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = FRA
+				owns_state = 6
+				owns_state = 34
+			}
+			random_owned_state = {
+				limit = {
+					state = 34
+				}
+				transfer_state_to = FRA
+			}
+			FLD = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				add_state_core = 6
+			}
+			FRA = {
+				puppet = FLD
+			}
+		}
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = FRA
+				owns_state = 34
+				NOT = { owns_state = 6 }
+			}
+			FRA = {
+				annex_country = {
+					target = BEL
+					transfer_troops = yes
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = FRA
+				owns_state = 6
+				NOT = { owns_state = 34 }
+			}
+			FLD = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				add_state_core = 6
+			}
+		}
+		random_owned_state = {
+			limit = {
+				state = 6
+			}
+			FLD = {
+				transfer_state = 6
+				add_state_core = 6
+			}
+			FRA = {
+				puppet = FLD
+			}
+		}
+				
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = FRA_focus_events.2
+	title = FRA_focus_events.2.t
+	desc = FRA_focus_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA_focus_events.2.a
+		random_owned_state = {
+			limit = {
+				state = 8
+			}
+			transfer_state_to = LUX
+			FRA = {
+				puppet = LUX
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = FRA_focus_events.3
+	title = FRA_focus_events.3.t
+	desc = FRA_focus_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRA_focus_events.3.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 35
+					state = 7
+					state =36
+				}
+			}
+			transfer_state_to = FLD
+			add_core_of = FLD
+		}
+		random_country = {
+			limit = {
+				is_puppet_of = FRA
+				original_tag = NER
+			}
+			FLD = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				add_state_core = 35
+				add_state_core = 7
+				add_state_core = 36
+			}
+		}
+		puppet = FLD
+		ai_chance = {
+			base = 1
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ NER_authoritarian_democrat: "尼德兰王国"
+ NER_authoritarian_democrat_DEF: "尼德兰王国"
+ NER_authoritarian_democrat_ADJ: "尼德兰"
+ NER_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ NER_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ NER_autonomy_puppet: "$OVERLORDADJ$属尼德兰"
+ NER_autonomy_puppet_DEF: "$OVERLORDADJ$属尼德兰"
+ NER: "尼德兰"
+ NER_DEF: "尼德兰"
+ NER_ADJ: "尼德兰"

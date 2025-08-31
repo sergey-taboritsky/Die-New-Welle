@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ LEV_syndicalist: "黎凡特公社"
+ LEV_syndicalist_DEF: "黎凡特公社"
+ LEV_syndicalist_ADJ: "黎凡特"
+ LEV_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ LEV_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ LEV_autonomy_puppet: "$OVERLORDADJ$属黎凡特"
+ LEV_autonomy_puppet_DEF: "$OVERLORDADJ$属黎凡特"
+ LEV: "黎凡特"
+ LEV_DEF: "黎凡特"
+ LEV_ADJ: "黎凡特"

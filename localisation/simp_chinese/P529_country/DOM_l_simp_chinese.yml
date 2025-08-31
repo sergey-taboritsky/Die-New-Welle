@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ DOM_social_conservative: "多米尼加共和国"
+ DOM_social_conservative_DEF: "多米尼加共和国"
+ DOM_social_conservative_ADJ: "多米尼加"
+ DOM_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ DOM_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ DOM_autonomy_puppet: "$OVERLORDADJ$属多米尼加"
+ DOM_autonomy_puppet_DEF: "$OVERLORDADJ$属多米尼加"
+ DOM: "多米尼加"
+ DOM_DEF: "多米尼加"
+ DOM_ADJ: "多米尼加"

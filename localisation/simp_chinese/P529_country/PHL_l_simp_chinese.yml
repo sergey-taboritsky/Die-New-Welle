@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ PHL_market_liberal: "菲律宾共和国"
+ PHL_market_liberal_DEF: "菲律宾共和国"
+ PHL_market_liberal_ADJ: "菲律宾"
+ PHL_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ PHL_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ PHL_autonomy_puppet: "$OVERLORDADJ$属菲律宾"
+ PHL_autonomy_puppet_DEF: "$OVERLORDADJ$属菲律宾"
+ PHL: "菲律宾"
+ PHL_DEF: "菲律宾"
+ PHL_ADJ: "菲律宾"

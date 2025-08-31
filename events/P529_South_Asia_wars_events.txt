@@ -1,0 +1,332 @@
+add_namespace = South_Asia_wars_event
+country_event = {
+	id = South_Asia_wars_event.1
+	title = South_Asia_wars_event.1.t
+	desc = South_Asia_wars_event.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {#普什图尼斯坦的野望
+		tag = AFK
+		has_global_flag = IND_collapsing_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = South_Asia_wars_event.1.a
+		AFK = {
+			declare_war_on = {
+				target = PUN
+				type = annex_everything
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = RUS
+			}
+		}
+	}
+}
+
+country_event = {
+	id = South_Asia_wars_event.2
+	title = South_Asia_wars_event.2.t
+	desc = South_Asia_wars_event.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {#锡克帝国的崛起
+		tag = PUN
+		has_global_flag = IND_collapsing_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = South_Asia_wars_event.2.a
+		PUN = {
+			declare_war_on = {
+				target = HID
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LJS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = GOC
+				type = annex_everything
+			}
+			add_core = 443
+			add_core = 433
+			add_core = 439
+			add_core = 428
+			set_cosmetic_tag = Sikh_empire
+		}
+	}
+}
+
+country_event = {
+	id = South_Asia_wars_event.3
+	title = South_Asia_wars_event.3.t
+	desc = South_Asia_wars_event.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {#北印度统一战争
+		tag = HID
+		has_global_flag = IND_collapsing_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = South_Asia_wars_event.3.a
+		HID = {
+			declare_war_on = {
+				target = BIH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LJS
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = South_Asia_wars_event.4
+	title = South_Asia_wars_event.4.t
+	desc = South_Asia_wars_event.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {#德干的权力真空
+		OR = {
+			AND = {
+				OR = {
+					tag = MRD
+					tag = HYD
+					tag = ADR
+					tag = MSR
+					tag = TMR
+					tag = ORS
+				}
+				is_ai = no
+			}
+			AND = {
+				any_country = {
+					limit = {
+						tag = MRD
+						tag = HYD
+						tag = ADR
+						tag = MSR
+						tag = TMR
+						tag = ORS
+					}
+					is_ai = yes
+				}
+				OR = {
+					tag = MRD
+					tag = HYD
+					tag = ADR
+					tag = MSR
+					tag = TMR
+					tag = ORS
+				}
+			}
+		}
+		has_global_flag = IND_collapsing_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = South_Asia_wars_event.4.a
+		MRD = {
+			declare_war_on = {
+				target = HYD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ADR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MSR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TMR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ORS
+				type = annex_everything
+			}
+		}
+		HYD = {
+			declare_war_on = {
+				target = MRD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ADR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MSR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TMR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ORS
+				type = annex_everything
+			}
+		}
+		ADR = {
+			declare_war_on = {
+				target = HYD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MRD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MSR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TMR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ORS
+				type = annex_everything
+			}
+		}
+		MSR = {
+			declare_war_on = {
+				target = HYD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ADR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MRD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TMR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ORS
+				type = annex_everything
+			}
+		}
+		TMR = {
+			declare_war_on = {
+				target = HYD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ADR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MSR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MRD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ORS
+				type = annex_everything
+			}
+		}
+		ORS = {
+			declare_war_on = {
+				target = HYD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ADR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MSR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MRD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TMR
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = South_Asia_wars_event.5
+	title = South_Asia_wars_event.5.t
+	desc = South_Asia_wars_event.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {#中印度十字路口
+		tag = MRP
+		has_global_flag = IND_collapsing_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = South_Asia_wars_event.5.a
+		MRP = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = MRP
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

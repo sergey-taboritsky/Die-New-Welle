@@ -1,0 +1,376 @@
+add_namespace = SOV_revolt_events
+add_namespace = SOV_revolt_news_events
+
+country_event = {
+	id = SOV_revolt_events.1
+	title = SOV_revolt_events.1.t
+	desc = SOV_revolt_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = SOV_revolt_events.1.a
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -50
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -40
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.1
+				states = { 218 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -40
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -30
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.2
+				states = { 200 218 227 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -30
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -20
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.2
+				states = { 137 196 200 218 227 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -20
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -10
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.3
+				states = { 137 192 196 197 200 218 227 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = -10
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 0
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.4
+				states = { 137 192 196 197 200 218 221 226 227 228 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 0
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 10
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.4
+				states = { 137 192 196 197 200 218 221 226 227 228 238 234 245 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 10
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 20
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.4
+				states = { 137 192 196 197 198 200 203 218 221 226 227 228 238 234 245 259 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 20
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 30
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.5
+				states = { 93 137 192 196 197 198 199 200 201 203 218 221 226 227 228 238 234 245 259 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 30
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 40
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.5
+				states = { 10 87 90 92 93 97 98 137 192 196 197 198 199 200 201 203 218 221 226 227 228 238 234 245 259 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 40
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 50
+					compare = less_than
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.6
+				states = { 10 87 90 92 93 94 97 98 137 192 196 197 198 199 200 201 202 203 218 221 226 227 228 233 238 234 245 259 826 834 }
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = RUS.SOV_support 
+					value = 50
+					compare = greater_than_or_equals
+				}
+			}
+			start_civil_war = {
+				
+				ideology = totalist 
+				size = 0.6
+				states = { 10 87 90 92 93 94 97 98 137 192 196 197 198 199 200 201 202 203 217 218 221 226 227 228 232 233 236 237 238 234 245 259 826 834 }
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = RUS
+				has_government = totalist
+			}
+			set_cosmetic_tag = SOV_revolt_fa
+		}
+		set_global_flag = SOV_revolt_has_happened
+	}
+}
+
+country_event = {
+	id = SOV_revolt_events.2
+	title = SOV_revolt_events.2.t
+	desc = SOV_revolt_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		original_tag = RUS
+		has_government = paternal_autocrat
+		has_civil_war = yes
+		surrender_progress > 0.5
+	}
+	fire_only_once = yes
+
+	option = {
+		name = SOV_revolt_events.2.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = ASK
+					is_core_of = TKM
+					is_core_of = HAZ
+					is_core_of = UZB
+					is_core_of = TJK
+				}
+			}
+			add_core_of = SIB
+		}
+		release = SIB
+		SIB = { change_tag_from = ROOT }
+		SIB = {
+			annex_country = { target = ROOT transfer_troops = yes }
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 1
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = RUS
+				has_government = totalist
+			} 
+			every_state = {
+				limit = {
+					is_core_of = RUS
+					NOT = {
+					is_core_of = SIB
+					}
+				}
+				transfer_state_to = PREV
+			}
+			drop_cosmetic_tag = yes			
+		}
+		random_other_country = {
+			limit = {
+				original_tag = RUS
+				has_government = totalist
+			}
+			set_cosmetic_tag = SOV_fa
+		}
+		news_event = {
+			id = SOV_revolt_news_events.2
+			hours = 12
+			days = 1
+		}
+		clr_global_flag = SOV_revolt_has_happened
+		set_global_flag = SOV_revolt_has_end
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	id = SOV_revolt_events.3
+	title = SOV_revolt_events.3.t
+	desc = SOV_revolt_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = SOV_revolt_events.3.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	id = SOV_revolt_events.4
+	title = SOV_revolt_events.4.t
+	desc = SOV_revolt_events.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV_revolt_events.4.a
+		set_global_flag = SOV_revolt_has_end	
+	}
+}
+news_event = {
+	id = SOV_revolt_news_events.1
+	title = SOV_revolt_news_events.1.t
+	desc = SOV_revolt_news_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV_revolt_news_events.1.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+news_event = {
+	id = SOV_revolt_news_events.2
+	title = SOV_revolt_news_events.2.t
+	desc = SOV_revolt_news_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SOV_revolt_news_events.2.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}

@@ -1,0 +1,19 @@
+on_actions = {
+	on_monthly = {
+		if = {
+			limit = {
+				has_war = yes
+				check_variable = {
+					private_civ_industry > 4
+				}
+			}
+			country_event = { id = gen_econ.1 }
+		}
+		else_if = {
+			limit = {
+				has_war = no
+			}
+			country_event = { id = gen_econ.2 }
+		}
+	}
+}

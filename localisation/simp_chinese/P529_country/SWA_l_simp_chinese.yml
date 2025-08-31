@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SWA_market_liberal: "斯瓦希里海岸共和国"
+ SWA_market_liberal_DEF: "斯瓦希里海岸共和国"
+ SWA_market_liberal_ADJ: "斯瓦希里海岸"
+ SWA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SWA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SWA_autonomy_puppet: "$OVERLORDADJ$属斯瓦希里海岸"
+ SWA_autonomy_puppet_DEF: "$OVERLORDADJ$属斯瓦希里海岸"
+ SWA: "斯瓦希里海岸"
+ SWA_DEF: "斯瓦希里海岸"
+ SWA_ADJ: "斯瓦希里海岸"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ AGR_market_liberal: "安哥拉共和国"
+ AGR_market_liberal_DEF: "安哥拉共和国"
+ AGR_market_liberal_ADJ: "安哥拉"
+ AGR_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ AGR_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ AGR_autonomy_puppet: "$OVERLORDADJ$属安哥拉"
+ AGR_autonomy_puppet_DEF: "$OVERLORDADJ$属安哥拉"
+ AGR: "安哥拉"
+ AGR_DEF: "安哥拉"
+ AGR_ADJ: "安哥拉"

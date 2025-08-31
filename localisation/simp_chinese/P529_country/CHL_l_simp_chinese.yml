@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ CHL_social_conservative: "智利共和国"
+ CHL_social_conservative_DEF: "智利共和国"
+ CHL_social_conservative_ADJ: "智利"
+ CHL_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ CHL_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ CHL_autonomy_puppet: "$OVERLORDADJ$属智利"
+ CHL_autonomy_puppet_DEF: "$OVERLORDADJ$属智利"
+ CHL: "智利"
+ CHL_DEF: "智利"
+ CHL_ADJ: "智利"

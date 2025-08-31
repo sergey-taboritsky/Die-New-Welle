@@ -1,0 +1,16 @@
+characters = {
+	GER_Ernst_Thälmann = {
+		name = GER_Ernst_Thälmann
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Ernst_Thälmann
+			}
+		}
+		country_leader = {
+			ideology = totalist
+			traits = {  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

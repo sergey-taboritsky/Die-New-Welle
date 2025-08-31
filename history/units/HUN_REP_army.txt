@@ -1,0 +1,132 @@
+division_template = {
+	name = "Mérsékelt fegyveres csoportok Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Mérsékelt fegyveres csoportok"
+		location = 9660  # Budapest
+		division_template = "Mérsékelt fegyveres csoportok Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+}

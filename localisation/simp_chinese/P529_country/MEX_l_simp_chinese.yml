@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MEX_national_populist: "墨西哥合众国"
+ MEX_national_populist_DEF: "墨西哥合众国"
+ MEX_national_populist_ADJ: "墨西哥"
+ MEX_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MEX_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MEX_autonomy_puppet: "$OVERLORDADJ$属墨西哥"
+ MEX_autonomy_puppet_DEF: "$OVERLORDADJ$属墨西哥"
+ MEX: "墨西哥"
+ MEX_DEF: "墨西哥"
+ MEX_ADJ: "墨西哥"

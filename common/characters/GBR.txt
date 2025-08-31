@@ -1,0 +1,66 @@
+characters={
+	GBR_Stanley_Baldwin = {
+		name = GBR_Stanley_Baldwin
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Stanley_Baldwin
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GBR_Edward_VIII = {
+		name = GBR_Edward_VIII
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Edward_VIII
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GBR_Oswald_Mosley = {
+		name = GBR_Oswald_Mosley
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Oswald_Mosley
+				small = GFX_portrait_Oswald_Mosley_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = GBR_Oswald_Mosley
+			allowed = {
+
+			}
+			available = {
+				has_government = radical_socialist 
+				is_country_leader = no
+			}
+			visible = {
+
+			}
+			traits = {
+				GBR_Loyal_staff
+			}
+			ai_will_do = {
+				base = 1.0
+			}
+		}
+	}
+}

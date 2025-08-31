@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ALB_paternal_autocrat: "大阿尔巴尼亚王国"
+ ALB_paternal_autocrat_DEF: "大阿尔巴尼亚王国"
+ ALB_paternal_autocrat_ADJ: "大阿尔巴尼亚"
+ ALB_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ALB_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ALB_autonomy_puppet: "$OVERLORDADJ$属大阿尔巴尼亚"
+ ALB_autonomy_puppet_DEF: "$OVERLORDADJ$属大阿尔巴尼亚"
+ ALB: "大阿尔巴尼亚"
+ ALB_DEF: "大阿尔巴尼亚"
+ ALB_ADJ: "大阿尔巴尼亚"

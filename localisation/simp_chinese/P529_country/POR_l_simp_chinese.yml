@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ POR_paternal_autocrat: "葡萄牙王国"
+ POR_paternal_autocrat_DEF: "葡萄牙王国"
+ POR_paternal_autocrat_ADJ: "葡萄牙"
+ POR_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ POR_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ POR_autonomy_puppet: "$OVERLORDADJ$属葡萄牙"
+ POR_autonomy_puppet_DEF: "$OVERLORDADJ$属葡萄牙"
+ POR: "葡萄牙"
+ POR_DEF: "葡萄牙"
+ POR_ADJ: "葡萄牙"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ETH_paternal_autocrat: "埃塞俄比亚帝国"
+ ETH_paternal_autocrat_DEF: "埃塞俄比亚帝国"
+ ETH_paternal_autocrat_ADJ: "埃塞俄比亚"
+ ETH_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ETH_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ETH_autonomy_puppet: "$OVERLORDADJ$属埃塞俄比亚"
+ ETH_autonomy_puppet_DEF: "$OVERLORDADJ$属埃塞俄比亚"
+ ETH: "埃塞俄比亚"
+ ETH_DEF: "埃塞俄比亚"
+ ETH_ADJ: "埃塞俄比亚"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ IRA_paternal_autocrat: "伊朗王国"
+ IRA_paternal_autocrat_DEF: "伊朗王国"
+ IRA_paternal_autocrat_ADJ: "伊朗"
+ IRA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ IRA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ IRA_autonomy_puppet: "$OVERLORDADJ$属伊朗"
+ IRA_autonomy_puppet_DEF: "$OVERLORDADJ$属伊朗"
+ IRA: "伊朗"
+ IRA_DEF: "伊朗"
+ IRA_ADJ: "伊朗"

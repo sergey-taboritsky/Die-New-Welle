@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ HAW_paternal_autocrat: "夏威夷联合王国"
+ HAW_paternal_autocrat_DEF: "夏威夷联合王国"
+ HAW_paternal_autocrat_ADJ: "夏威夷"
+ HAW_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ HAW_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ HAW_autonomy_puppet: "$OVERLORDADJ$属夏威夷"
+ HAW_autonomy_puppet_DEF: "$OVERLORDADJ$属夏威夷"
+ HAW: "夏威夷"
+ HAW_DEF: "夏威夷"
+ HAW_ADJ: "夏威夷"

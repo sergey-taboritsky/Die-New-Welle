@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ PGN_market_liberal: "几内亚共和国"
+ PGN_market_liberal_DEF: "几内亚共和国"
+ PGN_market_liberal_ADJ: "几内亚"
+ PGN_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ PGN_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ PGN_autonomy_puppet: "$OVERLORDADJ$属几内亚"
+ PGN_autonomy_puppet_DEF: "$OVERLORDADJ$属几内亚"
+ PGN: "几内亚"
+ PGN_DEF: "几内亚"
+ PGN_ADJ: "几内亚"

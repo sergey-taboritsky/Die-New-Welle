@@ -1,0 +1,184 @@
+division_template = {
+	name = "Bewaffnete Milizen Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+units = {
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Bewaffnete Milizen"
+		location = 11666  # Vienna
+		division_template = "Bewaffnete Milizen Division"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+}

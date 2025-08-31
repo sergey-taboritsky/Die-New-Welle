@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ CAM_paternal_autocrat: "柬埔寨王国"
+ CAM_paternal_autocrat_DEF: "柬埔寨王国"
+ CAM_paternal_autocrat_ADJ: "柬埔寨"
+ CAM_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ CAM_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ CAM_autonomy_puppet: "$OVERLORDADJ$属柬埔寨"
+ CAM_autonomy_puppet_DEF: "$OVERLORDADJ$属柬埔寨"
+ CAM: "柬埔寨"
+ CAM_DEF: "柬埔寨"
+ CAM_ADJ: "柬埔寨"

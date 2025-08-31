@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ TRA_paternal_autocrat: "特拉比松公国"
+ TRA_paternal_autocrat_DEF: "特拉比松公国"
+ TRA_paternal_autocrat_ADJ: "特拉比松"
+ TRA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ TRA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ TRA_autonomy_puppet: "$OVERLORDADJ$属特拉比松"
+ TRA_autonomy_puppet_DEF: "$OVERLORDADJ$属特拉比松"
+ TRA: "特拉比松"
+ TRA_DEF: "特拉比松"
+ TRA_ADJ: "特拉比松"

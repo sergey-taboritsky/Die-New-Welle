@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SWE_authoritarian_democrat: "瑞典王国"
+ SWE_authoritarian_democrat_DEF: "瑞典王国"
+ SWE_authoritarian_democrat_ADJ: "瑞典"
+ SWE_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SWE_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SWE_autonomy_puppet: "$OVERLORDADJ$属瑞典"
+ SWE_autonomy_puppet_DEF: "$OVERLORDADJ$属瑞典"
+ SWE: "瑞典"
+ SWE_DEF: "瑞典"
+ SWE_ADJ: "瑞典"

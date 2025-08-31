@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MOC_paternal_autocrat: "摩洛哥王国"
+ MOC_paternal_autocrat_DEF: "摩洛哥王国"
+ MOC_paternal_autocrat_ADJ: "摩洛哥"
+ MOC_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MOC_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MOC_autonomy_puppet: "$OVERLORDADJ$属摩洛哥"
+ MOC_autonomy_puppet_DEF: "$OVERLORDADJ$属摩洛哥"
+ MOC: "摩洛哥"
+ MOC_DEF: "摩洛哥"
+ MOC_ADJ: "摩洛哥"

@@ -1,0 +1,103 @@
+ideas = {
+	country = {
+		ISL_cruel_ruling_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				no_compliance_gain = 1
+				required_garrison_factor = 0.5
+			}
+		}
+		ISL_immigrant_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+		ISL_Religious_fanaticism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_regain = 0.1
+				attrition = 0.3
+				experience_loss_factor = 0.3
+			}
+		}
+		ISL_Religious_fanaticism_improve = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_regain = 0.1
+				attrition = 0.3
+				experience_loss_factor = 0.3
+				monthly_population = 0.1
+				surrender_limit = 0.1
+			}
+		}
+		ISL_Religious_focus = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = 0.3
+				stability_weekly = 0.001
+			}
+		}
+		ISL_complex_language = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+				political_power_cost = 0.1
+				research_speed_factor = -0.3
+			}
+		}
+		ISL_all_military_service = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription = 0.05
+			}
+		}
+	}
+}

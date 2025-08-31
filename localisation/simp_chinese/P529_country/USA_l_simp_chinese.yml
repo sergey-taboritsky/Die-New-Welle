@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ USA_market_liberal: "美利坚合众国"
+ USA_market_liberal_DEF: "美利坚合众国"
+ USA_market_liberal_ADJ: "美利坚"
+ USA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ USA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ USA_autonomy_puppet: "$OVERLORDADJ$属美利坚"
+ USA_autonomy_puppet_DEF: "$OVERLORDADJ$属美利坚"
+ USA: "美利坚"
+ USA_DEF: "美利坚"
+ USA_ADJ: "美利坚"

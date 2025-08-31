@@ -1,0 +1,106 @@
+AUS-HUN_civil_war_decision = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = AUS
+	}
+	visible = {
+		tag = AUS
+		AUS = {
+			has_completed_focus = AUS_start_focus
+		}
+		NOT = {
+			has_global_flag = AUS_civil_war_has_end
+		}
+		NOT = {
+			has_global_flag = AUS_civil_war_has_happened
+		}
+	}
+}
+
+AUS_civil_war_decision = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = AUS
+	}
+	visible = {
+		tag = AUS
+		NOT = {
+			has_global_flag = AUS_civil_war_has_end
+		}
+		has_global_flag = AUS_civil_war_has_happened
+	}
+}
+
+P529_AUS_civil_aftercare = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = AUS
+	}
+	visible = {
+		tag = AUS
+		has_global_flag = AUS_civil_war_has_end
+	}
+}
+
+HUN_civil_war_decision = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = HUN
+	}
+	visible = {
+		tag = HUN
+		NOT = {
+			has_global_flag = AUS_civil_war_has_end
+		}
+		has_global_flag = AUS_civil_war_has_happened
+	}
+}
+
+P529_HUN_civil_aftercare = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = HUN
+	}
+	visible = {
+		tag = HUN
+		OR = {
+			has_completed_focus = HUN_focus_SOV_OU_2
+		}
+	}
+}
+
+P529_GER_AUS_occupy_decision = {
+	priority = 100
+
+	icon = GFX_decision_category_SOV_civil_war 
+	picture = GFX_decision_cat_generic_austria_hungary
+	
+	allow = {
+		tag = GER
+	}
+	visible = {
+		HUN = {
+			has_completed_focus = HUN_focus_SOV_OU_A
+		}
+	}
+}

@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_Ernst_Thalmann"
+		texturefile = "gfx/P529_leaders/GER/Ernst_Thalmann.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Mikhail_Romanov"
+		texturefile = "gfx/P529_leaders/UKR/UKR_mikhail_romanov.png"
+	}	
+	spriteType = {
+		name = "GFX_portrait_Kun_Bela"
+		texturefile = "gfx/P529_leaders/HUN/Kun_Bela.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Stanley_Baldwin"
+		texturefile = "gfx/P529_leaders/GBR/Stanley_Baldwin.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Edward_VIII"
+		texturefile = "gfx/P529_leaders/GBR/Edward_VIII.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_Oswald_Mosley"
+		texturefile = "gfx/P529_leaders/GBR/Oswald_Mosley.png"
+	}
+}

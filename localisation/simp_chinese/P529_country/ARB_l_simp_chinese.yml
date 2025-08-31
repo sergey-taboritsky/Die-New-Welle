@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ARB_paternal_autocrat: "阿拉伯王国"
+ ARB_paternal_autocrat_DEF: "阿拉伯王国"
+ ARB_paternal_autocrat_ADJ: "阿拉伯"
+ ARB_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ARB_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ARB_autonomy_puppet: "$OVERLORDADJ$属阿拉伯"
+ ARB_autonomy_puppet_DEF: "$OVERLORDADJ$属阿拉伯"
+ ARB: "阿拉伯"
+ ARB_DEF: "阿拉伯"
+ ARB_ADJ: "阿拉伯"

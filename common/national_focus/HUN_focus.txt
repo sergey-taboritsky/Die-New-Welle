@@ -1,0 +1,1374 @@
+focus_tree = {
+	id = HUN_tree_SOV
+	country = {
+		factor = 0
+	}
+	#HUN_start_SOV
+	focus = {
+		id = HUN_focus_start_SOV
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 15
+		y = 0
+
+		completion_reward = {
+			load_oob = "HUN_SOV_army"
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#SOV_1
+	focus = {
+		id = HUN_focus_SOV_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_start_SOV
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_start_SOV }
+
+		completion_reward = {
+			add_manpower = 30000
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_2_1
+	focus = {
+		id = HUN_focus_SOV_2_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_SOV_1
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_1 }
+
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_2_2
+	focus = {
+		id = HUN_focus_SOV_2_2
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_SOV_1
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_1 }
+
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_3
+	focus = {
+		id = HUN_focus_SOV_3
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_SOV_1
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = HUN_focus_SOV_2_1 }
+		prerequisite = { focus = HUN_focus_SOV_2_2 }
+
+		completion_reward = {
+			create_country_leader = {
+				name = Kun_Bela
+				desc = "Kun_Bela"
+				picture = GFX_portrait_Kun_Bela
+				ideology = totalist_subtype
+				expire="1965.1.1.1"
+				traits = {
+				}
+			}
+			add_political_power = 50
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_4_1
+	focus = {
+		id = HUN_focus_SOV_4_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_SOV_3
+		x = -4
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_3 }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_4_2
+	focus = {
+		id = HUN_focus_SOV_4_2
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_3
+		x = 4
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_3 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_4_3
+	focus = {
+		id = HUN_focus_SOV_4_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = HUN_focus_SOV_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_3 }
+
+		completion_reward = {
+			add_ideas = war_economy
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_A
+	focus = {
+		id = HUN_focus_SOV_IN_A
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_2
+		x = -4
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_2 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_B }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_C }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_D }
+		
+		available = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_IN_A_tooltip
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_A_1
+	focus = {
+		id = HUN_focus_SOV_IN_A_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_IN_A
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_IN_A }
+		
+		available = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = HUN
+					NOT = {
+						OR = {
+							is_core_of = SLO
+							is_core_of = CRO
+							is_core_of = TRL
+							is_core_of = BNT
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_B
+	focus = {
+		id = HUN_focus_SOV_IN_B
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_2
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_2 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_A }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_C }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_D }
+		
+		available = {
+			NOT = {
+				has_country_flag = SLO_revolt_has_completed
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_IN_B_tooltip
+			add_days_remove  = {
+				decision = incoming_SLO_revolt
+				days = 300
+			}
+			add_to_variable = {
+				var = SLO_submit
+				value = 100
+				tooltip = add_100_SLO_submit_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_B_1
+	focus = {
+		id = HUN_focus_SOV_IN_B_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_IN_B
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_IN_B }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_capital = yes
+						is_core_of = SLO
+					}
+				}
+				create_unit = {
+					division = "
+						name = \"Német Támogatási Osztály Division\"
+						division_template = \"Infanterie Division\"
+						start_experience_factor = 0.15
+						start_equipment_factor = 1
+					"
+					owner = HUN
+				}
+			}
+			add_days_remove  = {
+				decision = incoming_SLO_revolt
+				days = 100
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_C
+	focus = {
+		id = HUN_focus_SOV_IN_C
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_2 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_A }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_B }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_D }
+		
+		available = {
+			NOT = {
+				has_country_flag = TRL_revolt_has_completed
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_IN_C_tooltip
+			add_days_remove  = {
+				decision = incoming_TRL_revolt
+				days = 300
+			}
+			add_to_variable = {
+				var = TRL_submit
+				value = 100
+				tooltip = add_100_TRL_submit_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_C_1
+	focus = {
+		id = HUN_focus_SOV_IN_C_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_IN_C
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_IN_C }
+
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.2
+			add_days_remove  = {
+				decision = incoming_TRL_revolt
+				days = 100
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_D
+	focus = {
+		id = HUN_focus_SOV_IN_D
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_2
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_2 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_A }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_B }
+		mutually_exclusive = { focus = HUN_focus_SOV_IN_C }
+		
+		available = {
+			NOT = {
+				has_country_flag = BNT_revolt_has_completed
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_IN_D_tooltip
+			add_days_remove  = {
+				decision = incoming_BNT_revolt
+				days = 300
+			}
+			add_to_variable = {
+				var = BNT_submit
+				value = 100
+				tooltip = add_100_BNT_submit_tt
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_D_1
+	focus = {
+		id = HUN_focus_SOV_IN_D_1
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = HUN_focus_SOV_IN_D
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_IN_D }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_capital = yes
+						is_core_of = BNT
+					}
+				}
+				create_unit = {
+					division = "
+						name = \"Német Támogatási Osztály Division\"
+						division_template = \"Infanterie Division\"
+						start_experience_factor = 0.15
+						start_equipment_factor = 1
+					"
+					owner = HUN
+				}
+			}
+			add_days_remove  = {
+				decision = incoming_BNT_revolt
+				days = 100
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_IN_2
+	focus = {
+		id = HUN_focus_SOV_IN_2
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 3
+		}
+		
+		relative_position_id = HUN_focus_SOV_IN_B_1
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_IN_A_1 OR = HUN_focus_SOV_IN_B_1 OR = HUN_focus_SOV_IN_C_1 OR = HUN_focus_SOV_IN_D_1 }
+
+		completion_reward = {
+			add_offsite_building = { 
+				type = arms_factory 
+				level = 3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_A
+	focus = {
+		id = HUN_focus_SOV_OU_A
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 3
+			modifier = {
+				AND = {
+					AUS = {
+						is_ai = yes
+					}
+					HUN = {
+						is_ai = yes
+					}
+				}
+				factor = 1
+			}
+			modifier = {
+				AND = {
+					AUS = {
+						is_ai = yes
+					}
+					HUN = {
+						is_ai = no
+					}
+				}
+				factor = 1
+			}
+			modifier = {
+				AND = {
+					AUS = {
+						is_ai = no
+					}
+					HUN = {
+						is_ai = yes
+					}
+				}
+				factor = 0
+			}
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_1
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_1 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_OU_B }
+		
+		available = {
+			date > 1936.8.20
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_OU_A_tooltip
+			GER = {
+				country_event = {
+					id = HUN_focus_events.1
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = AUS
+							is_core_of = SLV
+							AND = {
+								is_core_of = CZE
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+						}
+					}
+					clr_state_flag = AUS_HUN_potential_state_HUN
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_B
+	focus = {
+		id = HUN_focus_SOV_OU_B
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_1
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_SOV_4_1 }
+		
+		mutually_exclusive = { focus = HUN_focus_SOV_OU_A }
+		
+		available = {
+			date > 1936.8.20
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_OU_B_tooltip
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_2
+	focus = {
+		id = HUN_focus_SOV_OU_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_1
+		x = 0
+		y = 2
+		
+		available = {
+			OR = {
+				has_global_flag = AUS_civil_war_HUN_win
+				has_global_flag = AUS_civil_war_no_winner
+			}
+		}
+		
+		prerequisite = { focus = HUN_focus_SOV_OU_A OR = HUN_focus_SOV_OU_B }
+
+		completion_reward = {
+			custom_effect_tooltip = HUN_focus_SOV_OU_2_tooltip
+			add_ideas = HUN_reconsruction
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_A_2
+	focus = {
+		id = HUN_focus_SOV_OU_A_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_OU_A
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = HUN_focus_SOV_OU_A }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = HUN
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			GER = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = HUN
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_B_2
+	focus = {
+		id = HUN_focus_SOV_OU_B_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_OU_B
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = HUN_focus_SOV_OU_B }
+
+		completion_reward = {
+			manpower = 35000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = HUN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = HUN
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = HUN
+					NOT = {
+						OR = {
+							is_core_of = SLO
+							is_core_of = CRO
+							is_core_of = TRL
+							is_core_of = BNT
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_OU_3
+	focus = {
+		id = HUN_focus_SOV_OU_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_OU_2
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = HUN_focus_SOV_OU_2 }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = HUN_five_year_project
+				days = 1825
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_1
+	focus = {
+		id = HUN_focus_second_stage_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_SOV_4_3
+		x = 0
+		y = 5
+		
+		prerequisite = { focus = HUN_focus_SOV_OU_3 }
+		prerequisite = { focus = HUN_focus_SOV_IN_2 }
+		
+		available = {
+			has_war = no
+		}
+
+		completion_reward = {
+			add_political_power = 200
+			add_timed_idea = {
+				idea = HUN_overthrow_capitalists
+				days = 365
+			}
+			add_stability = -0.15
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_2_1
+	focus = {
+		id = HUN_focus_second_stage_2_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_1
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = HUN_focus_second_stage_1 }
+		
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = HUN_focus_events.2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_1
+	focus = {
+		id = HUN_focus_second_stage_PO_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_1
+		x = -4
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_1 }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_2
+	focus = {
+		id = HUN_focus_second_stage_PO_2
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_PO_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_PO_1 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HUN_opposition_working_1
+				remove_idea = HUN_opposition_working_0
+			}
+			add_timed_idea = {
+				idea = HUN_tree_authority
+				days = 365
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_3_1
+	focus = {
+		id = HUN_focus_second_stage_PO_3_1
+		icon = GFX_goal_generic_production
+		cost = 4
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_PO_2
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_PO_2 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_1
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_2
+					remove_idea = HUN_opposition_working_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_2
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_3
+					remove_idea = HUN_opposition_working_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_3
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_4
+					remove_idea = HUN_opposition_working_3
+				}
+			}
+			add_manpower = -50000
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_3_2
+	focus = {
+		id = HUN_focus_second_stage_PO_3_2
+		icon = GFX_goal_generic_production
+		cost = 6
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_PO_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_PO_2 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_1
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_2
+					remove_idea = HUN_opposition_working_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_2
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_3
+					remove_idea = HUN_opposition_working_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_3
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_4
+					remove_idea = HUN_opposition_working_3
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 1
+					is_capital = no
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 1
+					is_capital = no
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_3_3
+	focus = {
+		id = HUN_focus_second_stage_PO_3_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_PO_2
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_PO_2 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_1
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_2
+					remove_idea = HUN_opposition_working_1
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_2
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_3
+					remove_idea = HUN_opposition_working_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = HUN_opposition_working_3
+				}
+				swap_ideas = {
+					add_idea = HUN_opposition_working_4
+					remove_idea = HUN_opposition_working_3
+				}
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_PO_4
+	focus = {
+		id = HUN_focus_second_stage_PO_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_PO_3_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_PO_3_1 }
+		prerequisite = { focus = HUN_focus_second_stage_PO_3_2 }
+		prerequisite = { focus = HUN_focus_second_stage_PO_3_3 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HUN_opposition_working_5
+				remove_idea = HUN_opposition_working_4
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_1
+	focus = {
+		id = HUN_focus_second_stage_IN_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_1
+		x = 4
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_1 }
+
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_2_1
+	focus = {
+		id = HUN_focus_second_stage_IN_2_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_1
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_1 }
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+			add_timed_idea = {
+				idea = HUN_GER_helping
+				days = 730
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_2_2
+	focus = {
+		id = HUN_focus_second_stage_IN_2_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_1 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_2_3
+	focus = {
+		id = HUN_focus_second_stage_IN_2_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_1
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_1 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_3_1
+	focus = {
+		id = HUN_focus_second_stage_IN_3_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_2_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_2_1 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_3_2
+	focus = {
+		id = HUN_focus_second_stage_IN_3_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_2_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_2_2 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_3_3
+	focus = {
+		id = HUN_focus_second_stage_IN_3_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_2_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_2_3 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = HUN_construction_benefit
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#SOV_second_stage_IN_4
+	focus = {
+		id = HUN_focus_second_stage_IN_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			base = 5
+		}
+		
+		relative_position_id = HUN_focus_second_stage_IN_3_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = HUN_focus_second_stage_IN_3_1 }
+		prerequisite = { focus = HUN_focus_second_stage_IN_3_2 }
+		prerequisite = { focus = HUN_focus_second_stage_IN_3_3 }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+}
+
+focus_tree = {
+	id = HUN_tree_SYN
+	country = {
+		factor = 0
+	}
+	#HUN_start_SYN
+	focus = {
+		id = HUN_focus_start_SYN
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 15
+		y = 0
+
+		completion_reward = {
+			load_oob = "HUN_EMP_army"
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+}
+
+focus_tree = {
+	id = HUN_tree_REP
+	country = {
+		factor = 0
+	}
+	#HUN_start_REP
+	focus = {
+		id = HUN_focus_start_REP
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 15
+		y = 0
+
+		completion_reward = {
+			load_oob = "HUN_REP_army"
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+}

@@ -1,0 +1,365 @@
+﻿division_template = {
+	name = "Infanterie Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Geschutzwagen Division"
+	division_names_group = AUS_MNT_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Schnelle Division"  		# Schnelle-Division (cavalry)
+	division_names_group = AUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	##### Österreichisches Bundesheer #####
+	# I Korps
+	division= {	
+		name = "Schnelle Division I"
+		location = 11666  # Vienna
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division II"
+		location = 9692
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "Schnelle Division III"
+		location = 9660
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}	
+	division= {	
+		name = "Schnelle Division IV"
+		location = 11610
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division V"
+		location = 11581
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division VI"
+		location = 11659
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division VII"
+		location = 619
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division VIII"
+		location = 3569
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division IX"
+		location = 11542
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division X"
+		location = 11479
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division XI"
+		location = 9648
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division XII"
+		location = 732
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Schnelle Division XIII"
+		location = 6711
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division I"
+		location = 11584
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division II"
+		location = 603
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division III"
+		location = 673
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division IV"
+		location = 3585
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division V"
+		location = 11401
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division VI"
+		location = 3583
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division VII"
+		location = 442
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division VIII"
+		location = 9494
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division IX"
+		location = 577
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division X"
+		location = 690
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XI"
+		location = 3614
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XII"
+		location = 9821
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XIII"
+		location = 3924
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XIV"
+		location = 3592
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XV"
+		location = 11564
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XVI"
+		location = 5283
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XVII"
+		location = 11401
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XVIII"
+		location = 6562
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XIX"
+		location = 11598
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Infanterie Division XX"
+		location = 11411
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division I"
+		location = 11666
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division II"
+		location = 9660
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division III"
+		location = 3604
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division IV"
+		location = 9606
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division V"
+		location = 9672
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division VI"
+		location = 6522
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Geschutzwagen Division VII"
+		location = 11542
+		division_template = "Geschutzwagen Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

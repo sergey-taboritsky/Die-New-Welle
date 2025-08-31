@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MYA_paternal_autocrat: "缅甸王国"
+ MYA_paternal_autocrat_DEF: "缅甸王国"
+ MYA_paternal_autocrat_ADJ: "缅甸"
+ MYA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MYA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MYA_autonomy_puppet: "$OVERLORDADJ$属缅甸"
+ MYA_autonomy_puppet_DEF: "$OVERLORDADJ$属缅甸"
+ MYA: "缅甸"
+ MYA_DEF: "缅甸"
+ MYA_ADJ: "缅甸"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ GUI_paternal_autocrat: "大圭亚那"
+ GUI_paternal_autocrat_DEF: "大圭亚那"
+ GUI_paternal_autocrat_ADJ: "大圭亚那"
+ GUI_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ GUI_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ GUI_autonomy_puppet: "$OVERLORDADJ$属圭亚那"
+ GUI_autonomy_puppet_DEF: "$OVERLORDADJ$属圭亚那"
+ GUI: "圭亚那"
+ GUI_DEF: "圭亚那"
+ GUI_ADJ: "圭亚那"

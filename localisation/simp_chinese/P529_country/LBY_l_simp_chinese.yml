@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ LBY_social_conservative: "利比亚共和国"
+ LBY_social_conservative_DEF: "利比亚共和国"
+ LBY_social_conservative_ADJ: "利比亚"
+ LBY_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ LBY_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ LBY_autonomy_puppet: "$OVERLORDADJ$属利比亚"
+ LBY_autonomy_puppet_DEF: "$OVERLORDADJ$属利比亚"
+ LBY: "利比亚"
+ LBY_DEF: "利比亚"
+ LBY_ADJ: "利比亚"

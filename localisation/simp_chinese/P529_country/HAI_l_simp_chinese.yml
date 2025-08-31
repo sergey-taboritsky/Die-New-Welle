@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ HAI_social_conservative: "海地共和国"
+ HAI_social_conservative_DEF: "海地共和国"
+ HAI_social_conservative_ADJ: "海地"
+ HAI_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ HAI_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ HAI_autonomy_puppet: "$OVERLORDADJ$属海地"
+ HAI_autonomy_puppet_DEF: "$OVERLORDADJ$属海地"
+ HAI: "海地"
+ HAI_DEF: "海地"
+ HAI_ADJ: "海地"

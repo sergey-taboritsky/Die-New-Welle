@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SYY_paternal_autocrat: "暹罗王国"
+ SYY_paternal_autocrat_DEF: "暹罗王国"
+ SYY_paternal_autocrat_ADJ: "暹罗"
+ SYY_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SYY_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SYY_autonomy_puppet: "$OVERLORDADJ$属暹罗"
+ SYY_autonomy_puppet_DEF: "$OVERLORDADJ$属暹罗"
+ SYY: "暹罗"
+ SYY_DEF: "暹罗"
+ SYY_ADJ: "暹罗"

@@ -1,0 +1,181 @@
+add_namespace = HUN_political_events
+add_namespace = HUN_focus_events
+add_namespace = HUN_decision_events
+add_namespace = HUN_decision_news_events
+
+country_event = {
+	id = HUN_focus_events.1
+	title = HUN_focus_events.1.t
+	desc = HUN_focus_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HUN_focus_events.1.a
+		if = {
+			limit = {
+				CZE = {
+					exist = yes
+				}
+			}
+			declare_war_on = {
+				target = CZE
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				AUS = {
+					exist = yes
+				}
+			}
+			declare_war_on = {
+				target = AUS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				SLV = {
+					exist = yes
+				}
+			}
+			declare_war_on = {
+				target = SLV
+				type = annex_everything
+			}
+		}
+		GER = { add_to_faction = HUN }
+		hidden_effect = {
+			POL = {
+				country_event = AUS_civil_war_YRP_events.1
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = HUN_focus_events.2
+	title = HUN_focus_events.2.t
+	desc = HUN_focus_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = HUN_focus_events.2.a
+		GER = { add_to_faction = HUN }
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = HUN_political_events.1
+	title = HUN_political_events.1.t
+	desc = HUN_political_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = HUN
+		has_completed_focus = HUN_focus_SOV_IN_D_1
+		any_controlled_state = {
+			NOT = {
+				is_core_of = HUN
+				has_state_flag = HUN_BNT_help
+			}
+			OR = {
+				is_core_of = AUS
+				is_core_of = CZE
+				is_core_of = SLV
+				is_core_of = GER
+			}
+		}
+	}
+	
+	option = {
+		name = HUN_political_events.1.a
+		random_controlled_state = {
+			limit = {
+				NOT = {
+					is_core_of = HUN
+					has_state_flag = HUN_BNT_help
+				}
+				OR = {
+					is_core_of = AUS
+					is_core_of = CZE
+					is_core_of = SLV
+					is_core_of = GER
+				}
+			}
+			set_state_flag = HUN_BNT_help
+			HUN_BNT_help_state_modifier_scripted_effects = yes
+			
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = HUN_political_events.2
+	hidden = yes
+	
+	trigger = {
+		any_state = {
+			has_state_flag = HUN_BNT_help
+			OR = {
+				is_core_of = HUN
+				NOT = {
+					is_controlled_by = HUN
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_state = {
+			limit = {
+				has_state_flag = HUN_BNT_help
+				NOT = {
+					owner = HUN
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = HUN_BNT_help_state_modifier
+			}
+			clr_state_flag = HUN_BNT_help
+		}
+	}
+}
+
+country_event = {
+	id = HUN_political_events.3
+	title = HUN_political_events.3.t
+	desc = HUN_political_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = HUN
+		has_completed_focus = HUN_focus_SOV_OU_2
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = HUN_political_events.3.a
+		add_ideas = HUN_opposition_working_0
+		ai_chance = {
+			base = 1
+		}
+	}
+}

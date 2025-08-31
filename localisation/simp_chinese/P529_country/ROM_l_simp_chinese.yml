@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ROM_paternal_autocrat: "罗马尼亚王国"
+ ROM_paternal_autocrat_DEF: "罗马尼亚王国"
+ ROM_paternal_autocrat_ADJ: "罗马尼亚"
+ ROM_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ROM_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ROM_autonomy_puppet: "$OVERLORDADJ$属罗马尼亚"
+ ROM_autonomy_puppet_DEF: "$OVERLORDADJ$属罗马尼亚"
+ ROM: "罗马尼亚"
+ ROM_DEF: "罗马尼亚"
+ ROM_ADJ: "罗马尼亚"

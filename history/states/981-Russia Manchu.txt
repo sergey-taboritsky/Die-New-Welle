@@ -1,0 +1,26 @@
+
+state = {
+	id=981
+	name = "STATE_981" # Nikolayevsk
+	manpower = 27663
+	
+	state_category = rural
+	resources={
+		steel=18 # was: 24
+	}
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = RUS
+		add_core_of = SIB
+	}
+
+	provinces = {
+		1730 1772 1845 7691 7785 12591
+	}
+
+	local_supplies = 0.0 
+}

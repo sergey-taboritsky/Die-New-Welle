@@ -1,0 +1,601 @@
+AUS-HUN_civil_war_decision = {
+	incoming_civil_war_AUS = {          
+		available = {            
+			always = no
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 20
+		timeout_effect = {
+			AUS = { 
+				country_event = {
+					id = AUS_decision_events.1
+				}
+				remove_ideas = AUS_unrest_government
+				every_owned_state = {
+					AUS_civil_war_state_modifier_scripted_effects = yes
+					set_state_flag = AUS_HUN_potential_state_AUS
+					set_state_flag = AUS_HUN_potential_state_HUN
+				}
+			}
+			every_possible_country = {
+				news_event = {
+					id = AUS_decision_news_events.1
+					hours = 12
+					days = 1
+				}
+			}
+			set_global_flag = AUS_civil_war_has_happened
+		}
+		complete_effect = {                    
+		}
+	}
+}
+
+AUS_civil_war_decision = {
+	incoming_CZE_revolt = {          
+		available = {            
+			check_variable = {
+				CZE_submit > 99
+				tooltip = CZE_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.11
+			}
+			set_country_flag = CZE_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.12
+			}
+			set_country_flag = CZE_revolt_has_completed
+		}
+	}
+	get_CZE_submition = {
+		visible = {
+			OR = {
+			}
+			NOT = {
+				has_country_flag = CZE_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = CZE_submit
+				value = 10
+				tooltip = add_10_CZE_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+	incoming_CLA_revolt = {          
+		available = {            
+			check_variable = {
+				CLA_submit > 99
+				tooltip = CLA_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.21
+			}
+			set_country_flag = CLA_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.22
+			}
+			set_country_flag = CLA_revolt_has_completed			
+		}
+	}
+	incoming_SLV_revolt = {          
+		available = {            
+			check_variable = {
+				SLV_submit > 99
+				tooltip = SLV_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 200
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.31
+			}
+			set_country_flag = SLV_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.32
+			}
+			set_country_flag = SLV_revolt_has_completed
+		}
+	}
+	get_SLV_submition = {
+		visible = {
+			NOT = {
+				has_country_flag = SLV_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = SLV_submit
+				value = 10
+				tooltip = add_10_SLV_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+	incoming_VEN_revolt = {          
+		available = {            
+			check_variable = {
+				VEN_submit > 99
+				tooltip = VEN_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 10
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.41
+			}
+			set_country_flag = VEN_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.42
+			}
+			set_country_flag = VEN_revolt_has_completed			
+		}
+	}
+	AUS_FAS_conscription = {
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 5
+
+		days_remove = 20
+		
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+				is_controlled_by = ROOT
+				NOT = {
+					OR = { #奥地利本土
+						state = 4
+						state = 152
+						state = 153
+						state = 39
+						state = 848
+						state = 850
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = AUS_focus_FAS_1
+			NOT = {
+				has_global_flag = AUS_civil_war_has_end
+			}
+		}
+		complete_effect = {
+			AUS = {
+				add_manpower = 5000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = AUS
+				}
+			}
+			FROM = {
+				create_unit = {
+					division = "
+						name = \"Bewaffnete Milizen\"
+						division_template = \"Bewaffnete Milizen Division\"
+						start_experience_factor = 0.15
+						start_equipment_factor = 1
+					"
+					owner = AUS
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+}
+
+P529_AUS_civil_aftercare = {
+	AUS_recore_states = {
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 50
+
+		days_remove = 180
+		
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+				is_controlled_by = ROOT
+				has_state_flag = AUS_HUN_potential_state_AUS
+			}
+		}
+		
+		visible = {
+			OR = {	
+				has_completed_focus = AUS_focus_FAS_AB_1
+			}
+		}
+		
+		remove_effect = {
+			AUS = {
+				add_manpower = 10000
+			}
+			FROM = {
+				add_core_of = ROOT
+				clr_state_flag = AUS_HUN_potential_state_AUS
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+	AUS_GER_occupy = {
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 20
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+				is_core_of = GER
+			}
+		}
+		
+		visible = {
+			OR = {	
+				has_completed_focus = AUS_focus_FAS_AB_2
+			}
+		}
+		
+		remove_effect = {
+			AUS = {
+				add_manpower = 10000
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+}
+
+P529_HUN_civil_aftercare = {
+	HUN_recore_states = {
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 50
+
+		days_remove = 180
+		
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+				is_controlled_by = ROOT
+				has_state_flag = AUS_HUN_potential_state_HUN
+			}
+		}
+		
+		visible = {
+			OR = {	
+				has_completed_focus = HUN_focus_SOV_OU_2
+			}
+		}
+		
+		remove_effect = {
+			HUN = {
+				add_manpower = 10000
+			}
+			FROM = {
+				add_core_of = ROOT
+				clr_state_flag = AUS_HUN_potential_state_HUN
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+}
+
+P529_GER_AUS_occupy_decision = {
+	GER_AUS_occupy = {
+		state_target = yes
+		
+		on_map_mode = map_and_decisions_view 
+		
+		cancel_if_not_visible = yes
+		
+		cost = 30
+
+		days_remove = 90
+		
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+				OR = {
+					is_core_of = AUS
+					is_core_of = SLV
+					is_core_of = CZE
+				}
+			}
+		}
+		
+		visible = {
+			OR = {	
+				HUN = {
+					has_completed_focus = HUN_focus_SOV_OU_A
+				}
+			}
+		}
+		
+		remove_effect = {
+			GER = {
+				add_manpower = 10000
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			base = 10
+			factor = 200
+		}
+	}
+}
+
+HUN_civil_war_decision = {
+	incoming_SLO_revolt = {          
+		available = {            
+			check_variable = {
+				SLO_submit > 99
+				tooltip = SLO_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.51
+			}
+			set_country_flag = SLO_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.52
+			}	
+			set_country_flag = SLO_revolt_has_completed
+		}
+	}
+	get_SLO_submition = {
+		visible = {
+			OR = {
+				has_completed_focus = HUN_focus_SOV_IN_B
+			}
+			NOT = {
+				has_country_flag = SLO_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = SLV_submit
+				value = 10
+				tooltip = add_10_SLO_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+	incoming_CRO_revolt = {          
+		available = {            
+			check_variable = {
+				CRO_submit > 99
+				tooltip = CRO_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 50
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.61
+			}
+			set_country_flag = CRO_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.62
+			}	
+			set_country_flag = CRO_revolt_has_completed
+		}
+	}
+	get_CRO_submition = {
+		visible = {
+			NOT = {
+				has_country_flag = CRO_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = CRO_submit
+				value = 10
+				tooltip = add_10_CRO_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+	incoming_TRL_revolt = {          
+		available = {            
+			check_variable = {
+				TRL_submit > 99
+				tooltip = TRL_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 120
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.71
+			}
+			set_country_flag = TRL_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.72
+			}	
+			set_country_flag = TRL_revolt_has_completed
+		}
+	}
+	get_TRL_submition = {
+		visible = {
+			OR = {
+				has_completed_focus = HUN_focus_SOV_IN_C
+			}
+			NOT = {
+				has_country_flag = TRL_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = TRL_submit
+				value = 10
+				tooltip = add_10_TRL_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+	incoming_BNT_revolt = {          
+		available = {            
+			check_variable = {
+				BNT_submit > 99
+				tooltip = BNT_submit_further_than_100_tt
+			}
+		}
+		activation = {  
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			country_event = {
+				id = AUS_decision_events.81
+			}
+			set_country_flag = BNT_revolt_has_completed
+		}
+		complete_effect = {  
+			country_event = {
+				id = AUS_decision_events.82
+			}
+			set_country_flag = BNT_revolt_has_completed
+		}
+	}
+	get_BNT_submition = {
+		visible = {
+			OR = {
+				has_completed_focus = HUN_focus_SOV_IN_D
+			}
+			NOT = {
+				has_country_flag = BNT_revolt_has_completed
+			}
+		}
+		complete_effect = {  
+			add_to_variable = {
+				var = BNT_submit
+				value = 10
+				tooltip = add_10_BNT_submit_tt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		days_remove = 30
+	}
+}
+	

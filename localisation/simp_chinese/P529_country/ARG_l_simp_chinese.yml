@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ARG_social_conservative: "阿根廷联邦"
+ ARG_social_conservative_DEF: "阿根廷联邦"
+ ARG_social_conservative_ADJ: "阿根廷"
+ ARG_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ARG_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ARG_autonomy_puppet: "$OVERLORDADJ$属阿根廷"
+ ARG_autonomy_puppet_DEF: "$OVERLORDADJ$属阿根廷"
+ ARG: "阿根廷"
+ ARG_DEF: "阿根廷"
+ ARG_ADJ: "阿根廷"

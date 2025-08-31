@@ -1,0 +1,213 @@
+train_more_armor_and_mechanized = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		num_divisions > 100 #build enough infantry first
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 2
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 5
+	}
+}
+train_more_armor_and_mechanized = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		num_divisions < 200 #build enough infantry first
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 3
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 10
+	}
+}
+build_more_armor_and_mechanized = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -40
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 15
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 15
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = mechanized
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = light_armor
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = medium_armor
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_armor
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor 
+		id = motorized
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_factor 
+		id = mechanized
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories 
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories 
+		id = mechanized
+		value = 5
+	}
+}
+GER_more_armor_after_1938 = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		date > 1938.1.1
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -30
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 80
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 40
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 40 
+	}
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = armor
+		value = 70
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor 
+		id = motorized
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_factor 
+		id = mechanized
+		value = 40
+	}
+}

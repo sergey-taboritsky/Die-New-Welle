@@ -1,0 +1,63 @@
+capital = 7
+
+oob = "NER_1936"
+set_research_slots = 3
+set_convoys = 400
+
+recruit_character = NER_leader
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = Gaspar_Rivera
+		GFX = GFX_portrait_europe_generic_operative_male_9
+		traits = { operative_natural_orator operative_seducer }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { FRA GER }
+	}
+}
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1935.11.20"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	totalist = 10
+	syndicalist = 10
+	radical_socialist = 10
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 70
+	paternal_autocrat = 0
+	national_populist = 0
+}
+
+add_ideas = {
+	civilian_economy
+	export_focus
+	volunteer_only
+}
+set_stability = 0.6
+set_war_support = 0.60
+
+set_autonomy = {
+	target = INO
+	autonomous_state = autonomy_puppet
+}
+# Starting tech
+set_technology = {
+	basic_train = 1
+	fuel_refining = 1
+	fuel_silos = 1
+	gw_artillery = 1
+	infantry_weapons = 1
+	interwar_antiair = 1
+	interwar_artillery = 1
+	tech_support = 1
+}

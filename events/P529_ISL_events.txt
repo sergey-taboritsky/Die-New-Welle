@@ -1,0 +1,235 @@
+add_namespace = ISL_focus_events
+add_namespace = ISL_ETH_war_events
+
+country_event = {
+	id = ISL_focus_events.1
+	title = ISL_focus_events.1.t
+	desc = ISL_focus_events.1.desc
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			MGS = {
+				transfer_state = 543
+				load_oob = MGS_defend_army
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+				set_popularities = {
+					totalist = 0
+					syndicalist = 0
+					radical_socialist = 50
+					social_democrat = 0
+					social_liberal = 0
+					market_liberal = 0
+					social_conservative = 0
+					authoritarian_democrat = 30
+					paternal_autocrat = 0
+					national_populist = 20
+				}
+				add_ideas = AUS_civil_war_buff
+			}
+			ISL = {
+				set_province_controller = 5222
+			}
+			ISL = {
+				declare_war_on = {
+					target = MGS
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = ISL_focus_events.1.a
+		ISL = {
+			set_province_controller = 5222
+		}
+		load_oob = "ISL_god_army"
+		set_country_flag = ISL_MGS_war_has_started
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.2
+	title = ISL_focus_events.2.t
+	desc = ISL_focus_events.2.desc
+	
+	trigger = {
+		has_country_flag = ISL_MGS_war_has_started
+		MGS = {
+			surrender_progress > 0.8
+		}
+	}
+	
+	option = {
+		name = ISL_focus_events.2.a
+		ISL = {
+			transfer_state = 543
+			annex_country = {
+				target = MGS 
+			}
+		}
+		clr_country_flag = ISL_MGS_war_has_started
+		set_country_flag = ISL_win_MGS
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.3
+	title = ISL_focus_events.3.t
+	desc = ISL_focus_events.3.desc
+	
+	trigger = {
+		has_country_flag = ISL_MGS_war_has_started
+		543 = {
+			is_fully_controlled_by = MGS
+		}
+	}
+	
+	option = {
+		name = ISL_focus_events.3.a
+		white_peace = MGS
+		clr_country_flag = ISL_MGS_war_has_started
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.4
+	title = ISL_focus_events.4.t
+	desc = ISL_focus_events.4.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_focus_events.4.a
+		EGY = {
+			country_event = {
+				id = ISL_focus_events.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.5
+	title = ISL_focus_events.5.t
+	desc = ISL_focus_events.5.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_focus_events.5.a
+		ISL = {
+			country_event = {
+				id = ISL_focus_events.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.6
+	title = ISL_focus_events.6.t
+	desc = ISL_focus_events.6.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_focus_events.6.a
+		EGY = {
+			country_event = {
+				id = ISL_focus_events.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.7
+	title = ISL_focus_events.7.t
+	desc = ISL_focus_events.7.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_focus_events.7.a
+		ISL = {
+			country_event = {
+				id = ISL_focus_events.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_focus_events.8
+	title = ISL_focus_events.8.t
+	desc = ISL_focus_events.8.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_focus_events.8.a
+		complete_national_focus = ISL_focus_second_B_3
+		EGY = {
+			if = {
+				limit = {		
+					is_in_faction = yes
+				}
+				faction_leader = {
+					add_to_faction = ISL
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = EGY_ISL_faction_name
+				EGY = {
+					add_to_faction = ISL
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_ETH_war_events.1
+	title = ISL_ETH_war_events.1.t
+	desc = ISL_ETH_war_events.1.desc
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ISL 
+		has_war_with = ETH
+	}
+	
+	option = {
+		name = ISL_ETH_war_events.1.a
+		load_oob = "ISL_ETH_revolt_army"
+		set_province_controller = 12991
+		set_province_controller = 10833
+		set_province_controller = 8124
+		ETH = {
+			country_event = {
+				id = ISL_ETH_war_events.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ISL_ETH_war_events.2
+	title = ISL_ETH_war_events.2.t
+	desc = ISL_ETH_war_events.2.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ISL_ETH_war_events.2.a
+	}
+}

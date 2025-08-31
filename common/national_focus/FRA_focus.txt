@@ -1,0 +1,1842 @@
+focus_tree = {
+	id = FRA_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = FRA
+		}
+	}
+	#industry
+	#in1
+	focus = {
+		id = FRA_industry_focus_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+
+		x = 5
+		y = 0
+
+		completion_reward = {
+			add_ideas = FRA_women_join_army
+			add_stability = -0.3
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#in2
+	focus = {
+		id = FRA_industry_focus_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		relative_position_id = FRA_industry_focus_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_1 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = The_disaster_of_second_PF_war_2
+				remove_idea = The_disaster_of_second_PF_war_1
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in3
+	focus = {
+		id = FRA_industry_focus_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_2 }
+
+		available = {
+			OR = {
+				num_of_controlled_factories > 50
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					free_building_slots = { building = industrial_complex size > 3 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					free_building_slots = { building = industrial_complex size > 3 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = GER
+					free_building_slots = { building = industrial_complex size > 3 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = {
+						tag = FRA
+					}
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+							instant_build = yes
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_3_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in4
+	focus = {
+		id = FRA_industry_focus_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_3 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = The_disaster_of_second_PF_war_3
+				remove_idea = The_disaster_of_second_PF_war_2
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = {
+						tag = FRA
+					}
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_4_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in4_1
+	focus = {
+		id = FRA_industry_focus_4_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_3
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_3 }
+
+		completion_reward = {
+			add_research_slot = 1
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in4_2
+	focus = {
+		id = FRA_industry_focus_4_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_3
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_3 }
+
+		available = {
+			OR = {
+				ALG = {
+					is_puppet_of = FRA
+				}
+				AND = {
+					owns_state = 458
+					owns_state = 459
+					owns_state = 460
+					owns_state = 513
+					owns_state = 514
+					owns_state = 665
+				}
+			}
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ALG
+					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 5
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ALG
+					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in5_1
+	focus = {
+		id = FRA_industry_focus_5_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_4_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_4_1 }
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA 
+				}
+				add_ideas = Pair_international_research_group
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in5_2
+	focus = {
+		id = FRA_industry_focus_5_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_4_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_4_2 }
+
+		available = {
+			OR = {
+				ALG = {
+					is_puppet_of = FRA
+				}
+				AND = {
+					owns_state = 458
+					owns_state = 459
+					owns_state = 460
+					owns_state = 513
+					owns_state = 514
+					owns_state = 665
+				}
+			}
+		}
+
+		completion_reward = {
+			release = ALG
+			ALG = {
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.8
+				}
+				set_politics = {
+					ruling_party = syndicalist
+				}
+				FRA = { add_to_faction = ALG }
+				add_state_core = 458
+				add_state_core = 665
+				transfer_state = 458
+				transfer_state = 665
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in5
+	focus = {
+		id = FRA_industry_focus_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_4 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = The_disaster_of_second_PF_war_4
+				remove_idea = The_disaster_of_second_PF_war_3
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 2 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_5_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in6
+	focus = {
+		id = FRA_industry_focus_6
+		icon = GFX_goal_generic_production
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_5
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_5 }
+		prerequisite = { focus = FRA_industry_focus_5_1 }
+
+		completion_reward = {
+			add_research_slot = 1
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 2 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_5_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+		}
+	}
+	#in6_2
+	focus = {
+		id = FRA_industry_focus_6_2
+		icon = GFX_goal_generic_production
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_5_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_5_2 }
+
+		completion_reward = {
+			add_manpower = 100000
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					tag = ALG
+				}
+				hidden_effect = {
+					every_owned_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 2 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+							instant_build = yes
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_6_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+		}
+	}
+	#in7
+	focus = {
+		id = FRA_industry_focus_7
+		icon = GFX_goal_generic_production
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_industry_focus_6
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = FRA_industry_focus_6 }
+		prerequisite = { focus = FRA_industry_focus_6_2 }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = THIS
+					free_building_slots = { building = industrial_complex size > 2 include_locked = yes }
+					is_valid_state_for_development = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					NOT = {
+						tag = FRA
+					}
+				}
+				hidden_effect = {
+					random_owned_state = {
+						limit = {
+							is_core_of = THIS
+							free_building_slots = { building = industrial_complex size > 2 include_locked = yes }
+							is_valid_state_for_development = yes
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+							instant_build = yes
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+					FRA = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+				}
+				tooltip = FRA_industry_focus_7_tt
+			}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+		}
+	}
+	#Politics
+	#Po1
+	focus = {
+		id = FRA_Politics_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+
+		x = 20
+		y = 0
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_normal_government
+				remove_idea = FRA_unrest_government
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#PoA_2
+	focus = {
+		id = FRA_Politics_A_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = FRA_Politics_1
+		x = -5
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_1 }
+
+		completion_reward = {
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#PoA_a_3
+	focus = {
+		id = FRA_Politics_A_a_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		relative_position_id = FRA_Politics_A_2
+		x = -3
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_2 }
+
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = FRA_improving_government_1
+				remove_idea = FRA_normal_government
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#PoA_a_4
+	focus = {
+		id = FRA_Politics_A_a_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_a_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_a_3 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_government_2
+				remove_idea = FRA_improving_government_1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#PoA_a_5
+	focus = {
+		id = FRA_Politics_A_a_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_a_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_a_4 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_government_3
+				remove_idea = FRA_improving_government_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+	}
+	#PoA_a_6
+	focus = {
+		id = FRA_Politics_A_a_6
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_a_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_a_5 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_government_4
+				remove_idea = FRA_improving_government_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_b_3
+	focus = {
+		id = FRA_Politics_A_b_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_2
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_2 }
+
+		completion_reward = {
+			add_ideas = FRA_improving_army_1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_b_4
+	focus = {
+		id = FRA_Politics_A_b_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_b_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_b_3 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_army_2
+				remove_idea = FRA_improving_army_1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_b_5
+	focus = {
+		id = FRA_Politics_A_b_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_b_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_b_4 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_army_3
+				remove_idea = FRA_improving_army_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_b_6
+	focus = {
+		id = FRA_Politics_A_b_6
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_b_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_b_5 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improving_army_4
+				remove_idea = FRA_improving_army_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_ab
+	focus = {
+		id = FRA_Politics_A_ab
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_b_6
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_b_6 }
+		prerequisite = { focus = FRA_Politics_A_a_6 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improved_government
+				remove_idea = FRA_improving_government_4
+			}
+			swap_ideas = {
+				add_idea = FRA_improved_army
+				remove_idea = FRA_improving_army_4
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_c_3
+	focus = {
+		id = FRA_Politics_A_c_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_2
+		x = 3
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_2 }
+
+		completion_reward = {
+			create_intelligence_agency = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_c_4
+	focus = {
+		id = FRA_Politics_A_c_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_c_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_c_3 }
+
+		completion_reward = {
+			add_ideas = FRA_spy
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_c_5
+	focus = {
+		id = FRA_Politics_A_c_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_c_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_c_4 }
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_improved_spy
+				remove_idea = FRA_spy
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_c_6
+	focus = {
+		id = FRA_Politics_A_c_6
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_c_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_A_c_5 }
+
+		completion_reward = {
+			country_event = {
+				id = FRA_political_events.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_NER_1
+	focus = {
+		id = FRA_Politics_NER_1
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			modifier = { 
+				date < 1938.1.1
+				factor = 0
+			}
+			modifier = { 
+				date > 1939.1.1
+				factor = 100
+			}
+			factor = 12
+		}
+		
+		relative_position_id = FRA_Politics_A_c_5
+		x = -2
+		y = 2
+		
+		prerequisite = { focus = FRA_Politics_A_c_5 }
+		prerequisite = { focus = FRA_Politics_A_b_5 }
+
+		available = {
+			
+		}
+		
+		bypass = {
+			NER = {
+				OR = {
+					exists = no
+					is_in_faction_with = FRA
+					is_in_faction_with = GER
+					has_war_with = ROOT
+				}
+			}
+			BEL = {
+				OR = {
+					exists = no
+					is_in_faction_with = FRA
+					is_in_faction_with = GER
+					has_war_with = ROOT
+				}
+			}
+			LUX = {
+				OR = {
+					exists = no
+					is_in_faction_with = FRA
+					is_in_faction_with = GER
+					has_war_with = ROOT
+				}
+			}
+		}
+		
+		will_lead_to_war_with = NER
+		will_lead_to_war_with = BEL
+		will_lead_to_war_with = LUX
+		
+		completion_reward = {
+			if = { 
+				limit = {
+					country_exists = BEL
+					NOT = { BEL = { is_in_faction_with = GER } }
+					NOT = { has_war_with = BEL }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					expire = 0
+				}
+			}
+			if = { 
+				limit = {
+					country_exists = NER
+					NOT = { NER = { is_in_faction_with = GER } }
+					NOT = { has_war_with = NER }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = NER
+					expire = 0
+				}
+			}
+			if = { 
+				limit = {
+					country_exists = LUX
+					NOT = { LUX = { is_in_faction_with = GER } }
+					NOT = { has_war_with = LUX }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = LUX
+					expire = 0
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_NER_2_1
+	focus = {
+		id = FRA_Politics_NER_2_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_NER_1
+		x = -2
+		y = 1
+
+		prerequisite = { focus = FRA_Politics_NER_1 }
+		
+		available = {
+			is_subject = no
+			OR = {
+				BEL = { is_puppet_of = FRA }
+				OR = {
+					controls_state = 34
+				}
+			}
+		}
+		bypass = {
+			AND = {
+				6 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+				34 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+			}
+		}
+					
+		completion_reward = {
+			country_event = {
+				id = FRA_focus_events.1
+			}
+		}
+	}
+	#PoA_NER_2_2
+	focus = {
+		id = FRA_Politics_NER_2_2
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_NER_1
+		x = 0
+		y = 1
+
+		prerequisite = { focus = FRA_Politics_NER_1 }
+		
+		available = {
+			is_subject = no
+			OR = {
+				LUX = { is_puppet_of = FRA }
+				OR = {
+					controls_state = 8
+				}
+			}
+		}
+		bypass = {
+			AND = {
+				8 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+			}
+		}
+					
+		completion_reward = {
+			country_event = {
+				id = FRA_focus_events.2
+			}
+		}
+	}
+	#PoA_NER_2_3
+	focus = {
+		id = FRA_Politics_NER_2_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_NER_1
+		x = -4
+		y = 1
+
+		prerequisite = { focus = FRA_Politics_NER_1 }
+		
+		available = {
+			is_subject = no
+			OR = {
+				NER = { is_puppet_of = FRA }
+				OR = {
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+				}
+			}
+		}
+		bypass = {
+			AND = {
+				7 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+				35 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+				36 = {
+					owner = {
+					is_in_faction_with = GER
+					}
+				}
+			}
+		}
+					
+		completion_reward = {
+			country_event = {
+				id = FRA_focus_events.3
+			}
+		}
+	}
+	#PoA_GER_a_1
+	focus = {
+		id = FRA_Politics_GER_a_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_c_6
+		x = 0
+		y = 3
+		
+		prerequisite = { focus = FRA_Politics_A_c_6 }
+
+		mutually_exclusive = { focus = FRA_Politics_GER_b_1 }
+
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_a_2
+	focus = {
+		id = FRA_Politics_GER_a_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_a_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_a_1 }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_a_3
+	focus = {
+		id = FRA_Politics_GER_a_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_a_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_a_2 }
+
+		completion_reward = {
+			build_railway = {
+				level = 2
+				path = { 5291 3560 9472 }
+			}
+			18 = {				
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3560
+					}
+				}
+			}
+			17 = {				
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11516
+						id = 9642
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_a_4
+	focus = {
+		id = FRA_Politics_GER_a_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_a_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_a_3 }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_a_5
+	focus = {
+		id = FRA_Politics_GER_a_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_a_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_a_4 }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = radar_station
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = cat_anti_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_a_6
+	focus = {
+		id = FRA_Politics_GER_a_6
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_a_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_a_5 }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+			18 = {
+				add_building_construction = {
+					type = radar_station
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				category = cat_anti_air
+			}
+			add_ideas = FRA_denfend_army
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_1
+	focus = {
+		id = FRA_Politics_GER_b_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_A_c_6
+		x = 6
+		y = 3
+		
+		prerequisite = { focus = FRA_Politics_A_c_6 }
+
+		mutually_exclusive = { focus = FRA_Politics_GER_a_1 }
+		
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_2
+	focus = {
+		id = FRA_Politics_GER_b_2
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_b_1 }
+		
+		completion_reward = {
+			add_ideas = FRA_attack_plan_1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_3
+	focus = {
+		id = FRA_Politics_GER_b_3
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_b_2 }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_attack_plan_2
+				remove_idea = FRA_attack_plan_1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_4
+	focus = {
+		id = FRA_Politics_GER_b_4
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_b_3 }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_attack_plan_3
+				remove_idea = FRA_attack_plan_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_5
+	focus = {
+		id = FRA_Politics_GER_b_5
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_b_4 }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_attack_plan_4
+				remove_idea = FRA_attack_plan_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_b_6
+	focus = {
+		id = FRA_Politics_GER_b_6
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Politics_GER_b_5 }
+		
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						owner = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#PoA_GER_war_1
+	focus = {
+		id = FRA_Politics_GER_war_1
+		icon = GFX_goal_generic_production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Politics_GER_b_6
+		x = -3
+		y = 1
+		
+		available = {
+			GER = {
+				exists = yes
+			}
+		}
+		
+		prerequisite = { focus = FRA_Politics_GER_b_6 OR = FRA_Politics_GER_a_6 }
+		
+		will_lead_to_war_with = GER
+		
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GER
+				expire = 0
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_1
+	focus = {
+		id = FRA_Navy_1
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		
+		x = 10
+		y = 10
+		
+		available = {
+			num_of_controlled_factories > 60
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_2
+	focus = {
+		id = FRA_Navy_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Navy_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Navy_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = ship_modules_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_2_a
+	focus = {
+		id = FRA_Navy_2_a
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Navy_1
+		x = -2
+		y = 2
+		
+		prerequisite = { focus = FRA_Navy_1 }
+		
+		mutually_exclusive = { focus = FRA_Navy_2_b }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = ship_modules_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_2_b
+	focus = {
+		id = FRA_Navy_2_b
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Navy_1
+		x = 2
+		y = 2
+		
+		prerequisite = { focus = FRA_Navy_1 }
+		
+		mutually_exclusive = { focus = FRA_Navy_2_a }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = ship_modules_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_3_a
+	focus = {
+		id = FRA_Navy_3_a
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Navy_2_a
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Navy_2_a }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = ship_modules_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+			add_ideas = FRA_blue_navy
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	#Navy_3_b
+	focus = {
+		id = FRA_Navy_3_b
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		relative_position_id = FRA_Navy_2_b
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_Navy_2_b }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 3
+				category = ship_modules_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 2 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 60
+			add_ideas = FRA_green_navy
+		}	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ICE_paternal_autocrat: "冰岛公国"
+ ICE_paternal_autocrat_DEF: "冰岛公国"
+ ICE_paternal_autocrat_ADJ: "冰岛"
+ ICE_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ICE_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ICE_autonomy_puppet: "$OVERLORDADJ$属冰岛"
+ ICE_autonomy_puppet_DEF: "$OVERLORDADJ$属冰岛"
+ ICE: "冰岛"
+ ICE_DEF: "冰岛"
+ ICE_ADJ: "冰岛"

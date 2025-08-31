@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ ASS_social_democrat: "亚述大公国"
+ ASS_social_democrat_DEF: "亚述大公国"
+ ASS_social_democrat_ADJ: "亚述"
+ ASS_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ ASS_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ ASS_autonomy_puppet: "$OVERLORDADJ$属亚述"
+ ASS_autonomy_puppet_DEF: "$OVERLORDADJ$属亚述"
+ ASS: "亚述"
+ ASS_DEF: "亚述"
+ ASS_ADJ: "亚述"

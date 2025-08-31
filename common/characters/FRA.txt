@@ -1,0 +1,14 @@
+characters = {
+	FRA_1 = {
+		name = Maximiliano_Peralta
+		portraits = {
+			civilian = {
+				large = GFX_portrait_south_america_generic_7
+			}
+		}
+		country_leader = {
+			ideology = syndicalist
+			traits = {  }
+		}
+	}
+}

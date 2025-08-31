@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ TUR_paternal_autocrat: "卡帕多西亚突厥王国"
+ TUR_paternal_autocrat_DEF: "卡帕多西亚突厥王国"
+ TUR_paternal_autocrat_ADJ: "卡帕多西亚突厥"
+ TUR_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ TUR_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ TUR_autonomy_puppet: "$OVERLORDADJ$属卡帕多西亚突厥"
+ TUR_autonomy_puppet_DEF: "$OVERLORDADJ$属卡帕多西亚突厥"
+ TUR: "卡帕多西亚突厥"
+ TUR_DEF: "卡帕多西亚突厥"
+ TUR_ADJ: "卡帕多西亚突厥"

@@ -1,0 +1,24 @@
+﻿l_simp_chinese:
+### Decisions ###
+ generic_econ: "经济政策"
+ generic_econ_desc: "经济政策"
+ generic_privatize_civilian_factory: "私有化民用工业"
+ generic_privatize_civilian_factory_desc: "将民用工业出售给工业家"
+ generic_nationalise_civilian_factory: "国有化民用工业"
+ generic_nationalise_civilian_factory_desc: "购买工业家的民用工业"
+ generic_privatize_military_factory: "私有化军用工业"
+ generic_privatize_military_factory_desc: "将军用工业出售给工业家"
+ generic_nationalise_military_factory: "国有化军用工业"
+ generic_nationalise_military_factory_desc: "购买工业家的军用工业"
+
+### Events ###
+ gen_econ.1.t: "资本外逃！"
+ gen_econ.1.d: "战时资本外逃"
+ gen_econ.1.a: "该死！"
+ gen_econ.2.t: "经济增长"
+ gen_econ.2.d: "私营经济蓬勃发展"
+ gen_econ.2.a: "好的。"
+
+### Tooltips ###
+ has_private_firm_trigger_tt: "拥有私营经济"
+ has_private_milit_trigger_tt: "拥有私营军工"

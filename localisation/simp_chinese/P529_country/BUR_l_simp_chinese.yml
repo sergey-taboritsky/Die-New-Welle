@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ BUR_paternal_autocrat: "保加利亚沙皇国"
+ BUR_paternal_autocrat_DEF: "保加利亚沙皇国"
+ BUR_paternal_autocrat_ADJ: "保加利亚"
+ BUR_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ BUR_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ BUR_autonomy_puppet: "$OVERLORDADJ$属保加利亚"
+ BUR_autonomy_puppet_DEF: "$OVERLORDADJ$属保加利亚"
+ BUR: "保加利亚"
+ BUR_DEF: "保加利亚"
+ BUR_ADJ: "保加利亚"

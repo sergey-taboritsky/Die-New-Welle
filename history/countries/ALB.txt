@@ -1,0 +1,59 @@
+capital = 44
+
+oob = "ALB_1936"
+set_research_slots = 3
+set_convoys = 40
+
+recruit_character = ALB_leader
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = Gaspar_Rivera
+		GFX = GFX_portrait_europe_generic_operative_male_9
+		traits = { operative_natural_orator operative_seducer }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { FRA GER }
+	}
+}
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1935.11.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 5
+	syndicalist = 0
+	radical_socialist = 0
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 5
+	social_conservative = 5
+	authoritarian_democrat = 0
+	paternal_autocrat = 80
+	national_populist = 5
+}
+
+add_ideas = {
+	civilian_economy
+	export_focus
+	volunteer_only
+}
+set_stability = 0.9
+set_war_support = 0.50
+
+# Starting tech
+set_technology = {
+	basic_train = 1
+	fuel_refining = 1
+	fuel_silos = 1
+	gw_artillery = 1
+	infantry_weapons = 1
+	interwar_antiair = 1
+	interwar_artillery = 1
+	tech_support = 1
+}

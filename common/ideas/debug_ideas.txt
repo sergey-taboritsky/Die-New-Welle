@@ -1,0 +1,88 @@
+ideas = {
+	country = {
+		BUL_army_restrictions_aat = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		HUN_treaty_of_triannon_aat = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		SOV_purged_junior_army_officers_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		SOV_purged_junior_navy_officers_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		SWE_crusade_against_the_eastern_threat = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		american_protection_drift_communism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+		SMB_organization_of_american_states_member = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				
+			}
+		}
+	}
+}

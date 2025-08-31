@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ EGY_paternal_autocrat: "埃及王国"
+ EGY_paternal_autocrat_DEF: "埃及王国"
+ EGY_paternal_autocrat_ADJ: "埃及"
+ EGY_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ EGY_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ EGY_autonomy_puppet: "$OVERLORDADJ$属埃及"
+ EGY_autonomy_puppet_DEF: "$OVERLORDADJ$属埃及"
+ EGY: "埃及"
+ EGY_DEF: "埃及"
+ EGY_ADJ: "埃及"

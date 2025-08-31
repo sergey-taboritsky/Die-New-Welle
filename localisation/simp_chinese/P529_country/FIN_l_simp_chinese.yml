@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ FIN_paternal_autocrat: "芬兰大公国"
+ FIN_paternal_autocrat_DEF: "芬兰大公国"
+ FIN_paternal_autocrat_ADJ: "芬兰"
+ FIN_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ FIN_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ FIN_autonomy_puppet: "$OVERLORDADJ$属芬兰"
+ FIN_autonomy_puppet_DEF: "$OVERLORDADJ$属芬兰"
+ FIN: "芬兰"
+ FIN_DEF: "芬兰"
+ FIN_ADJ: "芬兰"

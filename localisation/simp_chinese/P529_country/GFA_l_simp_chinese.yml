@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ GFA_paternal_autocrat: "德意志非洲帝国王冠领"
+ GFA_paternal_autocrat_DEF: "德意志非洲帝国王冠领"
+ GFA_paternal_autocrat_ADJ: "德意志非洲领"
+ GFA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ GFA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ GFA_autonomy_puppet: "$OVERLORDADJ$属德意志非洲领"
+ GFA_autonomy_puppet_DEF: "$OVERLORDADJ$属德意志非洲领"
+ GFA: "德意志非洲领"
+ GFA_DEF: "德意志非洲领"
+ GFA_ADJ: "德意志非洲领"

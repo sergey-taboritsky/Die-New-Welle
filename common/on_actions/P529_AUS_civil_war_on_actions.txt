@@ -1,0 +1,1455 @@
+on_actions = {
+	on_capitulation = {#捷克投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CZE
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = CLA
+						}
+					}
+					CZE = {
+						NOT = {
+							has_war_with = GER
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					remove_core_of = CZE
+				}
+				if = {
+					limit = {
+						has_cosmetic_tag = CZE_SLO
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							has_war_with = HUN
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = AUS
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							has_war_with = HUN
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = AUS
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = yes
+							}
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = AUS
+						}
+						release = SLO
+						SLO = { change_tag_from = ROOT }
+						SLO = {
+							every_owned_state = {
+								transfer_state_to = SLO
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = yes
+							}
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = AUS
+						}
+						release = SLO
+						SLO = { change_tag_from = ROOT }
+						SLO = {
+							every_owned_state = {
+								transfer_state_to = SLO
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = yes
+							}
+							has_war_with = HUN
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = yes
+							}
+							has_war_with = HUN
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = no
+							}
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							transfer_state_to = AUS
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = no
+							}
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							transfer_state_to = AUS
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = no
+							}
+							has_war_with = HUN
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = no
+							}
+							has_war_with = HUN
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							NOT = {
+								has_war_with = HUN
+							}
+							has_war_with = CLA
+						}
+					}
+					drop_cosmetic_tag = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_cosmetic_tag = CZE_SLO
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+						}
+						every_owned_state = {
+							transfer_state_to = AUS
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							has_war_with = HUN
+						}
+						every_owned_state = {
+							transfer_state_to = HUN
+						}
+					}
+				}
+				white_peace = AUS
+				white_peace = HUN
+				white_peace = CLA
+			}
+		}
+	}
+	on_capitulation = {#捷克投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CZE
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = CLA
+						}
+					}
+					CZE = {
+						has_war_with = GER
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = SLO
+					}
+				remove_core_of = CZE
+				}
+				if = {
+					limit = {
+						has_cosmetic_tag = CZE_SLO
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							has_war_with = HUN
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = yes
+							}
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						release = SLO
+						SLO = { change_tag_from = ROOT }
+						SLO = {
+							every_owned_state = {
+								transfer_state_to = SLO
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = yes
+							}
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						release = SLO
+						SLO = { change_tag_from = ROOT }
+						SLO = {
+							every_owned_state = {
+								transfer_state_to = SLO
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = yes
+							}
+							has_war_with = HUN
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = no
+							}
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = SLO
+						}
+						SLO = { change_tag_from = ROOT }
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+							NOT = {
+								has_war_with = HUN
+							}
+							HUN = {
+								exists = no
+							}
+							NOT = {
+								has_war_with = CLA
+							}
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = SLO
+						}
+						SLO = { change_tag_from = ROOT }
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							AUS = {
+								exists = no
+							}
+							has_war_with = HUN
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							NOT = {
+								has_war_with = HUN
+							}
+							has_war_with = CLA
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = SLO
+						}
+						SLO = { change_tag_from = ROOT }
+					}
+					drop_cosmetic_tag = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_cosmetic_tag = CZE_SLO
+						}
+					}
+					if = {
+						limit = {
+							has_war_with = AUS
+						}
+						every_owned_state = {
+							transfer_state_to = GER
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_war_with = AUS
+							}
+							has_war_with = HUN
+						}
+						every_owned_state = {
+							limit = {
+								is_core_of = SLO
+							}
+							transfer_state_to = HUN
+						}
+						every_owned_state = {
+							limit = {
+								NOT = {
+									is_core_of = SLO
+								}
+							}
+							transfer_state_to = GER
+						}
+					}
+				}
+				white_peace = AUS
+				white_peace = HUN
+				white_peace = CLA
+				white_peace = GER
+			}
+		}
+	}
+	on_capitulation = {#加利西亚-沃里尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CLA
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = CZE
+						}
+					}
+					CLA = {
+						NOT = {
+							has_war_with = POL
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = AUS
+						has_war_with = CZE
+					}			
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = CZE
+							}
+						}
+						transfer_state_to = KAR
+						add_core_of = KAR
+					}
+					72 = {
+						transfer_state_to = CZE
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = AUS
+						has_war_with = HUN
+						NOT = {
+							has_war_with = CZE
+						}
+					}			
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = CZE
+							}
+						}
+						transfer_state_to = KAR
+						add_core_of = KAR
+					}
+					72 = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = AUS
+						}
+						NOT = {
+							has_war_with = HUN
+						}
+						has_war_with = CZE
+					}			
+					72 = {
+						transfer_state_to = CZE
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = AUS
+						NOT = {
+							has_war_with = HUN
+						}
+						NOT = {
+							has_war_with = CZE
+						}
+					}			
+					every_owned_state = {
+						transfer_state_to = KAR
+						add_core_of = KAR
+					}
+					72 = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = AUS
+						}
+						AUS = {
+							exists = no
+						}
+						has_war_with = HUN
+						has_war_with = CZE
+					}			
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+					72 = {
+						transfer_state_to = CZE
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = AUS
+						}
+						AUS = {
+							exists = no
+						}
+						NOT = {
+							has_war_with = CZE
+						}
+					}			
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				white_peace = AUS
+				white_peace = CZE
+				white_peace = HUN
+			}
+		}
+	}
+	on_capitulation = {#加利西亚-沃里尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CLA
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = CZE
+						}
+					}
+					CLA = {
+						has_war_with = POL
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = CZE
+					}					
+					72 = {
+						transfer_state_to = CZE
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								state = 72
+							}
+						}
+						transfer_state_to = POL
+						if = {
+							limit = {
+								is_core_of = CLA
+							}
+							add_core_of = POL
+						}
+					}
+				}
+				if = {
+					NOT = {
+						limit = {
+							has_war_with = CZE
+						}		
+					}
+					every_owned_state = {
+						transfer_state_to = POL
+						if = {
+							limit = {
+								is_core_of = CLA
+							}
+							add_core_of = POL
+						}
+					}	
+				}
+				white_peace = AUS
+				white_peace = CZE
+				white_peace = HUN
+				white_peace = POL
+			}
+		}
+	}
+	on_capitulation = {#斯洛文尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = SLV
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+					SLV = {
+						NOT = {
+							is_puppet_of = SBU
+						}
+						NOT = {
+							has_war_with = GER
+						}
+					}
+				}
+				if = {
+					limit = {
+						AUS = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				if = {
+					limit = {
+						AUS = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+			}
+		}
+	}
+	on_capitulation = {#斯洛文尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = SLV
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+					SLV = {
+						is_puppet_of = SBU
+						NOT = {
+							has_war_with = GER
+						}
+					}
+				}
+				if = {
+					limit = {
+						AUS = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				if = {
+					limit = {
+						AUS = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+				SBU = {
+					country_event = {
+						id = AUS_civil_war_YRP_events.14
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#斯洛文尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = SLV
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+					SLV = {
+						has_war_with = GER
+					}
+				}
+				if = {
+					limit = {
+						is_puppet_of = SBU
+					}
+					GER = {
+						white_peace = SBU
+						white_peace = CRO
+					}
+				}
+				every_owned_state = {
+					transfer_state_to = GER
+				}
+				white_peace = HUN
+				white_peace = GER
+				white_peace = AUS
+				SBU = {
+					country_event = {
+						id = AUS_civil_war_YRP_events.14
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#斯洛伐克投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = SLO
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+			}
+		}
+	}
+	on_capitulation = {#克罗地亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CRO
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+					CRO = {
+						NOT = {
+							is_puppet_of = SBU
+						}
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+			}
+		}
+	}
+	on_capitulation = {#克罗地亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = CRO
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}
+					}
+					CRO = {
+						is_puppet_of = SBU
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+				SBU = {
+					country_event = {
+						id = AUS_civil_war_YRP_events.13
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#特兰西瓦尼亚投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRL
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = BNT
+						}
+					}
+				}
+				if = {
+					limit = {
+						TRL = {
+							is_puppet_of = ROM
+						}
+					}
+					ROM = {
+						country_event = {
+							id = AUS_civil_war_YRP_events.4
+						}
+					}	
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = no
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						HUN = {
+							exists = yes
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				white_peace = HUN
+				white_peace = AUS
+				white_peace = BNT
+			}
+		}
+	}
+	on_capitulation = {#巴纳特投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = TRL
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+							tag = HUN
+							tag = TRL
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = HUN
+						has_war_with = TRL
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = TRL 
+						}
+						transfer_state_to = TRL
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = TRL
+							}
+						}
+						transfer_state_to = HUN
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = HUN
+						}
+						HUN = {
+							exists = no
+						}
+						has_war_with = TRL
+						has_war_with = AUS
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = TRL 
+						}
+						transfer_state_to = TRL
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = TRL
+							}
+						}
+						transfer_state_to = AUS
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = HUN
+						}
+						has_war_with = TRL
+						NOT = {
+							has_war_with = AUS
+						}
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = TRL
+						}
+						transfer_state_to = TRL
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = TRL
+						}
+						has_war_with = HUN
+					}
+					every_owned_state = {
+						transfer_state_to = HUN
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_war_with = TRL
+						}
+						NOT = {
+							has_war_with = HUN
+						}
+						HUN = {
+							exists = no
+						}
+						has_war_with = AUS
+					}
+					every_owned_state = {
+						transfer_state_to = AUS
+					}
+				}
+				white_peace = TRL
+				white_peace = HUN
+				white_peace = AUS
+				white_peace = ROM
+			}
+		}
+	}
+	on_capitulation = {#奥地利投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = AUS
+					}
+					FROM = {
+						OR = {
+							tag = HUN
+						}
+					}
+					AUS = {
+						NOT = {
+							has_war_with = GER
+						}
+					}
+					has_global_flag = AUS_civil_war_has_happened
+				}
+				HUN = {
+					annex_country = {
+						target = AUS
+						transfer_troops = yes
+					}
+				}		
+				clr_global_flag = AUS_civil_war_has_happened
+				set_global_flag = AUS_civil_war_has_end
+				set_global_flag = AUS_civil_war_HUN_win
+			}
+		}
+	}
+	on_capitulation = {#奥地利投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = AUS
+					}
+					FROM = {
+						OR = {
+							tag = CZE
+							tag = SLV
+							tag = CLA
+							tag = BNT
+							tag = TRL
+							tag = CLO
+							tag = POL
+							tag = CRO
+							tag = SBU
+							tag = ROM
+						}
+					}
+					AUS = {
+						NOT = {
+							has_war_with = GER
+						}
+					}
+					NOT = {
+						has_global_flag = AUS_civil_war_has_happened
+					}
+				}
+				KAR = {
+					every_owned_state = {
+						limit = {
+							is_core_of = KAR
+						}
+						if = {
+							limit = {
+								CLA = {
+									exists = yes
+								}
+							}
+						transfer_state_to = CLA
+						add_core_of = CLA
+						}
+						if = {
+							limit = {
+								AUS = {
+									has_war_with = POL	
+								}
+							}
+						transfer_state_to = POL
+						add_core_of = POL
+						}
+					}
+				}
+				white_peace = CZE
+				white_peace = SLV
+				white_peace = CLA
+				white_peace = BNT
+				white_peace = TRL
+				white_peace = CLO
+				white_peace = POL
+				white_peace = CRO
+				if = {
+					limit = {
+						has_war_with = ROM
+					}
+					white_peace = ROM
+					TRL = {
+						every_owned_state = {
+							limit = {
+								is_core_of = TRL
+							}
+							add_core_of = ROM
+						}
+					}
+					ROM = {
+						country_event = {
+							id = AUS_civil_war_YRP_events.3
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = SBU
+					}
+					white_peace = SBU
+					CRO = {
+						every_owned_state = {
+							limit = {
+								is_core_of = CRO
+							}
+							add_core_of = SBU
+						}
+					}
+					SBU = {
+						country_event = {
+							id = AUS_civil_war_YRP_events.11
+						}
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#匈牙利投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = HUN
+					}
+					FROM = {
+						OR = {
+							tag = AUS
+						}
+					}
+					has_global_flag = AUS_civil_war_has_happened
+				}
+				AUS = {
+					annex_country = {
+						target = HUN
+						transfer_troops = yes
+					}
+				}	
+				clr_global_flag = AUS_civil_war_has_happened
+				set_global_flag = AUS_civil_war_has_end
+				set_global_flag = AUS_civil_war_AUS_win
+			}
+		}
+	}
+	on_capitulation = {#匈牙利投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = HUN
+					}
+					FROM = {
+						OR = {
+							tag = CZE
+							tag = SLV
+							tag = CLA
+							tag = BNT
+							tag = TRL
+							tag = CLO
+							tag = POL
+							tag = CRO
+							tag = SBU
+							tag = ROM
+						}
+					}
+					NOT = {
+						has_global_flag = AUS_civil_war_has_happened
+					}
+				}
+				white_peace = BNT
+				white_peace = TRL
+				white_peace = CLO
+				white_peace = CRO
+				white_peace = CZE
+				white_peace = SLV
+				white_peace = CLA
+				if = {
+					limit = {
+						has_war_with = ROM
+					}
+					white_peace = ROM
+					TRL = {
+						every_owned_state = {
+							limit = {
+								is_core_of = TRL
+							}
+							add_core_of = ROM
+						}
+					}
+					ROM = {
+						country_event = {
+							id = AUS_civil_war_YRP_events.3
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = SBU
+					}
+					white_peace = SBU
+					SLV = {
+						every_owned_state = {
+							limit = {
+								is_core_of = SLV
+							}
+							add_core_of = SBU
+						}
+					}
+					SBU = {
+						country_event = {
+							id = AUS_civil_war_YRP_events.12
+						}
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#奥地利投降
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = AUS
+					}
+					FROM = {
+						OR = {
+							tag = GER
+						}
+					}
+					AUS = {
+						has_war_with = GER
+					}
+				}
+				GER = {
+					annex_country = {
+						target = AUS
+						transfer_troops = yes
+					}
+				}		
+				if = {
+					limit = {
+						has_global_flag = AUS_civil_war_has_happened
+					}
+					clr_global_flag = AUS_civil_war_has_happened
+					set_global_flag = AUS_civil_war_has_end
+					set_global_flag = AUS_civil_war_HUN_win
+				}
+			}
+		}
+	}
+}

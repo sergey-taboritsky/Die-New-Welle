@@ -1,0 +1,77 @@
+	fascism_bravery = {
+		
+		available = { 
+		}
+		frame = 1
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_merit = {
+		
+		available = { 
+		}
+		frame = 2
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_order_brave = {
+		
+		available = { 
+		}
+		frame = 3
+		icon = "GFX_medal_icon_fascism"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			armor_factor = 0.1
+			recon_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	fascism_heroism = {
+		
+		available = { 
+		}
+		frame = 4
+		icon = "GFX_medal_icon_fascism"
+	
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	

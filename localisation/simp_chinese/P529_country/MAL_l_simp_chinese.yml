@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MAL_market_liberal: "新加坡马来亚共和国"
+ MAL_market_liberal_DEF: "新加坡马来亚共和国"
+ MAL_market_liberal_ADJ: "新加坡马来亚"
+ MAL_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MAL_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MAL_autonomy_puppet: "$OVERLORDADJ$属新加坡马来亚"
+ MAL_autonomy_puppet_DEF: "$OVERLORDADJ$属新加坡马来亚"
+ MAL: "新加坡马来亚"
+ MAL_DEF: "新加坡马来亚"
+ MAL_ADJ: "新加坡马来亚"

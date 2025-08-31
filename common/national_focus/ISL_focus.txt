@@ -1,0 +1,1286 @@
+focus_tree = {
+	id = ISL_tree#谨记2023-2024年巴以冲突中以色列的罪行......
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = ISL
+		}
+	}
+	#ISL_start
+	focus = {
+		id = ISL_focus_start
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		x = 17
+		y = 0
+
+		completion_reward = {
+			every_owned_state = {
+				add_resistance = 30
+				add_compliance = -30
+			}
+			add_manpower = 50000
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_1
+	focus = {
+		id = ISL_focus_1
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_start
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_start }
+
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = ISL_focus_1_tooltip
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_2_1
+	focus = {
+		id = ISL_focus_2_1
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_1
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_1 }
+		
+		available = {
+			706 = {
+				is_core_of = ISL
+			}
+		}
+
+		completion_reward = {
+			706 = {
+				add_resource = {
+					type = rubber
+					amount = 40
+				}
+			}
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_2_2
+	focus = {
+		id = ISL_focus_2_2
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_1
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_1 }
+		
+		available = {
+			713 = {
+				is_core_of = ISL
+			}
+		}
+
+		completion_reward = {
+			713 = {
+				add_resource = {
+					type = oil
+					amount = 40
+				}
+			}
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_2
+	focus = {
+		id = ISL_focus_2
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_1 }
+
+		completion_reward = {
+			add_ideas = ISL_immigrant_1
+			add_manpower = 50000
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_3
+	focus = {
+		id = ISL_focus_3
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_2 }
+		
+		available = {
+			ISL = {			
+				check_variable = {
+					var = ISL.num_core_states 
+					value = 3
+					compare = greater_than_or_equals
+					tooltip = ISL_focus_3_tt
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 543
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 543
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 543
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_4
+	focus = {
+		id = ISL_focus_4
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_3
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_3 }
+
+		completion_reward = {
+			set_technology = {
+				basic_battery = 1
+				basic_depth_charges = 1
+				early_ship_hull_light = 1
+				early_ship_hull_cruiser = 1
+			}
+			add_offsite_building = { 
+				type = dockyard 
+				level = 3 
+			}
+			create_equipment_variant = {
+				name = "Moses Class"
+				type = ship_hull_cruiser_1
+				name_group = ISL_CA_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_battery_slot = ship_medium_battery_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_medium_battery_1
+					rear_1_custom_slot = ship_airplane_launcher_1	
+				}
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_1
+					version_name = "Moses Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1				
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_1
+					version_name = "Moses Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1				
+			}
+			create_equipment_variant = {
+				name = "Israel Class"
+				type = ship_hull_light_1
+				name_group = ISL_DD_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_torpedo_slot = ship_torpedo_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_engine_slot = light_ship_engine_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_depth_charge_1
+				}
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1	
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1	
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1	
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1	
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1	
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1	
+			}
+			add_ai_strategy = {
+				type = role_ratio
+				id = capital_ship
+				value = 15
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_4_1
+	focus = {
+		id = ISL_focus_4_1
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_3
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_3 }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_4_2
+	focus = {
+		id = ISL_focus_4_2
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_3
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_3 }
+
+		completion_reward = {
+			load_oob = "ISL_god_army"
+			add_ideas = ISL_Religious_fanaticism
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_5
+	focus = {
+		id = ISL_focus_5
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_4
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_4 }
+
+		completion_reward = {
+			708 = {			
+				add_manpower = -100000
+				add_manpower = 150000
+				add_core_of = ISL
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_6
+	focus = {
+		id = ISL_focus_6
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_5
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_5 }
+
+		completion_reward = {
+			country_event = {
+				id = ISL_focus_events.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_7
+	focus = {
+		id = ISL_focus_7
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_6
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_6 }
+		
+		available = {
+			has_country_flag = ISL_win_MGS
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_7_tt
+			543 = {
+				set_state_name = "新迦南"
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_8_1
+	focus = {
+		id = ISL_focus_8_1
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_7
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_7 }
+		
+		completion_reward = {
+			708 = {
+				add_building_construction = {
+					type = naval_base
+					level = 6
+					instant_build = yes
+					province = 13072
+				}
+			}
+			709 = {
+				add_building_construction = {
+					type = naval_base
+					level = 6
+					instant_build = yes
+					province = 2188
+				}
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_8_2
+	focus = {
+		id = ISL_focus_8_2
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_7
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_7 }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.3
+			}
+			add_ideas = ISL_Religious_focus
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_8_3
+	focus = {
+		id = ISL_focus_8_3
+		icon = GFX_goal_generic_production
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_7
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_7 }
+		
+		completion_reward = {
+			remove_ideas = ISL_complex_language
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_9
+	focus = {
+		id = ISL_focus_9
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_8_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_8_1 }
+		prerequisite = { focus = ISL_focus_8_2 }
+		prerequisite = { focus = ISL_focus_8_3 }
+		
+		completion_reward = {
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_research_1
+	focus = {
+		id = ISL_focus_research_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_6
+		x = -4
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_6 }
+		prerequisite = { focus = ISL_focus_4_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = electronics
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_research_2_1
+	focus = {
+		id = ISL_focus_research_2_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_research_1
+		x = -4
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_research_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = mio_cat_tech_all_armor_and_modules
+			}
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_research_2_2
+	focus = {
+		id = ISL_focus_research_2_2
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_research_1
+		x = -2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_research_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = mio_cat_all_light_fighter_and_modules
+			}
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = mio_cat_all_light_aircraft_and_modules
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_research_2_3
+	focus = {
+		id = ISL_focus_research_2_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_research_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_research_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = mio_cat_tech_all_screen_ship_and_modules
+			}
+			add_tech_bonus = {
+				bonus = 3
+				uses = 3
+				category = mio_cat_tech_all_capital_ship_and_modules
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_research_3
+	focus = {
+		id = ISL_focus_research_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_research_2_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_research_2_1 }
+		prerequisite = { focus = ISL_focus_research_2_2 }
+		prerequisite = { focus = ISL_focus_research_2_3 }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_army_1
+	focus = {
+		id = ISL_focus_army_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_6
+		x = 4
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_6 }
+		prerequisite = { focus = ISL_focus_4_2 }
+		
+		completion_reward = {
+			add_offsite_building = { 
+				type = arms_factory
+				level = 3 
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_army_2_1
+	focus = {
+		id = ISL_focus_army_2_1
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_army_1
+		x = 4
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_army_1 }
+		
+		completion_reward = {
+			add_offsite_building = { 
+				type = arms_factory
+				level = 2
+			}
+			add_offsite_building = { 
+				type = industrial_complex
+				level = 2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_army_2_2
+	focus = {
+		id = ISL_focus_army_2_2
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_army_1
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_army_1 }
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 100
+				producer = GER
+			}
+			set_technology = {
+				aa_lmg = 1
+				engines_1 = 1
+				engines_2 = 1
+				aircraft_construction = 1
+				iw_small_airframe = 1
+				basic_small_airframe = 1
+			}
+			create_equipment_variant = {
+				name = "S-p-s 01"#此处的S-p-s 为 Six pointed star 的缩写，用星星代指天空
+				type = small_plane_airframe_1
+				design_team = mio:GER_messerschmitt_organization
+				modules = {
+					fixed_main_weapon_slot = light_mg_4x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_army_2_3
+	focus = {
+		id = ISL_focus_army_2_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_army_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_army_1 }
+		
+		completion_reward = {
+			add_ideas = ISL_all_military_service
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_army_3
+	focus = {
+		id = ISL_focus_army_3
+		icon = GFX_goal_generic_production
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_army_2_2
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_army_2_1 }
+		prerequisite = { focus = ISL_focus_army_2_2 }
+		prerequisite = { focus = ISL_focus_army_2_3 }
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ISL_Religious_fanaticism_improve
+				remove_idea = ISL_Religious_fanaticism
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_1
+	focus = {
+		id = ISL_focus_second_1
+		icon = GFX_goal_generic_production
+		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_9
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_research_3 }
+		prerequisite = { focus = ISL_focus_9 }
+		prerequisite = { focus = ISL_focus_army_3 }
+		
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_second_1_tt
+			add_political_power = 250
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_A_1
+	focus = {
+		id = ISL_focus_second_A_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_1
+		x = -8
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_1 }
+		
+		completion_reward = {
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 3
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 3
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 3
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 3
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					version_name = "Israel Class"
+				}
+				requested_factories = 1
+				progress = 0.99
+				amount = 3
+			}
+			set_technology = {
+				basic_ship_hull_heavy = 1
+			}
+			create_equipment_variant = {
+				name = "Ayutthaya Class"
+				type = ship_hull_heavy_2
+				name_group = ISL_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bc_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_1
+					rear_1_custom_slot = ship_heavy_battery_1
+				}
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					version_name = "Ayutthaya Class"
+				}
+				requested_factories = 1
+				progress = 0.7
+				amount = 3
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_A_2_1
+	focus = {
+		id = ISL_focus_second_A_2_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_A_1
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_A_1 }
+		
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_second_A_2_1_tt
+			add_political_power = -40
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = -500
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_A_2_2
+	focus = {
+		id = ISL_focus_second_A_2_2
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_A_1
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_A_1 }
+		
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_second_A_2_2_tt
+			add_political_power = 50
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_A_3
+	focus = {
+		id = ISL_focus_second_A_3
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_A_1
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = ISL_focus_second_A_2_1 }
+		prerequisite = { focus = ISL_focus_second_A_2_2 }
+		
+		will_lead_to_war = ETH
+		
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ETH
+				expire = 0
+			}
+			ETH = {
+				every_core_state = {
+					add_claim_by  = ISL
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				declare_war_on = {
+					target = ETH
+					type = take_state_focus
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_B_1
+	focus = {
+		id = ISL_focus_second_B_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_1
+		x = 8
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_1 }
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = GBR
+				modifier = P529_ENG_ISL_common_defend
+			}
+			GBR = {
+				add_opinion_modifier = {
+					target = ISL
+					modifier = P529_ENG_ISL_common_defend
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_B_2_1
+	focus = {
+		id = ISL_focus_second_B_2_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_B_1
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_B_1 }
+		
+		completion_reward = {
+			give_guarantee = GBR
+			GBR = {
+				give_guarantee = ISL
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_B_2_2
+	focus = {
+		id = ISL_focus_second_B_2_2
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_B_1
+		x = 1
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_B_1 }
+		
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_second_B_2_2_tt
+			EGY = {
+				country_event = {
+					id = ISL_focus_events.4
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_B_3
+	focus = {
+		id = ISL_focus_second_B_3
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_B_1
+		x = 0
+		y = 2
+		
+		available = {
+		}
+		
+		prerequisite = { focus = ISL_focus_second_B_2_1 }
+		prerequisite = { focus = ISL_focus_second_B_2_2 }
+		
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_C_1
+	focus = {
+		id = ISL_focus_second_C_1
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_1
+		x = 0
+		y = 4
+		
+		prerequisite = { focus = ISL_focus_second_A_3 }
+		prerequisite = { focus = ISL_focus_second_B_3 }
+		
+		completion_reward = {
+			custom_effect_tooltip = ISL_focus_second_C_1_tt
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+	#ISL_second_stage_C_2
+	focus = {
+		id = ISL_focus_second_C_2
+		icon = GFX_goal_generic_production
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		
+		relative_position_id = ISL_focus_second_C_1
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = ISL_focus_second_C_1 }
+		
+		available = {
+			OR = {
+				ETH = {
+					is_puppet_of = ISL
+				}
+				ETH = {
+					exists = no
+				}
+			}
+		}
+		
+		completion_reward = {
+			454 = {
+				add_claim_by = ISL
+			}
+			454 = {
+				owner = {
+					ISL = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							expire = 0
+						}
+						if = {
+							limit = {
+								is_ai = yes
+							}
+							declare_war_on = {
+								target = PREV
+								type = take_state_focus
+							}
+						}
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }		
+	}
+}

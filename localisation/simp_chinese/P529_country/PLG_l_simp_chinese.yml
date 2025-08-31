@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ PLG_social_conservative: "巴拉圭共和国"
+ PLG_social_conservative_DEF: "巴拉圭共和国"
+ PLG_social_conservative_ADJ: "巴拉圭"
+ PLG_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ PLG_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ PLG_autonomy_puppet: "$OVERLORDADJ$属巴拉圭"
+ PLG_autonomy_puppet_DEF: "$OVERLORDADJ$属巴拉圭"
+ PLG: "巴拉圭"
+ PLG_DEF: "巴拉圭"
+ PLG_ADJ: "巴拉圭"

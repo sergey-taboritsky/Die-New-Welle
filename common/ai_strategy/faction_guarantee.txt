@@ -1,0 +1,107 @@
+EGY_ISL_faction = {
+	allowed = {
+		OR = {
+			tag = EGY
+			tag = ISL
+		}
+	}
+	enable = {
+		ISL = {
+			has_completed_focus = ISL_focus_second_B_2_2
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = EGY
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = ISL
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			is_in_faction_with = FRA
+		}
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = EGY
+		value = 10
+	}
+}
+
+NOR_GER_faction = {
+	allowed = {
+		OR = {
+			tag = NOR
+			tag = GER
+		}
+	}
+	enable = {
+		GER = {
+			has_completed_focus = GER_communsit_politic_SWE_2
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = NOR
+		value = 1000
+	}
+}
+
+GBR_GER_union = {
+	allowed = {
+		OR = {
+			tag = GBR
+			tag = GER
+		}
+	}
+	enable = {
+		GER = {
+			has_global_flag = GBR_GER_union
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = GBR
+		value = 1000
+	}
+}
+
+GBR_FRA_union = {
+	allowed = {
+		OR = {
+			tag = GBR
+			tag = FRA
+		}
+	}
+	enable = {
+		GER = {
+			has_global_flag = GBR_FRA_union
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = GBR
+		value = 1000
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ SWI_market_liberal: "瑞士联邦"
+ SWI_market_liberal_DEF: "瑞士联邦"
+ SWI_market_liberal_ADJ: "瑞士"
+ SWI_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ SWI_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ SWI_autonomy_puppet: "$OVERLORDADJ$属瑞士"
+ SWI_autonomy_puppet_DEF: "$OVERLORDADJ$属瑞士"
+ SWI: "瑞士"
+ SWI_DEF: "瑞士"
+ SWI_ADJ: "瑞士"

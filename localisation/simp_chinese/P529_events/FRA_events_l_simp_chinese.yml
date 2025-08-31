@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+    FRA_political_events.1.t: "德意志解决方案"
+    FRA_political_events.1.desc: "我国东侧的邻居，卑劣的独裁者，德意志，正在我们东侧边境蹂躏阿尔萨斯-洛林的人民，我们不能坐视这一切，是时候决定该如何处理他们了"
+    FRA_political_events.1.a: "建设弗朗什孔泰防线"
+    FRA_political_events.1.b: "准备收复莱茵河以西"
+    FRA_focus_events.1.t: "瓦隆-佛兰德分治法"
+    FRA_focus_events.1.desc: "瓦隆和佛兰德两个民族本身就是被帝国主义者强行结合成比利时的，强行将两族放置在同一片土地上只会加剧他们的矛盾，更会被有心之人催动民族仇杀。在这一切发生之前，我们应该尊重他们自己的意愿，让他们各自为政"
+    FRA_focus_events.1.a: "回来吧，瓦隆"
+    FRA_focus_events.2.t: "卢森堡自治法案"
+    FRA_focus_events.2.desc: "卢森堡已经被我们占领，当地的民众都希望成立一个自治的卢森堡工团，以他们自己的努力成为巴黎国际的一部分"
+    FRA_focus_events.2.a: "设立一个自治的卢森堡工团"
+    FRA_focus_events.3.t: "佛兰德地区自治案"
+    FRA_focus_events.3.desc: "前尼德兰王国的地区已经被我们解放，当地的工团主义者已经正式向我们提出了申请，他们希望作为佛兰德的一部分在巴黎国际发光发热"
+    FRA_focus_events.3.a: "同意他们的请求"
+

@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_P529_decision_ISL_small"
+		texturefile = "gfx/interface/decisions/P529_decision_ISL_small.dds"
+	}
+	spriteType = {
+		name = "GFX_P529_decision_ISL_big"
+		texturefile = "gfx/interface/decisions/P529_decision_ISL_big.png"
+	}
+}

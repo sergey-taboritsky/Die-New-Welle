@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ LAO_paternal_autocrat: "老挝王国"
+ LAO_paternal_autocrat_DEF: "老挝王国"
+ LAO_paternal_autocrat_ADJ: "老挝"
+ LAO_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ LAO_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ LAO_autonomy_puppet: "$OVERLORDADJ$属老挝"
+ LAO_autonomy_puppet_DEF: "$OVERLORDADJ$属老挝"
+ LAO: "老挝"
+ LAO_DEF: "老挝"
+ LAO_ADJ: "老挝"

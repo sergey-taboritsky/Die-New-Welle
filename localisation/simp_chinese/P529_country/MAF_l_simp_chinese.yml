@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ MAF_authoritarian_democrat: "中非邦联共和国"
+ MAF_authoritarian_democrat_DEF: "中非邦联共和国"
+ MAF_authoritarian_democrat_ADJ: "中非邦联"
+ MAF_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ MAF_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ MAF_autonomy_puppet: "$OVERLORDADJ$属中非邦联"
+ MAF_autonomy_puppet_DEF: "$OVERLORDADJ$属中非邦联"
+ MAF: "中非邦联"
+ MAF_DEF: "中非邦联"
+ MAF_ADJ: "中非邦联"

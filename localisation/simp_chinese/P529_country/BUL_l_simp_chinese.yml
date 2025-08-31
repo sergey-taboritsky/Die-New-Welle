@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ BUL_authoritarian_democrat: "布尔共和国"
+ BUL_authoritarian_democrat_DEF: "布尔共和国"
+ BUL_authoritarian_democrat_ADJ: "布尔"
+ BUL_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ BUL_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ BUL_autonomy_puppet: "$OVERLORDADJ$属布尔"
+ BUL_autonomy_puppet_DEF: "$OVERLORDADJ$属布尔"
+ BUL: "布尔"
+ BUL_DEF: "布尔"
+ BUL_ADJ: "布尔"

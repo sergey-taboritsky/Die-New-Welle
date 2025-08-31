@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ GUP_paternal_autocrat: "西班牙王国古巴领"
+ GUP_paternal_autocrat_DEF: "西班牙王国古巴领"
+ GUP_paternal_autocrat_ADJ: "西班牙-古巴"
+ GUP_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ GUP_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ GUP_autonomy_puppet: "$OVERLORDADJ$属古巴"
+ GUP_autonomy_puppet_DEF: "$OVERLORDADJ$属古巴"
+ GUP: "古巴"
+ GUP_DEF: "古巴"
+ GUP_ADJ: "古巴"

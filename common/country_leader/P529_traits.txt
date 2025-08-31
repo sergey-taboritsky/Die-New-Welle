@@ -1,0 +1,8 @@
+leader_traits = {
+	GBR_Loyal_staff = {
+		random = no
+		sprite = 1
+		radical_socialist_drift = 0.1
+		political_power_gain = 0.3
+		research_speed_factor = 0.1
+}

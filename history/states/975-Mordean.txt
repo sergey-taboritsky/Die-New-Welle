@@ -1,0 +1,32 @@
+
+state = {
+	id=975
+	name = "STATE_975"
+	manpower = 3202401
+	
+	state_category = large_city
+	
+	resources = {
+		aluminium=9 # was: 16
+	}
+
+	history = {
+		owner = ITA
+		victory_points = { #Parma
+			9752 1
+		}
+		buildings = {
+			infrastructure = 4 #was: 7
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = ITA
+		add_core_of = MDN
+	}
+
+	provinces = {
+		3773 3976 6790 9752
+	}
+
+	local_supplies = 0.0 
+}

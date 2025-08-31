@@ -1,0 +1,729 @@
+add_namespace = GER_political_events
+add_namespace = GER_focus_events
+
+country_event = {
+	id = GER_focus_events.1
+	title = GER_political_events.1.t
+	desc = GER_political_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.1.a
+		add_state_core = 7
+		add_state_core = 35
+		add_state_core = 36
+		random_country = {
+			limit = {
+				tag = NER
+				is_puppet_of = GER
+			}
+			GER = {
+				annex_country = {
+					target = NER
+					transfer_troops = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.2
+	title = GER_political_events.2.t
+	desc = GER_political_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.2.a
+		add_state_core = 8
+		random_country = {
+			limit = {
+				tag = LUX
+				is_puppet_of = GER
+			}
+			GER = {
+				annex_country = {
+					target = LUX
+					transfer_troops = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.3
+	title = GER_political_events.3.t
+	desc = GER_political_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.3.a
+		add_state_core = 6
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = GER
+				owns_state = 6
+				owns_state = 34
+			}
+			random_owned_state = {
+				limit = {
+					state = 6
+				}
+				transfer_state_to = GER
+			}
+			WLO = {
+				add_state_core = 29
+				add_state_core = 34
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				inherit_technology = BEL
+			}
+			GER = {
+				set_autonomy = {
+					target = WLO
+					autonomous_state = autonomy_satellite_state
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = GER
+				NOT = { owns_state = 6 }
+				owns_state = 34
+			}
+			WLO = {
+				add_state_core = 29
+				add_state_core = 34
+				transfer_state = 34
+				inherit_technology = BEL
+			}
+			GER = {
+				set_autonomy = {
+					target = WLO
+					autonomous_state = autonomy_satellite_state
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				original_tag = BEL
+				is_puppet_of = GER
+				owns_state = 6
+				NOT = { owns_state = 34 }
+			}
+			GER = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GER
+				owns_state = 34
+				NOT = {
+					owns_state = 6
+				}
+			}
+			WLO = {
+				add_state_core = 34
+				add_state_core = 29
+				transfer_state = 34
+			}
+			GER = {
+				set_autonomy = {
+					target = WLO
+					autonomous_state = autonomy_satellite_state
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GER
+				owns_state = 34
+				owns_state = 6
+			}
+			random_owned_state = {
+				limit = {
+					state = 34
+				}
+				WLO = {
+					add_state_core = 29
+					add_state_core = 34
+					transfer_state = 34
+				}
+				GER = {
+					set_autonomy = {
+						target = WLO
+						autonomous_state = autonomy_satellite_state
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = GER_focus_events.3.b
+		
+		trigger = {
+			owns_state = 6
+			owns_state = 34
+		}
+		
+		BEL = {
+			set_state_owner = 6
+			set_state_controller = 6
+			set_state_controller = 34
+			set_state_owner = 34
+		}
+		GER = {
+			set_autonomy = {
+				target = BEL
+				autonomous_state = autonomy_satellite_state
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.4
+	title = GER_political_events.4.t
+	desc = GER_political_events.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.4.a
+		add_political_power = 50
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.5
+	title = GER_political_events.5.t
+	desc = GER_political_events.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.5.a
+		add_political_power = 50
+		every_owned_state = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 7
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_coastal = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.6
+	title = GER_political_events.6.t
+	desc = GER_political_events.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.4.a
+		add_ideas = GER_DAN_Union_navy
+		every_owned_state = {
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.7
+	title = GER_political_events.7.t
+	desc = GER_political_events.7.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {#GER
+		name = GER_focus_events.7.a
+		GER = {
+			country_event = {
+				id = GER_focus_events.8
+			}
+			set_autonomy = {
+				target = SWI
+				autonomous_state = autonomy_satellite_state
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_opinion = {
+					target = GER
+					value > 50
+				}
+				add = 10
+			}
+		}
+	}
+	option = {#FRA
+		name = GER_focus_events.7.b
+		GER = {
+			country_event = {
+				id = GER_focus_events.10
+			}
+		}
+		FRA = {
+			country_event = {
+				id = GER_focus_events.9
+			}
+			puppet = SWI
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_opinion = {
+					target = FRA
+					value > 50
+				}
+				add = 10
+			}
+		}
+	}
+	option = {#ITA
+		name = GER_focus_events.7.c
+		GER = {
+			country_event = {
+				id = GER_focus_events.10
+			}
+		}
+		ITA = {
+			country_event = {
+				id = GER_focus_events.9
+			}
+			puppet = SWI
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				has_opinion = {
+					target = ITA
+					value > 70
+				}
+				add = 10
+			}
+		}		
+	}
+	option = {#AUS
+		name = GER_focus_events.7.d
+		GER = {
+			country_event = {
+				id = GER_focus_events.10
+			}
+		}
+		AUS = {
+			country_event = {
+				id = GER_focus_events.9
+			}
+			puppet = SWI
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				has_opinion = {
+					target = AUS
+					value > 70
+				}
+				add = 10
+			}
+		}
+	}
+	option = {#SWI
+		name = GER_focus_events.7.e
+		GER = {
+			country_event = {
+				id = GER_focus_events.10
+			}
+		}
+		add_timed_idea = {
+			idea = SWI_home_defend
+			days = 730
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.8
+	title = GER_political_events.8.t
+	desc = GER_political_events.8.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.8.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.9
+	title = GER_political_events.9.t
+	desc = GER_political_events.9.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.9.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = GER_focus_events.9.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_focus_events.10
+	title = GER_political_events.10.t
+	desc = GER_political_events.10.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.10.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}	
+
+country_event = {
+	id = GER_focus_events.11
+	title = GER_political_events.11.t
+	desc = GER_political_events.11.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_focus_events.11.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}	
+
+country_event = {
+	id = GER_political_events.12
+	title = GER_political_events.12.t
+	desc = GER_political_events.12.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.12.a
+		SWE = {
+			country_event = {
+				id = GER_political_events.13
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.13
+	title = GER_political_events.13.t
+	desc = GER_political_events.13.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.13.a
+		138 = {
+			transfer_state_to = DAN
+			add_core_of = DAN
+		}
+		hidden_effect = {
+			NOR = {
+				country_event = {
+					id = GER_political_events.14
+				}
+			}
+			DAN = {
+				country_event = {
+					id = GER_political_events.16
+				}
+			}
+			GER = {
+				country_event = {
+					id = GER_political_events.17
+				}
+			}			
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = GER_political_events.13.b
+		DAN = {
+			declare_war_on = {
+				target = SWE
+				type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.14
+	title = GER_political_events.14.t
+	desc = GER_political_events.14.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.14.a
+		915 = {
+			transfer_state_to = NOR
+			add_core_of = NOR
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.4
+		}
+		SWE = {
+			country_event = {
+				id = GER_political_events.15
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.15
+	title = GER_political_events.15.t
+	desc = GER_political_events.15.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.15.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}	
+
+country_event = {
+	id = GER_political_events.16
+	title = GER_political_events.16.t
+	desc = GER_political_events.16.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.16.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}	
+
+country_event = {
+	id = GER_political_events.17
+	title = GER_political_events.17.t
+	desc = GER_political_events.17.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.17.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.18
+	title = GER_political_events.18.t
+	desc = GER_political_events.18.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.18.a
+		NOR = {
+			country_event = {
+				id = GER_political_events.19
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.19
+	title = GER_political_events.19.t
+	desc = GER_political_events.19.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.19.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.4
+		}
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		GER = { add_to_faction = NOR }
+		SWE = {
+			country_event = {
+				id = GER_political_events.20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.20
+	title = GER_political_events.20.t
+	desc = GER_political_events.20.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.20.a
+		917 = {
+			transfer_state_to = NOR
+			add_core_of = NOR
+		}
+		NOR = {
+			country_event = {
+				id = GER_political_events.21
+			}
+		}
+		GER = {
+			country_event = {
+				id = GER_political_events.22
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.21
+	title = GER_political_events.21.t
+	desc = GER_political_events.21.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.21.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = GER_political_events.22
+	title = GER_political_events.22.t
+	desc = GER_political_events.22.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_political_events.22.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}

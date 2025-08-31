@@ -1,0 +1,3800 @@
+add_namespace = AUS_political_events
+add_namespace = AUS_focus_events
+add_namespace = AUS_decision_events #包含了奥匈帝国10个tag的投降事件，包括匈牙利
+add_namespace = AUS_decision_news_events 
+add_namespace = AUS_civil_war_YRP_events #Yugoslavia Romania Poland
+
+country_event = {
+	id = AUS_focus_events.1
+	title = AUS_focus_events.1.t
+	desc = AUS_focus_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_focus_events.1.a
+		set_country_flag = AUS_civil_war_flag
+		unlock_national_focus = AUS_focus_1
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_focus_events.1.b
+		set_country_flag = HUN_civil_war_flag
+		unlock_national_focus = HUN_focus_1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_focus_events.2
+	title = AUS_focus_events.2.t
+	desc = AUS_focus_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_focus_events.2.a #波兰专员辖区
+		KAR = {
+			set_cosmetic_tag = KAR_AUS_FAS_POL
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_focus_events.2.b #并入东方辖区
+		KAR = {
+			set_cosmetic_tag = KAR_AUS_FAS_LET
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.1
+	title = AUS_decision_events.1.t
+	desc = AUS_decision_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		diplomatic_relation = {
+			country = ALB
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = UKR
+			relation = guarantee
+			active = no
+		}
+		drop_cosmetic_tag = yes
+	}
+	
+	option = {
+		name = AUS_decision_events.1.a
+		trigger = {
+			has_country_flag = AUS_civil_war_flag
+		}
+		release = HUN
+		declare_war_on = {
+			target = HUN
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				has_country_flag = AUS_FAS_elect
+			}
+			load_focus_tree = AUS_tree_FAS
+		}
+		if = {
+			limit = {
+				has_country_flag = AUS_EMP_elect
+			}
+			load_focus_tree = AUS_tree_EMP
+		}
+		if = {
+			limit = {
+				has_country_flag = AUS_REP_elect
+			}
+			load_focus_tree = AUS_tree_REP
+		}
+		hidden_effect = {
+			transfer_units_fraction= {
+				target = HUN
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			} 
+			HUN = {
+				inherit_technology = AUS
+				load_oob = "AUS_civil_war_start"
+				set_popularities = {
+					social_democrat = 30
+					radical_socialist = 10
+					syndicalist = 30
+					totalist = 30
+				}
+				random_list = {
+					30 = {
+						set_politics = {
+							ruling_party = social_democrat
+						}
+						load_focus_tree = HUN_tree_REP
+					}
+					10 = {
+						set_politics = {
+							ruling_party = radical_socialist
+						}
+						load_focus_tree = HUN_tree_SOV
+					}
+					30 = {
+						set_politics = {
+							ruling_party = syndicalist
+						}
+						load_focus_tree = HUN_tree_SYN
+					}
+					30 = {
+						set_politics = {
+							ruling_party = totalist
+						}
+						load_focus_tree = HUN_tree_SOV
+					}
+				}
+			}
+			AUS = {
+				country_event = {
+					id = AUS_decision_events.2
+					hours = 12
+				}
+			}
+			HUN = {
+				country_event = {
+					id = AUS_decision_events.2
+					hours = 12
+				}
+			}
+			ROM = {
+				country_event = {
+					id = AUS_decision_events.3
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.1.b
+		trigger = {
+			has_country_flag = HUN_civil_war_flag
+		}
+		AUS = {
+			release = HUN
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+			hidden_effect = {
+				transfer_units_fraction= {
+					target = HUN
+					size = 0.5
+					stockpile_ratio = 0.5
+					army_ratio = 0.5
+					navy_ratio = 0.5
+					air_ratio = 0.5
+				} 
+			}
+		}
+		HUN = { change_tag_from = ROOT }
+		HUN = {
+			set_popularities = {
+				social_democrat = 30
+				radical_socialist = 10
+				syndicalist = 30
+				totalist = 30
+			}
+			AUS = {
+				if = {
+					limit = {
+						has_country_flag = HUN_REP_elect
+					}
+					HUN = {
+						load_focus_tree = HUN_tree_REP
+						set_politics = {
+							ruling_party = social_democrat
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = HUN_SYN_elect
+					}
+					HUN = {
+						load_focus_tree = HUN_tree_SYN
+						set_politics = {
+							ruling_party = syndicalist
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = HUN_SOV_elect
+					}
+					HUN = {
+						load_focus_tree = HUN_tree_SOV
+						set_politics = {
+							ruling_party = totalist
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			HUN = {
+				inherit_technology = AUS
+				load_oob = "AUS_civil_war_start"
+			}
+			AUS = {
+				set_popularities = {
+					social_liberal = 5
+					market_liberal = 15
+					social_conservative = 20
+					authoritarian_democrat = 10
+					paternal_autocrat = 30
+					national_populist = 20
+				}
+				random_list = {
+					5 = {
+						set_politics = {
+							ruling_party = social_liberal
+						}
+						load_focus_tree = AUS_tree_REP
+					}
+					15 = {
+						set_politics = {
+							ruling_party = market_liberal
+						}
+						load_focus_tree = AUS_tree_REP
+					}
+					20 = {
+						set_politics = {
+							ruling_party = social_conservative
+						}
+						load_focus_tree = AUS_tree_REP
+					}
+					10 = {
+						set_politics = {
+							ruling_party = authoritarian_democrat
+						}
+						load_focus_tree = AUS_tree_EMP
+					}
+					30 = {
+						set_politics = {
+							ruling_party = paternal_autocrat
+						}
+						load_focus_tree = AUS_tree_EMP
+					}
+					20 = {
+						set_politics = {
+							ruling_party = national_populist
+						}
+						load_focus_tree = AUS_tree_FAS
+					}
+				}
+			}
+			AUS = {
+				country_event = {
+					id = AUS_decision_events.2
+					hours = 12
+				}
+			}
+			HUN = {
+				country_event = {
+					id = AUS_decision_events.2
+					hours = 12
+				}
+			}
+			ROM = {
+				country_event = {
+					id = AUS_decision_events.3
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.2
+	title = AUS_decision_events.2.t
+	desc = AUS_decision_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.2.a
+		trigger = {
+			tag = AUS
+		}
+		activate_mission = incoming_CZE_revolt
+		activate_mission = incoming_CLA_revolt
+		activate_mission = incoming_SLV_revolt
+		activate_mission = incoming_VEN_revolt
+		set_variable = {
+			var = CZE_submit
+			value = 0
+		}
+		set_variable = {
+			var = CLA_submit
+			value = 0
+		}
+		set_variable = {
+			var = SLV_submit
+			value = 0
+		}
+		set_variable = {
+			var = VEN_submit
+			value = 0
+		}
+		add_timed_idea = {
+			idea = AUS_civil_war_buff
+			days = 1460
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.2.b
+		trigger = {
+			tag = HUN
+		}
+		activate_mission = incoming_SLO_revolt
+		activate_mission = incoming_CRO_revolt
+		activate_mission = incoming_TRL_revolt
+		activate_mission = incoming_BNT_revolt
+		set_variable = {
+			var = SLO_submit
+			value = 0
+		}
+		set_variable = {
+			var = CRO_submit
+			value = 0
+		}
+		set_variable = {
+			var = TRL_submit
+			value = 0
+		}
+		set_variable = {
+			var = BNT_submit
+			value = 0
+		}
+		add_timed_idea = {
+			idea = AUS_civil_war_buff
+			days = 1460
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.3
+	title = AUS_decision_events.3.t
+	desc = AUS_decision_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.3.a
+		AUS = {
+			country_event = {
+				id = AUS_decision_events.4
+				hours = 12
+			}
+		}
+		transfer_state = 80
+		80 = {
+			clr_state_flag = AUS_HUN_potential_state_AUS
+			clr_state_flag = AUS_HUN_potential_state_HUN
+			remove_dynamic_modifier = {
+				modifier = AUS_civil_war_state_modifier
+			}
+			remove_core_of = AUS
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.3.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.4
+	title = AUS_decision_events.4.t
+	desc = AUS_decision_events.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.4.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.3
+	hidden = yes
+	
+	trigger = {
+		date > 1937.01.01
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		every_state = {
+			remove_dynamic_modifier = {
+				modifier = AUS_civil_war_state_modifier
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.11
+	title = AUS_decision_events.11.t
+	desc = AUS_decision_events.11.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.01.a
+		release = CZE
+		declare_war_on = {
+			target = CZE
+			type = annex_everything
+		}
+		HUN = {
+			declare_war_on = {
+				target = CZE
+				type = annex_everything
+			}
+		}
+		CZE = {
+			inherit_technology = AUS
+			load_oob = "CZE_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.12
+	title = AUS_decision_events.12.t
+	desc = AUS_decision_events.12.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.02.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.13
+	title = AUS_decision_events.13.t
+	desc = AUS_decision_events.13.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CZE
+		SLO = {
+			exists = yes
+		}
+		CZE = {
+			exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.13.a
+		SLO = {
+			white_peace = AUS
+			white_peace = HUN
+		}
+		CZE = {
+			annex_country = {
+				target = SLO
+				transfer_troops = yes
+			}
+			set_cosmetic_tag = CZE_SLO
+		}
+		every_state = {
+			limit = {
+				is_core_of = SLO 
+			}
+			add_core_of = CZE
+		}
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = AUS_decision_events.14
+					hours = 10
+				}
+			}
+			HUN = {
+				country_event = {
+					id = AUS_decision_events.14
+					hours = 10
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.14
+	title = AUS_decision_events.14.t
+	desc = AUS_decision_events.14.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.14.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.15
+	title = AUS_decision_events.15.t
+	desc = AUS_decision_events.15.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CZE
+		OR = {
+			date > 1937.01.01
+			OR = {
+				HUN = {
+					exists = no
+				}
+				AUS = {
+					exists = no
+				}
+			}
+		}
+		CLA = {
+			exists = yes
+		}
+		72 = {
+			owner = CLA
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.15.a
+		CZE = {
+			declare_war_on = {
+				target = CLA
+				type = annex_everything
+			}
+			add_core = 72
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.16
+	title = AUS_decision_events.16.t
+	desc = AUS_decision_events.16.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CZE
+		NOT = {
+			has_war_with = GER
+		}
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+			has_war_with = CLA
+		}
+		OR = {
+			CZE = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+			9 = {
+				NOT = {
+					is_controlled_by = CZE
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.16.a
+		every_state = {
+			limit = {
+				is_core_of = SLO
+			}
+			remove_core_of = CZE
+		}
+		if = {
+			limit = {
+				has_cosmetic_tag = CZE_SLO
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					has_war_with = HUN
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = AUS
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					has_war_with = HUN
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = AUS
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = yes
+					}
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = AUS
+				}
+				release = SLO
+				SLO = { change_tag_from = ROOT }
+				SLO = {
+					every_owned_state = {
+						transfer_state_to = SLO
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = yes
+					}
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = AUS
+				}
+				release = SLO
+				SLO = { change_tag_from = ROOT }
+				SLO = {
+					every_owned_state = {
+						transfer_state_to = SLO
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = yes
+					}
+					has_war_with = HUN
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = yes
+					}
+					has_war_with = HUN
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = no
+					}
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					transfer_state_to = AUS
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = no
+					}
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					transfer_state_to = AUS
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = no
+					}
+					has_war_with = HUN
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = no
+					}
+					has_war_with = HUN
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					NOT = {
+						has_war_with = HUN
+					}
+					has_war_with = CLA
+				}
+			}
+			drop_cosmetic_tag = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = CZE_SLO
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+				}
+				every_owned_state = {
+					transfer_state_to = AUS
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					has_war_with = HUN
+				}
+				every_owned_state = {
+					transfer_state_to = HUN
+				}
+			}
+		}
+		white_peace = AUS
+		white_peace = HUN
+		white_peace = CLA
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.17
+	title = AUS_decision_events.17.t
+	desc = AUS_decision_events.17.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CZE
+		has_war_with = GER
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		OR = {
+			CZE = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+			9 = {
+				NOT = {
+					is_controlled_by = CZE
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.16.a
+		every_state = {
+			limit = {
+				is_core_of = SLO
+			}
+			remove_core_of = CZE
+		}
+		if = {
+			limit = {
+				has_cosmetic_tag = CZE_SLO
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					has_war_with = HUN
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = yes
+					}
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				release = SLO
+				SLO = { change_tag_from = ROOT }
+				SLO = {
+					every_owned_state = {
+						transfer_state_to = SLO
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = yes
+					}
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				release = SLO
+				SLO = { change_tag_from = ROOT }
+				SLO = {
+					every_owned_state = {
+						transfer_state_to = SLO
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = yes
+					}
+					has_war_with = HUN
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = no
+					}
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = SLO
+				}
+				SLO = { change_tag_from = ROOT }
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+					NOT = {
+						has_war_with = HUN
+					}
+					HUN = {
+						exists = no
+					}
+					NOT = {
+						has_war_with = CLA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = SLO
+				}
+				SLO = { change_tag_from = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					AUS = {
+						exists = no
+					}
+					has_war_with = HUN
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					NOT = {
+						has_war_with = HUN
+					}
+					has_war_with = CLA
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = SLO
+				}
+				SLO = { change_tag_from = ROOT }
+			}
+			drop_cosmetic_tag = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = CZE_SLO
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = AUS
+				}
+				every_owned_state = {
+					transfer_state_to = GER
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = AUS
+					}
+					has_war_with = HUN
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					transfer_state_to = HUN
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = SLO
+						}
+					}
+					transfer_state_to = GER
+				}
+			}
+		}
+		white_peace = AUS
+		white_peace = HUN
+		white_peace = CLA
+		white_peace = GER
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.21
+	title = AUS_decision_events.21.t
+	desc = AUS_decision_events.21.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.01.a
+		release = CLA
+		declare_war_on = {
+			target = CLA
+			type = annex_everything
+		}
+		HUN = {
+			declare_war_on = {
+				target = CLA
+				type = annex_everything
+			}
+		}
+		CLA = {
+			inherit_technology = AUS
+			load_oob = "CLA_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.22
+	title = AUS_decision_events.22.t
+	desc = AUS_decision_events.22.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.02.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.23
+	title = AUS_decision_events.23.t
+	desc = AUS_decision_events.23.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CLA
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+			has_war_with = CZE
+		}
+		NOT = {
+			has_war_with = POL
+		}
+		OR = {
+			CLA = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.23.a
+		if = {
+			limit = {
+				has_war_with = AUS
+				has_war_with = CZE
+			}			
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = CZE
+					}
+				}
+				transfer_state_to = KAR
+				add_core_of = KAR
+			}
+			72 = {
+				transfer_state_to = CZE
+			}
+		}
+		if = {
+			limit = {
+				has_war_with = AUS
+				has_war_with = HUN
+				NOT = {
+					has_war_with = CZE
+				}
+			}			
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = CZE
+					}
+				}
+				transfer_state_to = KAR
+				add_core_of = KAR
+			}
+			72 = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = AUS
+				}
+				NOT = {
+					has_war_with = HUN
+				}
+				has_war_with = CZE
+			}			
+			72 = {
+				transfer_state_to = CZE
+			}
+		}
+		if = {
+			limit = {
+				has_war_with = AUS
+				NOT = {
+					has_war_with = HUN
+				}
+				NOT = {
+					has_war_with = CZE
+				}
+			}			
+			every_owned_state = {
+				transfer_state_to = KAR
+				add_core_of = KAR
+			}
+			72 = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = AUS
+				}
+				AUS = {
+					exists = no
+				}
+				has_war_with = HUN
+				has_war_with = CZE
+			}			
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+			72 = {
+				transfer_state_to = CZE
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = AUS
+				}
+				AUS = {
+					exists = no
+				}
+				NOT = {
+					has_war_with = CZE
+				}
+			}			
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		white_peace = AUS
+		white_peace = CZE
+		white_peace = HUN
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.24
+	title = AUS_decision_events.24.t
+	desc = AUS_decision_events.24.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CLA
+		has_war_with = POL
+		OR = {
+			CLA = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.24.a
+		if = {
+			limit = {
+				has_war_with = CZE
+			}					
+			72 = {
+				transfer_state_to = CZE
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						state = 72
+					}
+				}
+				transfer_state_to = POL
+				if = {
+					limit = {
+						is_core_of = CLA
+					}
+					add_core_of = POL
+				}
+			}
+		}
+		if = {
+			NOT = {
+				limit = {
+					has_war_with = CZE
+				}		
+			}
+			every_owned_state = {
+				transfer_state_to = POL
+				if = {
+					limit = {
+						is_core_of = CLA
+					}
+					add_core_of = POL
+				}
+			}	
+		}
+		white_peace = AUS
+		white_peace = CZE
+		white_peace = HUN
+		white_peace = POL
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.31
+	title = AUS_decision_events.31.t
+	desc = AUS_decision_events.31.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.01.a
+		release = SLV
+		declare_war_on = {
+			target = SLV
+			type = annex_everything
+		}
+		HUN = {
+			declare_war_on = {
+				target = SLV
+				type = annex_everything
+			}
+		}
+		SLV = {
+			inherit_technology = AUS
+			load_oob = "SLV_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.32
+	title = AUS_decision_events.32.t
+	desc = AUS_decision_events.32.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.02.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.33
+	title = AUS_decision_events.33.t
+	desc = AUS_decision_events.33.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SLV
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		NOT = {
+			is_puppet_of = SBU
+		}
+		NOT = {
+			has_war_with = GER
+		}
+		OR = {
+			SLV = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.33.a
+		if = {
+			limit = {
+				AUS = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		if = {
+			limit = {
+				AUS = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.34
+	title = AUS_decision_events.34.t
+	desc = AUS_decision_events.34.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SLV
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		is_puppet_of = SBU
+		NOT = {
+			has_war_with = GER
+		}
+		OR = {
+			SLV = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.34.a
+		if = {
+			limit = {
+				AUS = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		if = {
+			limit = {
+				AUS = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+		SBU = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.35
+	title = AUS_decision_events.35.t
+	desc = AUS_decision_events.35.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SLV
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		has_war_with = GER
+		OR = {
+			SLV = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.35.a
+		if = {
+			limit = {
+				is_puppet_of = SBU
+			}
+			GER = {
+				white_peace = SBU
+				white_peace = CRO
+			}
+		}
+		every_owned_state = {
+			transfer_state_to = GER
+		}
+		white_peace = HUN
+		white_peace = GER
+		white_peace = AUS
+		SBU = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.41
+	title = AUS_decision_events.41.t
+	desc = AUS_decision_events.41.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.01.a
+		release = VEN
+		declare_war_on = {
+			target = VEN
+			type = annex_everything
+		}
+		HUN = {
+			declare_war_on = {
+				target = VEN
+				type = annex_everything
+			}
+		}
+		VEN = {
+			inherit_technology = AUS
+			load_oob = "VEN_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.42
+	title = AUS_decision_events.42.t
+	desc = AUS_decision_events.42.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.02.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.43
+	title = AUS_decision_events.43.t
+	desc = AUS_decision_events.43.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = ITA
+		VEN = {
+			exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.43.a
+		VEN = {
+			white_peace = AUS
+			white_peace = HUN
+		}
+		160 = {
+			clr_state_flag = AUS_HUN_potential_state_AUS
+			clr_state_flag = AUS_HUN_potential_state_HUN
+			remove_dynamic_modifier = {
+				modifier = AUS_civil_war_state_modifier
+			}
+		}
+		ITA = {
+			annex_country = {
+				target = VEN
+				transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = AUS_decision_events.44
+					hours = 10
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.44
+	title = AUS_decision_events.44.t
+	desc = AUS_decision_events.44.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.44.a
+		add_stability = 0.05
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.51
+	title = AUS_decision_events.51.t
+	desc = AUS_decision_events.51.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.03.a
+		release = SLO
+		declare_war_on = {
+			target = SLO
+			type = annex_everything
+		}
+		AUS = {
+			declare_war_on = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+		SLO = {
+			inherit_technology = HUN
+			load_oob = "SLO_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.52
+	title = AUS_decision_events.52.t
+	desc = AUS_decision_events.52.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.04.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.53
+	title = AUS_decision_events.53.t
+	desc = AUS_decision_events.53.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SLO
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		OR = {
+			SLO = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.53.a
+		if = {
+			limit = {
+				HUN = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.61
+	title = AUS_decision_events.61.t
+	desc = AUS_decision_events.61.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.03.a
+		release = CRO
+		declare_war_on = {
+			target = CRO
+			type = annex_everything
+		}
+		AUS = {
+			declare_war_on = {
+				target = CRO
+				type = annex_everything
+			}
+		}
+		CRO = {
+			inherit_technology = HUN
+			load_oob = "CRO_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.62
+	title = AUS_decision_events.62.t
+	desc = AUS_decision_events.62.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.04.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.63
+	title = AUS_decision_events.63.t
+	desc = AUS_decision_events.63.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CRO
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		NOT = {
+			is_puppet_of = SBU
+		}
+		OR = {
+			CRO = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.63.a
+		if = {
+			limit = {
+				HUN = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.64
+	title = AUS_decision_events.64.t
+	desc = AUS_decision_events.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = CRO
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+		is_puppet_of = SBU
+		OR = {
+			CRO = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.63.a
+		if = {
+			limit = {
+				HUN = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+		SBU = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.71
+	title = AUS_decision_events.71.t
+	desc = AUS_decision_events.71.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.03.a
+		release = TRL
+		declare_war_on = {
+			target = TRL
+			type = annex_everything
+		}
+		AUS = {
+			declare_war_on = {
+				target = TRL
+				type = annex_everything
+			}
+		}
+		TRL = {
+			inherit_technology = HUN
+			load_oob = "TRL_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.72
+	title = AUS_decision_events.72.t
+	desc = AUS_decision_events.72.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.04.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.73
+	title = AUS_decision_events.73.t
+	desc = AUS_decision_events.73.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = TRL
+		BNT = {
+			exists = yes
+		}
+		TRL = {
+			exists = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.73.a
+		BNT = {
+			country_event = {
+				id = AUS_decision_events.74
+				hours = 4
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.74
+	title = AUS_decision_events.74.t
+	desc = AUS_decision_events.74.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.74.a
+		TRL = {
+			declare_war_on = {
+				target = BNT
+				type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = AUS_decision_events.74.b
+		TRL = {
+			transfer_state = 83
+			transfer_state = 82
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.75
+	title = AUS_decision_events.75.t
+	desc = AUS_decision_events.75.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = TRL
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+			has_war_with = BNT
+		}
+		OR = {
+			TRL = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.75.a
+		if = {
+			limit = {
+				TRL = {
+					is_puppet_of = ROM
+				}
+			}
+			ROM = {
+				country_event = {
+					id = AUS_civil_war_YRP_events.4
+				}
+			}	
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = no
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+				}
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		white_peace = HUN
+		white_peace = AUS
+		white_peace = BNT
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.81
+	title = AUS_decision_events.81.t
+	desc = AUS_decision_events.81.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.03.a
+		release = BNT
+		declare_war_on = {
+			target = BNT
+			type = annex_everything
+		}
+		AUS = {
+			declare_war_on = {
+				target = BNT
+				type = annex_everything
+			}
+		}
+		BNT = {
+			inherit_technology = HUN
+			load_oob = "BNT_revolt_army"
+			set_popularities = {
+				social_liberal = 5
+				market_liberal = 15
+				social_conservative = 20
+				authoritarian_democrat = 10
+				paternal_autocrat = 30
+				national_populist = 20
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_timed_idea = {
+				idea = AUS_civil_war_buff
+				days = 1460
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.82
+	title = AUS_decision_events.82.t
+	desc = AUS_decision_events.82.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_events.04.a
+		add_manpower = 100000
+		add_stability = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.83
+	title = AUS_decision_events.83.t
+	desc = AUS_decision_events.83.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = BNT
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+			has_war_with = TRL
+		}
+		OR = {
+			BNT = {
+				surrender_progress > 0.7#投降进度大于70
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.83.a
+		if = {
+			limit = {
+				has_war_with = HUN
+				has_war_with = TRL
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = TRL 
+				}
+				transfer_state_to = TRL
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = TRL
+					}
+				}
+				transfer_state_to = HUN
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = HUN
+				}
+				HUN = {
+					exists = no
+				}
+				has_war_with = TRL
+				has_war_with = AUS
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = TRL 
+				}
+				transfer_state_to = TRL
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = TRL
+					}
+				}
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = HUN
+				}
+				has_war_with = TRL
+				NOT = {
+					has_war_with = AUS
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = TRL
+				}
+				transfer_state_to = TRL
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = TRL
+				}
+				has_war_with = HUN
+			}
+			every_owned_state = {
+				transfer_state_to = HUN
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_war_with = TRL
+				}
+				NOT = {
+					has_war_with = HUN
+				}
+				HUN = {
+					exists = no
+				}
+				has_war_with = AUS
+			}
+			every_owned_state = {
+				transfer_state_to = AUS
+			}
+		}
+		white_peace = TRL
+		white_peace = HUN
+		white_peace = AUS
+		white_peace = ROM
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.101
+	title = AUS_decision_events.101.t
+	desc = AUS_decision_events.101.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = AUS
+				AUS = {
+					is_ai = no
+				}
+				HUN ={
+					is_ai = yes
+				}
+			}
+			AND = {
+				tag = HUN
+				AUS = {
+					is_ai = yes
+				}
+				HUN ={
+					is_ai = no
+				}
+			}
+			AND = {
+				OR = {
+					tag = AUS
+					tag = HUN
+				}
+				AUS = {
+					is_ai = yes
+				}
+				HUN ={
+					is_ai = yes
+				}
+			}
+		}
+		OR = {
+			AND = {
+				AUS = {
+					surrender_progress > 0.7#投降进度大于70
+				}
+				HUN = {
+					surrender_progress > 0.7#投降进度大于70
+				}
+			}
+			AND = {
+				AUS = {
+					surrender_progress < 0.3#投降进度小于30
+				}
+				HUN = {
+					surrender_progress < 0.3#投降进度小于30
+				}
+			}
+		}
+		date > 1937.01.01
+		has_global_flag = AUS_civil_war_has_happened
+		NOT = {
+			AUS = {
+				has_war_with = GER
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.101.a
+		trigger = {
+			tag = AUS
+		}
+		white_peace = HUN
+		white_peace = CRO
+		white_peace = SLO
+		white_peace = BNT
+		white_peace = TRL
+		HUN = {
+			white_peace = SLV
+			if = {
+				limit = {
+					CZE = {
+						NOT = {
+							has_cosmetic_tag = CZE_SLO
+						}
+					}
+				}
+				white_peace = CZE
+			}
+		}
+		clr_global_flag = AUS_civil_war_has_happened
+		set_global_flag = AUS_civil_war_has_end
+		set_global_flag = AUS_civil_war_no_winner
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.101.a
+		trigger = {
+			tag = HUN
+		}
+		white_peace = AUS
+		white_peace = SLV
+		if = {
+			limit = {
+				CZE = {
+					NOT = {
+						has_cosmetic_tag = CZE_SLO
+					}
+				}
+			}
+			white_peace = CZE
+		}
+		AUS = {
+			white_peace = CRO
+			white_peace = SLO
+			white_peace = BNT
+			white_peace = TRL
+		}
+		clr_global_flag = AUS_civil_war_has_happened
+		set_global_flag = AUS_civil_war_has_end
+		set_global_flag = AUS_civil_war_no_winner
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.102
+	title = AUS_decision_events.102.t
+	desc = AUS_decision_events.102.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = AUS
+		NOT = {
+			has_war_with = GER
+		}
+		HUN = {
+			OR = {
+				exists = no
+				surrender_progress < 0.5
+			}
+		}
+		OR = {
+			has_global_flag = AUS_civil_war_has_happened
+			OR = {
+				has_war_with = CZE
+				has_war_with = SLV
+				has_war_with = CLA
+			}
+		}
+		AUS = {
+			surrender_progress > 0.9#投降进度大于80
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.102.a
+		trigger = {
+			has_global_flag = AUS_civil_war_has_happened
+		}
+		HUN = {
+			annex_country = {
+				target = AUS
+				transfer_troops = yes
+			}
+		}		
+		clr_global_flag = AUS_civil_war_has_happened
+		set_global_flag = AUS_civil_war_has_end
+		set_global_flag = AUS_civil_war_HUN_win
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.102.b
+		trigger = {
+			NOT = {
+				has_global_flag = AUS_civil_war_has_happened
+			}
+		}
+		KAR = {
+			every_owned_state = {
+				limit = {
+					is_core_of = KAR
+				}
+				if = {
+					limit = {
+						CLA = {
+							exists = yes
+						}
+					}
+				transfer_state_to = CLA
+				add_core_of = CLA
+				}
+				if = {
+					limit = {
+						AUS = {
+							has_war_with = POL	
+						}
+					}
+				transfer_state_to = POL
+				add_core_of = POL
+				}
+			}
+		}
+		white_peace = CZE
+		white_peace = SLV
+		white_peace = CLA
+		white_peace = BNT
+		white_peace = TRL
+		white_peace = CLO
+		white_peace = POL
+		white_peace = CRO
+		if = {
+			limit = {
+				has_war_with = ROM
+			}
+			white_peace = ROM
+			TRL = {
+				every_owned_state = {
+					limit = {
+						is_core_of = TRL
+					}
+					add_core_of = ROM
+				}
+			}
+			ROM = {
+				country_event = {
+					id = AUS_civil_war_YRP_events.3
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_war_with = SBU
+			}
+			white_peace = SBU
+			CRO = {
+				every_owned_state = {
+					limit = {
+						is_core_of = CRO
+					}
+					add_core_of = SBU
+				}
+			}
+			SBU = {
+				country_event = {
+					id = AUS_civil_war_YRP_events.11
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.103
+	title = AUS_decision_events.103.t
+	desc = AUS_decision_events.103.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = HUN
+		AUS = { 
+			OR = {
+				exists = no
+				surrender_progress < 0.5
+			}
+		}
+		OR = {
+			has_global_flag = AUS_civil_war_has_happened
+			OR = {
+				has_war_with = BNT
+				has_war_with = CRO
+				has_war_with = SLO
+				has_war_with = TRL
+				has_war_with = CLA
+			}
+		}
+		HUN = {
+			surrender_progress > 0.9#投降进度大于80
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.103.a
+		trigger = {
+			has_global_flag = AUS_civil_war_has_happened
+		}
+		AUS = {
+			annex_country = {
+				target = HUN
+				transfer_troops = yes
+			}
+		}	
+		clr_global_flag = AUS_civil_war_has_happened
+		set_global_flag = AUS_civil_war_has_end
+		set_global_flag = AUS_civil_war_AUS_win
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = AUS_decision_events.103.b
+		trigger = {
+			NOT = {
+				has_global_flag = AUS_civil_war_has_happened
+			}
+		}
+		white_peace = BNT
+		white_peace = TRL
+		white_peace = CLO
+		white_peace = CRO
+		white_peace = CZE
+		white_peace = SLV
+		white_peace = CLA
+		white_peace = SBU
+		if = {
+			limit = {
+				has_war_with = ROM
+			}
+			white_peace = ROM
+			TRL = {
+				every_owned_state = {
+					limit = {
+						is_core_of = TRL
+					}
+					add_core_of = ROM
+				}
+			}
+			ROM = {
+				country_event = {
+					id = AUS_civil_war_YRP_events.3
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_war_with = SBU
+			}
+			white_peace = SBU
+			SLV = {
+				every_owned_state = {
+					limit = {
+						is_core_of = SLV
+					}
+					add_core_of = SBU
+				}
+			}
+			SBU = {
+				country_event = {
+					id = AUS_civil_war_YRP_events.12
+				}
+			}
+		}
+			
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_decision_events.104
+	title = AUS_decision_events.104.t
+	desc = AUS_decision_events.104.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = AUS
+		has_war_with = GER
+		HUN = {
+			OR = {
+				exists = no
+				surrender_progress < 0.5
+			}
+		}
+		OR = {
+			has_global_flag = AUS_civil_war_has_happened
+			OR = {
+				has_war_with = CZE
+				has_war_with = SLV
+				has_war_with = CLA
+			}
+		}
+		AUS = {
+			surrender_progress > 0.9#投降进度大于80
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_decision_events.102.a
+		trigger = {
+			has_global_flag = AUS_civil_war_has_happened
+		}
+		GER = {
+			annex_country = {
+				target = AUS
+				transfer_troops = yes
+			}
+		}		
+		clr_global_flag = AUS_civil_war_has_happened
+		set_global_flag = AUS_civil_war_has_end
+		set_global_flag = AUS_civil_war_HUN_win
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.1
+	title = AUS_civil_war_YRP_events.1.t
+	desc = AUS_civil_war_YRP_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = POL
+		POL = {
+			exists = yes
+		}
+		CLA = {
+			exists = yes
+			OR = {
+				has_war_with = CZE
+				has_war_with = HUN
+				has_war_with = AUS
+			}
+		}
+		date > 1937.01.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.1.a
+		POL = {
+			declare_war_on = {
+			target = CLA
+			type = annex_everything
+			}
+		}	
+	}
+	option = {
+		name = AUS_civil_war_YRP_events.1.b
+		POL = {
+			declare_war_on = {
+				target = CLA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KAR
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.2
+	title = AUS_civil_war_YRP_events.2.t
+	desc = AUS_civil_war_YRP_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = ROM
+		TRL = {
+			exists = yes
+			has_war_with = HUN
+		}
+		TRL = {
+			NOT = {
+				has_war_with = AUS
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.2.a
+		ROM = {
+			if = {
+				limit = {
+					BNT = {
+						has_war_with = TRL
+					}
+				}
+				declare_war_on = {
+					target = BNT
+					type = annex_everything
+				}	
+			}
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+			puppet = TRL
+		}	
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.3
+	title = AUS_civil_war_YRP_events.3.t
+	desc = AUS_civil_war_YRP_events.3.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.3.a
+		ROM = {
+			annex_country = {
+				target = TRL
+				transfer_troops = yes
+			}
+		}	
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.4
+	title = AUS_civil_war_YRP_events.4.t
+	desc = AUS_civil_war_YRP_events.4.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.4.a
+		ROM = {
+			white_peace = HUN
+			white_peace = BNT
+		}	
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.5
+	title = AUS_civil_war_YRP_events.5.t
+	desc = AUS_civil_war_YRP_events.5.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SBU
+		has_global_flag = AUS_civil_war_has_happened
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.5.a
+		BYZ = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.6
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.6
+	title = AUS_civil_war_YRP_events.6.t
+	desc = AUS_civil_war_YRP_events.6.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.6.a
+		SBU = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.7
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.7
+	title = AUS_civil_war_YRP_events.7.t
+	desc = AUS_civil_war_YRP_events.7.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.7.a
+		declare_war_on = {
+			target = ALB
+			type = annex_everything
+		}
+		BYZ = {
+			declare_war_on = {
+				target = ALB
+				type = annex_everything
+			}			
+		}
+		802 = {
+			add_core_of = SBU
+		}
+		805 = {
+			add_core_of = BYZ
+		}
+		934 = {
+			add_claim_by = SBU
+		}
+		44 ={
+			add_claim_by = BYZ
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.8
+	title = AUS_civil_war_YRP_events.8.t
+	desc = AUS_civil_war_YRP_events.8.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = POL
+		CLA = {
+			exists = no
+		}
+		has_war_with = AUS
+		has_war_with = KAR
+		KAR = {
+			all_owned_state = {
+				is_controlled_by  = POL
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.8.a
+		white_peace = AUS
+		annex_country = {
+			target = KAR
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.9
+	title = AUS_civil_war_YRP_events.9.t
+	desc = AUS_civil_war_YRP_events.9.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = HUN
+		has_war_with = TRL
+		has_war_with = ROM
+		OR = {
+			AND = {
+				HUN = {
+					surrender_progress < 0.3#投降进度大于70
+				}
+				TRL = {
+					surrender_progress < 0.3#投降进度大于70
+				}
+			}
+			AND = {
+				HUN = {
+					surrender_progress < 0.5#投降进度大于50
+				}
+				TRL = {
+					surrender_progress < 0.5#投降进度大于50
+				}
+				date > 1938.01.01
+			}
+		}
+		date > 1937.07.01
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.9.a
+		white_peace = ROM
+		white_peace = TRL
+		ROM = {
+			country_event = {
+				id = AUS_civil_war_YRP_events.10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.10
+	title = AUS_civil_war_YRP_events.10.t
+	desc = AUS_civil_war_YRP_events.10.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.10.a
+		ROM = {
+			annex_country = {
+				target = TRL
+				transfer_troops = yes
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = BNT
+				}
+				transfer_state_to = HUN
+			}
+			white_peace = BNT
+			if = {
+				limit = {
+					has_war_with = GER
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = GER
+					}
+					white_peace = ROM
+				}
+			}
+		}	
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.11
+	title = AUS_civil_war_YRP_events.11.t
+	desc = AUS_civil_war_YRP_events.11.desc
+	picture = GFX_report_event_DEN_danish_politics
+
+	trigger = {
+		tag = SBU
+		ALB = {
+			exists = no
+		}
+		AND = {
+			CRO = {
+				exists = yes
+				OR = {
+					has_war_with = HUN
+					has_war_with = AUS
+				}
+			}
+			SLV = {
+				exists = yes
+				OR = {
+					has_war_with = HUN
+					has_war_with = AUS
+				}
+			}
+		}
+		date > 1936.09.01
+	}
+	
+	option = {
+		name = AUS_civil_war_YRP_events.11.a
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+				}
+			}			
+			if = {
+				limit = {
+					CRO = {
+						has_war_with = HUN
+					}
+				}
+				declare_war_on = {
+					target = HUN
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					CRO = {
+						has_war_with = AUS
+					}
+				}
+				declare_war_on = {
+					target = AUS
+					type = annex_everything
+				}
+			}
+			puppet = CRO
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+				}
+			}	
+			if = {
+				limit = {
+					SLV = {
+						has_war_with = HUN
+					}
+				}
+				declare_war_on = {
+					target = HUN
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					SLV = {
+						has_war_with = AUS
+					}
+				}
+				declare_war_on = {
+					target = AUS
+					type = annex_everything
+				}
+			}
+			puppet = SLV
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.110#做本地化的时候才发现写了两个11，但是后面都排序好了，只能改成110了
+	title = AUS_civil_war_YRP_events.110.t
+	desc = AUS_civil_war_YRP_events.110.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.110.a
+		annex_country = {
+			target = CRO
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.12
+	title = AUS_civil_war_YRP_events.12.t
+	desc = AUS_civil_war_YRP_events.12.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.12.a
+		annex_country = {
+			target = SLV
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.13
+	title = AUS_civil_war_YRP_events.13.t
+	desc = AUS_civil_war_YRP_events.13.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.13.a
+		if = {
+			limit = {
+				SLV = {
+					is_puppet_of = SBU
+				}
+			}
+			end_puppet = SLV
+			white_peace = HUN
+			white_peace = AUS
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = no
+				}
+			}
+			white_peace = HUN
+			white_peace = AUS
+		}
+		972 = {
+			transfer_state_to = SBU
+			add_core_of = SBU
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.14
+	title = AUS_civil_war_YRP_events.14.t
+	desc = AUS_civil_war_YRP_events.14.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.14.a
+		if = {
+			limit = {
+				HUN = {
+					NOT = {
+						has_war_with = AUS
+					}
+				}
+			}
+			white_peace = AUS
+		}
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.15
+	title = AUS_civil_war_YRP_events.15.t
+	desc = AUS_civil_war_YRP_events.15.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SBU
+		surrender_progress < 0.2
+		OR = {
+			AND = {
+				CRO =  {
+					OR = {
+						exists = no
+						surrender_progress < 0.3
+					}
+				}
+				SLV = {
+					OR = {
+						exists = no
+						surrender_progress < 0.3
+					}
+				}
+			}
+			AND = {
+				CRO =  {
+					OR = {
+						exists = no
+						surrender_progress < 0.7
+					}
+				}
+				SLV = {
+					OR = {
+						exists = no
+						surrender_progress < 0.7
+					}
+				}
+				date > 1937.09.01
+			}
+		}
+		date > 1937.06.01
+		OR = {
+			has_war_with = AUS
+			has_war_with = HUN
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = {
+		SLV = {
+			every_owned_state = {
+				limit = {
+					is_core_of = SLV
+				}
+				add_core_of = SBU
+			}
+		}
+		CRO = {
+			every_owned_state = {
+				limit = {
+					is_core_of = CRO
+				}
+				add_core_of = SBU
+			}
+		}
+	}
+	
+	option = {
+		name = AUS_civil_war_YRP_events.15.a		
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+				}
+			}
+			109 = {
+				transfer_state_to = HUN
+			}
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = no
+				}
+			}
+			109 = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+				}
+				AUS = {
+					exists = yes
+				}
+			}
+			102 = {
+				transfer_state_to = AUS
+			}
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+				}
+				AUS = {
+					exists = no
+				}
+				has_war_with = GER
+			}
+			102 = {
+				transfer_state_to = GER
+			}
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+				}
+				AUS = {
+					exists = no
+				}
+				NOT = {
+					has_war_with = GER
+				}
+			}
+			102 = {
+				transfer_state_to = HUN
+			}
+		}
+		annex_country = {
+			target = CRO
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SLV
+			transfer_troops = yes
+		}
+		white_peace = HUN
+		white_peace = AUS
+		white_peace = GER
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.16
+	title = AUS_civil_war_YRP_events.16.t
+	desc = AUS_civil_war_YRP_events.16.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SBU
+		has_war = no
+		103 = {
+			is_owned_by = SBU
+		}
+		853 = {
+			is_owned_by = SBU
+		}
+		736 = {
+			is_owned_by = SBU
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.16.a		
+		set_cosmetic_tag = YUG
+	}
+}
+
+country_event = {
+	id = AUS_civil_war_YRP_events.17
+	title = AUS_civil_war_YRP_events.17.t
+	desc = AUS_civil_war_YRP_events.17.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	trigger = {
+		tag = SBU
+		surrender_progress > 0.7
+		OR = {
+			has_war_with = HUN
+			has_war_with = AUS
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = AUS_civil_war_YRP_events.17.a		
+		if = {
+			limit = {
+				CRO = {
+					is_puppet_of = SBU
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = HUN
+				}
+				HUN = {
+					annex_country = {
+						target = CRO
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						exists = no
+					}
+					has_war_with = AUS
+				}
+				AUS = {
+					annex_country = {
+						target = CRO
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				SLV = {
+					is_puppet_of = SBU
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = GER
+				}
+				GER = {
+					annex_country = {
+						target = SLV
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {	
+						has_war_with = GER
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = AUS
+					}
+					AUS = {
+						annex_country = {
+							target = SLV
+						}
+					}
+				}
+				if = {
+					limit = {
+						AUS = {
+							exists = no
+						}
+						has_war_with = HUN
+					}
+					HUN = {
+						annex_country = {
+							target = SLV
+						}
+					}
+				}
+			}
+		}
+		white_peace = AUS
+		white_peace = GER
+		white_peace = HUN
+	}
+}
+
+news_event = {
+	id = AUS_decision_news_events.1
+	title = AUS_decision_news_events.1.t
+	desc = AUS_decision_news_events.1.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_news_events.1.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+news_event = {
+	id = AUS_decision_news_events.2
+	title = AUS_decision_news_events.2.t
+	desc = AUS_decision_news_events.2.desc
+	picture = GFX_report_event_DEN_danish_politics
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = AUS_decision_news_events.2.a
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = the_third_PF_war
+				}
+			}
+			set_global_flag = the_third_PF_war
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}

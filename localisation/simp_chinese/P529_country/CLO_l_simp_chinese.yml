@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ CLO_social_conservative: "哥伦比亚共和国"
+ CLO_social_conservative_DEF: "哥伦比亚共和国"
+ CLO_social_conservative_ADJ: "哥伦比亚"
+ CLO_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ CLO_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ CLO_autonomy_puppet: "$OVERLORDADJ$属哥伦比亚"
+ CLO_autonomy_puppet_DEF: "$OVERLORDADJ$属哥伦比亚"
+ CLO: "哥伦比亚"
+ CLO_DEF: "哥伦比亚"
+ CLO_ADJ: "哥伦比亚"

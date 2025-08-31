@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ QNG_paternal_autocrat: "大清帝国"
+ QNG_paternal_autocrat_DEF: "大清帝国"
+ QNG_paternal_autocrat_ADJ: "清"
+ QNG_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ QNG_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ QNG_autonomy_puppet: "$OVERLORDADJ$属清"
+ QNG_autonomy_puppet_DEF: "$OVERLORDADJ$属清"
+ QNG: "清"
+ QNG_DEF: "清"
+ QNG_ADJ: "清"

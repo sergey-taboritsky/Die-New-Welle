@@ -1,0 +1,56 @@
+add_namespace = UKR_warprep
+add_namespace = UKR
+
+country_event = {
+	id = UKR_warprep.1
+	title = UKR_warprep.1.t
+	desc = UKR_warprep.1.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UKR_warprep.1.a
+		UKR = {
+			country_event = { id = UKR_warprep.2 }
+		}
+	}
+}
+country_event = {
+	id = UKR_warprep.2
+	title = UKR_warprep.2.t
+	desc = UKR_warprep.2.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UKR_warprep.2.a
+		add_political_power = 100
+		custom_effect_tooltip = UKR_warprep.2.tt
+	}
+}
+country_event = {
+	id = UKR_warprep.3
+	title = UKR_warprep.3.t
+	desc = UKR_warprep.3.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UKR_warprep.3.a
+		RUS = {
+			random_unit_leader = {
+				set_nationality = UKR
+			}
+			random_unit_leader = {
+				set_nationality = UKR
+			}
+			random_unit_leader = {
+				set_nationality = UKR
+			}
+			transfer_units_fraction = {
+				target = UKR
+				army_ratio = 0.15
+			}
+		}
+	}
+}

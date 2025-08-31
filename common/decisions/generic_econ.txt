@@ -1,0 +1,155 @@
+generic_econ = {
+	
+	generic_privatize_civilian_factory = {
+		#icon =
+		available = {
+			is_ai = no
+			any_core_state = {
+				industrial_complex > 1
+			}
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 10
+		complete_effect = {
+			random_core_state = {
+				limit = { industrial_complex > 1 }
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				ROOT = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+					add_to_variable = {
+						var = private_civ_industry
+						value = 1
+					}
+					add_political_power = 50
+				}
+			}
+		}
+	}
+	generic_nationalise_civilian_factory = {
+		#icon =
+		available = {
+			is_ai = no
+			custom_trigger_tooltip = {
+				tooltip = has_private_firm_trigger_tt
+				check_variable = {
+					private_civ_industry > 0
+				}
+			}
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 15
+		complete_effect = {
+			random_core_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = -1
+			}
+			add_to_variable = {
+				var = private_civ_industry
+				value = -1
+			}
+		}
+	}
+	generic_privatize_military_factory = {
+		#icon =
+		available = {
+			is_ai = no
+			any_core_state = {
+				arms_factory > 1
+			}
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 10
+		complete_effect = {
+			random_core_state = {
+				limit = { arms_factory > 1 }
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+				ROOT = {
+					add_offsite_building = {
+						type = arms_factory
+						level = 1
+					}
+					add_to_variable = {
+						var = private_mil_industry
+						value = 1
+					}
+					add_political_power = 30
+				}
+			}
+		}
+	}
+	generic_nationalise_military_factory = {
+		#icon =
+		available = {
+			is_ai = no
+			custom_trigger_tooltip = {
+				tooltip = has_private_milit_trigger_tt
+				check_variable = {
+					private_mil_industry > 0
+				}
+			}
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 15
+		complete_effect = {
+			random_core_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = -1
+			}
+			add_to_variable = {
+				var = private_mil_industry
+				value = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,275 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				#Opinion Modifiers Setup
+				every_possible_country = {
+					limit = { 
+						NOT = { 
+							tag = PREV 
+						} 
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									THIS = {
+										OR = {
+											has_government = totalist
+											has_government = syndicalist
+											has_government = radical_socialist
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+										}
+									}
+									PREV = {
+										OR = {
+											has_government = totalist
+											has_government = syndicalist
+											has_government = radical_socialist
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+										}
+									}
+								}
+								AND = {
+									THIS = {
+										OR = {
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+											has_government = social_conservative
+											has_government = authoritarian_democrat
+											has_government = paternal_autocrat
+											has_government = national_populist
+										}
+									}
+									PREV = {
+										OR = {
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+											has_government = social_conservative
+											has_government = authoritarian_democrat
+											has_government = paternal_autocrat
+											has_government = national_populist
+										}
+									}
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = P529_similar_ruling_party_group
+						}
+					}
+				}
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			every_possible_country = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = P529_similar_ruling_party_group
+				}
+				ROOT = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = P529_similar_ruling_party_group
+					}
+				}
+			}
+			every_possible_country = {
+				#Opinion Modifiers Setup
+				every_possible_country = {
+					limit = { 
+						NOT = { 
+							tag = PREV 
+						} 
+					}
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									THIS = {
+										OR = {
+											has_government = totalist
+											has_government = syndicalist
+											has_government = radical_socialist
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+										}
+									}
+									PREV = {
+										OR = {
+											has_government = totalist
+											has_government = syndicalist
+											has_government = radical_socialist
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+										}
+									}
+								}
+								AND = {
+									THIS = {
+										OR = {
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+											has_government = social_conservative
+											has_government = authoritarian_democrat
+											has_government = paternal_autocrat
+											has_government = national_populist
+										}
+									}
+									PREV = {
+										OR = {
+											has_government = social_democrat
+											has_government = social_liberal
+											has_government = market_liberal
+											has_government = social_conservative
+											has_government = authoritarian_democrat
+											has_government = paternal_autocrat
+											has_government = national_populist
+										}
+									}
+								}
+							}
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = P529_similar_ruling_party_group
+						}
+					}
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = FRA
+					}
+					FROM = {
+						tag = GER
+					}
+				}
+				set_global_flag = the_third_PF_war
+				every_possible_country = {
+					news_event = {
+						id = AUS_decision_news_events.2
+						hours = 12
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#阿尔巴尼亚瓜分
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = ALB
+					}
+					FROM = {
+						OR = {
+							tag = SBU
+							tag = BYZ
+						}
+					}
+				}
+				BYZ = {
+					transfer_state = 44
+					transfer_state = 805
+				}
+				SBU = {
+					transfer_state = 802
+					transfer_state = 934
+				}
+			}
+		}
+	}
+	on_capitulation = {#比利时流亡刚果
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = BEL
+					}
+					FROM = {
+						OR = {
+							tag = GER
+							tag = FRA
+						}
+					}
+				}
+				CGN = { change_tag_from = BEL }		
+				BEL = {
+					end_puppet = CGN
+					
+				}
+				CGN = {
+					white_peace = GER
+					white_peace = FRA
+					set_cosmetic_tag = BEL_exile_government
+					country_event = {
+						id = P529_country_on_actions_events.1
+					}
+				}
+				every_possible_country = {
+					news_event = {
+						id = P529_news_events.1
+						hours = 12
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {#尼德兰流亡东印度
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = NER
+					}
+					FROM = {
+						OR = {
+							tag = GER
+							tag = FRA
+						}
+					}
+				}
+				NER = {
+					end_puppet = INO
+					INO = { change_tag_from = NER }			
+					
+				}
+				INO = {
+					white_peace = GER
+					white_peace = FRA
+					set_cosmetic_tag = NER_exile_government
+					country_event = {
+						id = P529_country_on_actions_events.2
+					}
+				}
+				every_possible_country = {
+					news_event = {
+						id = P529_news_events.2
+						hours = 12
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ BRZ_paternal_autocrat: "巴西帝国"
+ BRZ_paternal_autocrat_DEF: "巴西帝国"
+ BRZ_paternal_autocrat_ADJ: "巴西"
+ BRZ_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ BRZ_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ BRZ_autonomy_puppet: "$OVERLORDADJ$属巴西"
+ BRZ_autonomy_puppet_DEF: "$OVERLORDADJ$属巴西"
+ BRZ: "巴西"
+ BRZ_DEF: "巴西"
+ BRZ_ADJ: "巴西"

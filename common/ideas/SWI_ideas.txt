@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+		SWI_home_defend = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				max_dig_in_factor = 0.3
+				army_defence_factor = 0.2
+			}
+		}
+	}
+}

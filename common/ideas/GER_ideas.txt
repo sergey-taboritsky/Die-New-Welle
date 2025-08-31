@@ -1,0 +1,263 @@
+ideas = {
+  country = {
+    The_aftermath_of_second_PF_war_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = -0.2
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				consumer_goods_factor = 0.2
+				war_support_factor = -0.3
+			}
+		}
+		
+    The_aftermath_of_second_PF_war_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				production_factory_max_efficiency_factor = -0.20
+				industrial_capacity_factory = -0.20
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.15
+				war_support_factor = -0.2
+			}
+		}
+		
+		  The_aftermath_of_second_PF_war_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.05
+				war_support_factor = -0.1
+			}
+		}
+		
+		Unstable_government_GER = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+					political_power_cost = 0.3
+				 	disabled_ideas = 1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		Socialist_collective_construction = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		Socialist_collective_construction_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		
+		GER_DAN_Union_navy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+
+		Berlin_priority_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+					political_power_gain = 0.1
+					subjects_autonomy_gain = -0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		GER_red_army_1 = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		GER_red_army_2 = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				conscription_factor = 0.1
+				army_fuel_capacity_factor = 0.3
+				army_fuel_consumption_factor = -0.3
+			}
+		}
+		GER_army_loyal = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			modifier = {
+				command_power_gain = 0.3
+				conscription = 0.02
+				max_command_power = 50
+			}
+		}
+		GER_mass_motor_produce = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		GER_great_engine = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			equipment_bonus = {
+				light_armor = {
+					maximum_speed = 0.1
+				}
+				medium_armor = {
+					maximum_speed = 0.1
+				}
+				heavy_armor = {
+					maximum_speed = 0.2
+				}
+				super_heavy_armor = {
+					maximum_speed = 0.5
+				}
+			}
+		}
+		GER_CV_improve = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		GER_BB_improve = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			equipment_bonus = {
+				ship_hull_pre_dreadnought = {
+					build_cost_ic = -0.65
+				}
+				ship_hull_cruiser_panzerschiff = {
+					build_cost_ic = -0.75
+				}
+			}
+		}
+		GER_SS_improve = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1		
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.3
+				}
+			}
+		}
+		GER_great_synthetic = {
+		allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1				
+			modifier = {
+				production_oil_factor = 0.5 
+			}
+		}
+	}
+}

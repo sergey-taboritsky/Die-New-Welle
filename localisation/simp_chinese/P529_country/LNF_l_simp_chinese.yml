@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ LNF_market_liberal: "兰芳渤泥共和国"
+ LNF_market_liberal_DEF: "兰芳渤泥共和国"
+ LNF_market_liberal_ADJ: "兰芳渤泥"
+ LNF_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ LNF_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ LNF_autonomy_puppet: "$OVERLORDADJ$属兰芳渤泥共和国"
+ LNF_autonomy_puppet_DEF: "$OVERLORDADJ$属兰芳渤泥共和国"
+ LNF: "兰芳"
+ LNF_DEF: "兰芳"
+ LNF_ADJ: "兰芳"

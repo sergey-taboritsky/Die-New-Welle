@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ PLI_paternal_autocrat: "波利尼西亚联合王国"
+ PLI_paternal_autocrat_DEF: "波利尼西亚联合王国"
+ PLI_paternal_autocrat_ADJ: "波利尼西亚"
+ PLI_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ PLI_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ PLI_autonomy_puppet: "$OVERLORDADJ$属波利尼西亚"
+ PLI_autonomy_puppet_DEF: "$OVERLORDADJ$属波利尼西亚"
+ PLI: "波利尼西亚"
+ PLI_DEF: "波利尼西亚"
+ PLI_ADJ: "波利尼西亚"

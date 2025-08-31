@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ IND_market_liberal: "印度共和国"
+ IND_market_liberal_DEF: "印度共和国"
+ IND_market_liberal_ADJ: "印度"
+ IND_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ IND_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ IND_autonomy_puppet: "$OVERLORDADJ$属印度"
+ IND_autonomy_puppet_DEF: "$OVERLORDADJ$属印度"
+ IND: "印度"
+ IND_DEF: "印度"
+ IND_ADJ: "印度"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ VEA_social_conservative: "委瑞内拉共和国"
+ VEA_social_conservative_DEF: "委瑞内拉共和国"
+ VEA_social_conservative_ADJ: "委瑞内拉"
+ VEA_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ VEA_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ VEA_autonomy_puppet: "$OVERLORDADJ$属委瑞内拉"
+ VEA_autonomy_puppet_DEF: "$OVERLORDADJ$属委瑞内拉"
+ VEA: "委瑞内拉"
+ VEA_DEF: "委瑞内拉"
+ VEA_ADJ: "委瑞内拉"

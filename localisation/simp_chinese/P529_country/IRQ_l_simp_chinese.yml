@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ IRQ_radical_socialist: "伊拉克王国"
+ IRQ_radical_socialist_DEF: "伊拉克王国"
+ IRQ_radical_socialist_ADJ: "伊拉克"
+ IRQ_autonomy_supervised_state: "$OVERLORDADJ$占领区"
+ IRQ_autonomy_supervised_state_DEF: "$OVERLORDADJ$占领区"
+ IRQ_autonomy_puppet: "$OVERLORDADJ$属伊拉克"
+ IRQ_autonomy_puppet_DEF: "$OVERLORDADJ$属伊拉克"
+ IRQ: "伊拉克"
+ IRQ_DEF: "伊拉克"
+ IRQ_ADJ: "伊拉克"

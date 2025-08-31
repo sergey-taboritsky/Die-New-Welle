@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ autonomy_satellite_state: "卫星国"
+ autonomy_autonomous_colonial_territory: "自治殖民领"
+ autonomy_colonial_territory: "殖民领"
+ autonomy_crown_colonial_territory: "王冠殖民领"
+ autonomy_protectorate: "保护国"
+ autonomy_core_province: "核心省"
+ autonomy_unified_province: "统划省"
+ autonomy_autonomous_province: "自治省"
