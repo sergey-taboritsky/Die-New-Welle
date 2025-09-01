@@ -3,14 +3,14 @@ state={
 	name="STATE_1019"
 	
 	history={
-		owner = BUL
+		owner = BYZ
 		victory_points = { #Haskovo
 			9862 1
 		}
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = BUL
+		add_core_of = BYZ
 	}
 	
 	provinces={

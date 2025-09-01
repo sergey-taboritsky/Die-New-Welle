@@ -3,12 +3,14 @@ state={
 	name="STATE_994"
 	
 	history={
-		owner = SBU
+		owner = AUS
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = SBU
 		add_core_of = SER
+		add_core_of = HUN
+		add_core_of = AUS
 	}
 	
 	provinces={

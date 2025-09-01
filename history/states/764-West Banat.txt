@@ -6,7 +6,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = SBU
+		owner = AUS
 		victory_points = {
 			3614 1
 		}
@@ -15,6 +15,9 @@ state={
 			infrastructure = 3 #was: 6
 		}
 		add_core_of = SBU
+		add_core_of = SER
+		add_core_of = HUN
+		add_core_of = AUS
 	}
 
 	provinces={

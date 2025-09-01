@@ -3,8 +3,8 @@ state={
 	name="Liko"
 
 	history={
-		owner = FRA
-		add_core_of = RCG
+		owner = MAF
+		add_core_of = MAF
 		buildings = {
 			infrastructure = 1
 

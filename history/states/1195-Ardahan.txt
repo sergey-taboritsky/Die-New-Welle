@@ -3,13 +3,12 @@ state={
 	name="STATE_999"
 	
 	history={
-		owner = TUR
+		owner = RUS
 		
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = TUR
-		add_claim_by = SOV
+		add_core_of = RUS
 	}
 	
 	provinces={

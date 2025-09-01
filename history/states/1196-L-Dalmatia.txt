@@ -3,7 +3,7 @@ state={
 	name="STATE_1000"
 	
 	history={
-		owner = SBU
+		owner = AUS
 		victory_points = { #Dubrovnik
 			6889 3 
 		}
@@ -21,8 +21,7 @@ state={
 				naval_base = 1
 			}
 		}
-		add_core_of = SBU
-		#add_claim_by = ITA #added by focus
+		add_core_of = AUS
 		add_core_of = CRO
 	}
 	

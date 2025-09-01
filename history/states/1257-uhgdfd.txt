@@ -6,8 +6,10 @@ state={
 	
 	history = {
 
-		owner = ROM
+		owner = AUS
 		add_core_of = ROM
+		add_core_of = HUN
+		add_core_of = AUS
 
 		buildings = {
 			infrastructure = 3 

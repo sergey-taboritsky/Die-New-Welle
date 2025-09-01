@@ -7,8 +7,8 @@ state={
 
 	history = {
 
-		owner = FRA
-		add_core_of = RCG
+		owner = MAF
+		add_core_of = MAF
 
 		victory_points = {
 			8193 3 #Brazzaville

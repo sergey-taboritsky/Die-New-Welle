@@ -7,10 +7,8 @@ state = {
 
 	history = {
 
-		owner = POL
-		add_core_of = POL
-		add_core_of = KSH
-		add_claim_by = PRE
+		owner = GER
+		add_core_of = GER
 
 		victory_points = {
 			3295 5 # Torun

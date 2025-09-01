@@ -12,7 +12,7 @@ state={
 
 		}
 		add_core_of = BYZ
-		add_claim_by = BUL
+		add_claim_by = BUR
 
 	}
 	

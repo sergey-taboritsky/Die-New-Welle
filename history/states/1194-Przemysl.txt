@@ -3,12 +3,13 @@ state={
 	name="Przemysl"
 	
 	history={
-		owner = POL
+		owner = AUS
 		buildings = {
 			infrastructure = 3
 
 		}
 		add_core_of = POL
+		add_core_of = AUS
 
 		victory_points = {
 			9494 2

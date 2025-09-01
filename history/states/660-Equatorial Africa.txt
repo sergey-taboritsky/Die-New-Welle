@@ -6,8 +6,8 @@ state={
 	}
 
 	history={
-		owner = FRA
-		add_core_of = CAR
+		owner = MAF
+		add_core_of = MAF
 		victory_points = {
 			12830 1
 		}

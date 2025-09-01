@@ -3,14 +3,13 @@ state={
 	name="STATE_1034"
 	
 	history={
-		owner = SBU
+		owner = AUS
 		buildings = {
 			infrastructure = 3
 			dockyard = 1
 			industrial_complex = 3
 		}
-		add_core_of = SBU
-		#add_claim_by = ITA #added by focus
+		add_core_of = AUS
 		add_core_of = CRO
 	}
 	

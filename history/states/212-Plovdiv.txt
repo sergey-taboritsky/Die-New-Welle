@@ -3,7 +3,7 @@ state={
 	name="STATE_212"
 	
 	history={
-		owner = BUL
+		owner = BUR
 		victory_points = { #Plovdiv
 			6923 10
 		}
@@ -16,7 +16,7 @@ state={
 			industrial_complex =2
 			air_base = 2
 		}
-		add_core_of = BUL
+		add_core_of = BUR
 	}
 	
 	resources={

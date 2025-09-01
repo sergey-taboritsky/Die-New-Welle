@@ -5,11 +5,9 @@ state = {
 	state_category = city
 
 	history = {
-		owner = ITA
-		add_core_of = ITA
-		add_core_of = SBU
+		owner = AUS
+		add_core_of = AUS
 		add_core_of = SLV
-		add_core_of = LBV
 		buildings = {
 			infrastructure = 1
 			dockyard = 1

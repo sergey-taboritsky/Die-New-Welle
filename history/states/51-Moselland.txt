@@ -6,8 +6,6 @@ state={
 
 		owner = GER
 		add_core_of = GER
-		add_core_of = RHI
-		add_core_of = PRE
 
 		victory_points = {
 			6469 10 # Essen
@@ -32,13 +30,6 @@ state={
 			air_base = 3
 		}
 
-		1939.1.1 = {
-			buildings = {
-				air_base = 6
-				radar_station = 1
-			}
-		}
-	
 		set_demilitarized_zone = yes
 	
 		1936.3.7 = {
