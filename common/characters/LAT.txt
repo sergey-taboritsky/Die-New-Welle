@@ -1,0 +1,72 @@
+characters = {
+	LAT_Alfred_Fletcher = {
+		name = LAT_Alfred_Fletcher
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAT_Alfred_Fletcher
+			}
+		}
+		country_leader = {
+			ideology = social_conservative
+			traits = {  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LAT_Rudiger_von_Goltz = {
+		name = LAT_Rudiger_von_Goltz
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAT_Rudiger_von_Goltz
+			}
+		}
+		country_leader = {
+			ideology = national_populist
+			traits = {  }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+	LAT_Karlis_Ulmanis = {
+		name = LAT_Karlis_Ulmanis
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAT_Karlis_Ulmanis
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat
+			traits = {  }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+	LAT_Andrievs_Niedras = {
+		name = LAT_Andrievs_Niedras
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAT_Andrievs_Niedras
+			}
+		}
+		country_leader = {
+			ideology = market_liberal
+			traits = {  }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+	LAT_Janis_Kalnberzins = {
+		name = LAT_Janis_Kalnberzins
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAT_Janis_Kalnberzins
+			}
+		}
+		country_leader = {
+			ideology = totalist
+			traits = {  }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+}

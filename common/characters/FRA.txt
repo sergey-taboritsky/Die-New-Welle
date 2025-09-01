@@ -9,6 +9,8 @@ characters = {
 		country_leader = {
 			ideology = syndicalist
 			traits = {  }
+			expire="1999.1.1.1"
+			id=-1
 		}
 	}
 }

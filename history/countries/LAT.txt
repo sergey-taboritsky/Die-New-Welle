@@ -5,41 +5,31 @@ set_research_slots = 3
 set_convoys = 50
 
 recruit_character = LAT_leader
-
-if = {
-	limit = { has_dlc = "La Resistance" }
-	create_operative_leader = {
-		name = Gaspar_Rivera
-		GFX = GFX_portrait_europe_generic_operative_male_9
-		traits = { operative_natural_orator operative_seducer }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { FRA GER }
-	}
-}
+recruit_character = LAT_Alfred_Fletcher
+recruit_character = LAT_Rudiger_von_Goltz
+recruit_character = LAT_Karlis_Ulmanis
+recruit_character = LAT_Andrievs_Niedras
+recruit_character = LAT_Janis_Kalnberzins
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = social_conservative
 	last_election = "1935.11.20"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-	totalist = 0
+	totalist = 17
 	syndicalist = 0
-	radical_socialist = 10
-	social_democrat = 10
-	social_liberal = 20
-	market_liberal = 20
-	social_conservative = 20
+	radical_socialist = 0
+	social_democrat = 3
+	social_liberal = 12
+	market_liberal = 5
+	social_conservative = 35
 	authoritarian_democrat = 20
 	paternal_autocrat = 0
-	national_populist = 0
+	national_populist = 8
 }
-
-give_guarantee = LIT
-give_guarantee = EST
 
 add_ideas = {
 	civilian_economy
